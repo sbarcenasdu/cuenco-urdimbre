@@ -1,0 +1,124 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.5, user-scalable=yes"
+    />
+    <link rel="icon" type="image/svg+xml" href="images/favicon.ico" />
+    <title>{title}</title>
+    <!-- <title>
+			Inicio: Instituto Nacional De Investigación, Innovación Y Política
+			Educativa
+		</title> -->
+    <meta
+      name="author"
+      content="Instituto Nacional De Investigación, Innovación Y Política Educativa"
+    />
+    <meta
+      name="keywords"
+      content="Instituto Nacional De Investigación, Innovación Y Política Educativa"
+    />
+    <meta
+      name="description"
+      content="Instituto Nacional De Investigación, Innovación Y Política Educativa"
+    />
+
+    <meta name="revisit-after" content="1 hour" />
+    <meta name="distribution" content="all" />
+    <meta name="expires" content="1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="robots" content="all" />
+
+    <script is:inline src="js/jquery.js" ></script>
+    <script is:inline src="js/unal.js" ></script>
+    <script is:inline src="js/accesibilidad.js" ></script>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="css/bootstrap.min.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="css/bootstrap-theme.min.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="css/accesibilidad.css"
+      media="all"
+    />
+    <link rel="stylesheet" type="text/css" href="css/reset.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/unal.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/base.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/tablet.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/phone.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/small.css" media="all" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="css/printer.css"
+      media="print"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+
+  <body>
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --svg-primary: #2b72b6;
+    --svg-secondary: #28b796;
+    --svg-accent: #3c499c;
+    --svg-magenta: #c20a92;
+    --svg-background: #666;
+
+    --cuenco-primary: #2b72b8;
+    --cuenco-secondary: #25b998;
+    --cuenco-accent: #3c499e;
+    --cuenco-magenta: #b3288f;
+    --cuenco-background: #666;
+  }
+
+  html {
+    font-family: system-ui, sans-serif;
+    scroll-behavior: smooth;
+  }
+  code {
+    font-family:
+      Menlo,
+      Monaco,
+      Lucida Console,
+      Liberation Mono,
+      DejaVu Sans Mono,
+      Bitstream Vera Sans Mono,
+      Courier New,
+      monospace;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+</style>

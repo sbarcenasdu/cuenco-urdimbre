@@ -1,0 +1,91 @@
+<a href="#" class="scroll-to-top" id="btnTop">
+  <span class="arrow">&#11181;</span>
+</a>
+
+<style>
+  .scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #007bff8f;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    text-decoration: none;
+    pointer-events: none;
+  }
+
+  .scroll-to-top:hover {
+    background-color: #007bff;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .scroll-to-top .arrow {
+    color: #fff;
+    font-size: 2.3rem;
+  }
+
+  .scroll-to-top.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+</style>
+
+<script>
+// document.addEventListener("DOMContentLoaded", function () {
+//     var botonSubir = document.getElementById("btnTop") as HTMLElement;
+
+//     if (botonSubir) {
+//         window.addEventListener("scroll", function () {
+//             var scrollPos = window.scrollY || document.documentElement.scrollTop;
+
+//             scrollPos > 500
+//                 ? botonSubir.classList.add("active")
+//                 : botonSubir.classList.remove("active");
+//         });
+
+//         botonSubir.addEventListener("click", function () {
+//             window.scrollTo({
+//                 top: 0,
+//                 behavior: "smooth",
+//             });
+//         });
+//     }
+// });
+
+document.addEventListener("DOMContentLoaded", function () {
+  var btnTop = document.getElementById("btnTop") as HTMLElement;
+  var myFooter = document.getElementById("myFooter") as HTMLElement;
+
+  if (btnTop && myFooter) {
+    window.addEventListener("scroll", function () {
+      var scrollPos = window.scrollY || document.documentElement.scrollTop;
+      var myFooterPos = myFooter.getBoundingClientRect().top;
+
+      scrollPos > 500
+        ? btnTop.classList.add("active")
+        : btnTop.classList.remove("active");
+
+      if (myFooterPos < window.innerHeight) {
+        btnTop.style.bottom = (window.innerHeight - myFooterPos + 20) + "px";
+      } else {
+        btnTop.style.bottom = "20px";
+      }
+    });
+
+    btnTop.addEventListener("click", function () {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    });
+  }
+});
+
+</script>

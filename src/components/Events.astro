@@ -1,0 +1,120 @@
+<div class="card w-[80vw] mx-auto my-10">
+    <h3 class="card-header text-center mb-4"> CE FIA II Asociación de Construcción en Seco </h3>
+    <div class="card-columns d-flex flex-column flex-md-row mb-5" id="galery">
+      <!-- script images -->
+      <script>
+        var images = ['01', '02', '03'];
+        var galery = document.getElementById('galery');
+
+        for (let image of images) {
+          galery!.innerHTML += `
+          <div class="d-flex align-items-center">
+            <a href="" data-toggle="modal" data-target="#FIA-II-${image}">
+              <img src="img-urdimbre/FIA-II/${image}.webp" alt="FIA-II-${image}" class="rounded shd-card img-thumbnail my-1 mh-400">
+            </a>
+          </div>
+          <!-- Modal -->
+          <div class="modal fade" id="FIA-II-${image}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <button type="button" class="close mr-2" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <div class="modal-dialog modal-lg modal-centered" role="document">
+              <img src="img-urdimbre/FIA-II/${image}.webp" alt="FIA-II-${image}" class="img-fluid rounded">
+            </div>
+          </div>
+          `
+        }
+      </script>
+    </div>
+
+    <!-- 2 -->
+    <h3 class="card-header text-center mb-4"> Toma cultural </h3>
+    <div class="card-columns d-flex flex-column flex-md-row mb-5" id="galery2">
+      <!-- script images -->
+      <script>
+        var images = ['04', '01', '02', '03'];
+        var galery = document.getElementById('galery2');
+
+        for (let image of images) {
+          galery!.innerHTML += `
+          <div class="d-flex justify-content-center">
+            <a href="" data-toggle="modal" data-target="#eventos${image}">
+              <img src="img-urdimbre/eventos/${image}.webp" alt="Eventos-${image}" class="rounded shd-card img-thumbnail my-1 mh-400">
+            </a>
+          </div>
+          <!-- Modal -->
+          <div class="modal fade" id="eventos${image}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <button type="button" class="close mr-2" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <div class="modal-dialog modal-lg modal-centered" role="document">
+              <img src="img-urdimbre/eventos/${image}.webp" alt="Eventos-${image}" class="img-fluid rounded">
+            </div>
+          </div>
+          `
+        }
+      </script>
+    </div>
+
+    <!-- 3 -->
+    <h3 class="card-header text-center mb-4"> Bazar Empresarial </h3>
+    <div class="card-columns d-flex flex-column flex-md-row mb-5" id="galery3">
+      <!-- script images -->
+      <script>
+        var images = ['BazarEmpresarial'];
+        var galery = document.getElementById('galery3');
+
+        for (let image of images) {
+          galery!.innerHTML += `
+          <div class="d-flex justify-content-center">
+            <a href="" data-toggle="modal" data-target="#eventos${image}">
+              <img src="img-urdimbre/eventos/${image}.webp" alt="Eventos-${image}" class="rounded shd-card img-thumbnail my-1 mh-300">
+            </a>
+          </div>
+          <!-- Modal -->
+          <div class="modal fade" id="eventos${image}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <button type="button" class="close mr-2" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <div class="modal-dialog modal-lg modal-centered" role="document">
+              <img src="img-urdimbre/eventos/${image}.webp" alt="Eventos-${image}" class="img-fluid rounded">
+            </div>
+          </div>
+          `
+        }
+      </script>
+    </div>
+
+    <!-- 4 -->
+    <h3 class="card-header text-center mb-4"> Agencia UNAL </h3>
+    <div class="card-columns d-flex flex-column flex-md-row mb-5" id="galery4">
+      <!-- script images -->
+      <script>
+        var images = ['AgenciaUNAL01', 'AgenciaUNAL02'];
+        var galery = document.getElementById('galery4');
+
+        for (let image of images) {
+          galery!.innerHTML += `
+          <div class="d-flex justify-content-center">
+            <a href="" data-toggle="modal" data-target="#eventos${image}">
+              <img src="img-urdimbre/eventos/${image}.webp" alt="Eventos-${image}" class="rounded shd-card img-thumbnail my-1 mh-400 mw-400">
+            </a>
+          </div>
+          <!-- Modal -->
+          <div class="modal fade" id="eventos${image}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <button type="button" class="close mr-2" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <div class="modal-dialog modal-lg modal-centered" role="document">
+              <img src="img-urdimbre/eventos/${image}.webp" alt="Eventos-${image}" class="img-fluid rounded">
+            </div>
+          </div>
+          `
+        }
+      </script>
+    </div>
+  </div>

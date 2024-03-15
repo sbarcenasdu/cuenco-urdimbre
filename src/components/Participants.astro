@@ -1,0 +1,97 @@
+---
+const { class: className } = Astro.props;
+import Linea from "../../public/svg/linea.astro";
+
+const participants = [
+  {
+    name: "Gloria Hoyos Bustamante",
+    rol: "Directora",
+    mail: "ghbustamante@unal.edu.co",
+    area: "Arquitectura",
+  },
+  {
+    name: "Katia Montes",
+    rol: "Coordinadora Funcional",
+    mail: "kmmonteso@unal.edu.co",
+    area: "Coordinadora",
+  },
+  {
+    name: "Kelly Hoyos",
+    rol: "Contratista",
+    mail: "kjnorenah@unal.edu.co",
+    area: "Socióloga",
+  },
+  {
+    name: "Luisa Martinez",
+    rol: "Contratista",
+    mail: "lumartinez@unal.edu.co",
+    area: "Diseñadora",
+  },
+  {
+    name: "Sebastian Bárcenas",
+    rol: "Contratista",
+    mail: "sbarcenasd@unal.edu.co",
+    area: "Desarrollador Web",
+  },
+  {
+    name: "Sofia Valencia Osorio",
+    rol: "Contratista",
+    mail: "sovalenciaos@unal.edu.co",
+    area: "Politóloga",
+  },
+];
+---
+
+<div class=`mt-20 card ${className}`>
+  <div class="mb-8s pb-1 mx-auto md:w-[768px]">
+    <h1
+      class="font-semibold section-title leading-6 text-gray-700 mb-1 text-center"
+    >
+      Participantes
+    </h1>
+    <Linea class="max-w-[22rem] mx-auto mb-4" />
+  </div>
+
+  <div class="relative shadow-md sm:rounded-lg">
+    <table
+      class="w-full text-lg md:text-xl text-left text-gray-500"
+    >
+      <thead class="text-lg md:text-xl text-gray-700 uppercase bg-gray-300">
+        <tr>
+          <th scope="col" class="px-6 py-3"> Nombre</th>
+          <th scope="col" class="px-6 py-3"> Rol</th>
+          <th scope="col" class="px-6 py-3"> Correo</th>
+          <th scope="col" class="px-6 py-3"> Área de estudio</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          participants.map((participant) => (
+            <tr class="bg-white border-b hover:bg-gray-50">
+              <th
+                scope="row"
+                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
+              >
+                {participant.name}
+              </th>
+              <td class="px-6 py-4">{participant.rol}</td>
+              <td class="px-6 py-4">{participant.mail}</td>
+              <td class="px-6 py-4">{participant.area}</td>
+            </tr>
+          ))
+        }
+        <!-- <tr class="bg-white border-b hover:bg-gray-50">
+            <th
+              scope="row"
+              class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
+            >
+              Gloria Hoyos Bustamante
+            </th>
+            <td class="px-6 py-4"> Directora</td>
+            <td class="px-6 py-4"> ghbustamante@unal.edu.co</td>
+            <td class="px-6 py-4"> Arquitectura</td>
+          </tr> -->
+      </tbody>
+    </table>
+  </div>
+</div>

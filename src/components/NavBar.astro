@@ -1,0 +1,152 @@
+---
+import Cuenco from "../../public/svg/cuenco.astro";
+import About from "../../public/svg/about.astro";
+import Stats from "../../public/svg/stats.astro";
+import Meetings from "../../public/svg/meetings.astro";
+import Participants from "../../public/svg/participants.astro";
+import Baseline from "../../public/svg/baseline.astro";
+import Contact from "../../public/svg/contact.astro";
+
+export const navItems = [
+  {
+    title: "Cuenco",
+    url: "#home",
+    label: "home",
+  },
+  {
+    title: "¿Quiénes Somos?",
+    url: "#about",
+    label: "about",
+    icon: About,
+  },
+  {
+    title: "Encuentros Intersedes",
+    url: "#meetings",
+    label: "meetings",
+    icon: Meetings,
+  },
+  {
+    title: "Estadísticas de participación",
+    url: "#stats",
+    label: "stats",
+    icon: Stats,
+  },
+  {
+    title: "Participantes",
+    url: "#participants",
+    label: "participants",
+    icon: Participants,
+  },
+  {
+    title: "Línea Base",
+    url: "#baseline",
+    label: "baseline",
+    icon: Baseline,
+  },
+  {
+    title: "Contacto",
+    url: "#contact",
+    label: "contact",
+    icon: Contact,
+  },
+];
+
+---
+
+<div
+  class="hidden md:flex md:justify-center md:w-full items-center
+    mx-auto py-5 z-10
+    sticky top-0 text-black"
+>
+  <nav
+    class="border border-white rounded-xl opacity-95
+      pl-4 flex flex-row items-center
+      bg-white
+      backdrop-blur-2xl"
+  >
+    <Cuenco class="w-[6.5rem] lg:w-24" />
+          <!-- sm:flex-col sm:py-2 sm:px-0 lg:flex-row  -->
+    {
+      navItems.map((link) => (
+        <a
+          class="pill flex items-center hover:bg-white/10 sm:text-base md:text-xs
+          transition ease-in lg:whitespace-nowrap
+          md:px-3 md:py-2 lg:px-3 xl:px-6 2xl:px-10
+          "
+          aria-label={link.label}
+          href={link.url}
+        >
+          {link.icon && <link.icon fill={"#47123a"} class="w-5 h-5 m-1" />}
+          {link.title}
+        </a>
+      ))
+    }
+  </nav>
+</div>
+
+<style>
+  nav {
+    animation: nav-shadow 1s linear both;
+    animation-timeline: scroll();
+    animation-range: 0 400px;
+  }
+  @keyframes nav-shadow {
+    to {
+      @apply shadow-xl;
+    }
+  }
+
+  .navbar-c {
+    z-index: 1000;
+    backdrop-filter: blur(1rem);
+  }
+
+  .pill {
+    text-align: center;
+    font-size: medium;
+    /* border-radius: 1rem; */
+    /* padding: 0.3rem 1rem; */
+    cursor: pointer;
+    transition:
+      background-color 0.3s ease,
+      transform 0.3s ease-in;
+    will-change: transform;
+  }
+  .pill:hover {
+    /*background-color: #9db4d7;*/
+    text-decoration: none;
+    transform: scale(1.12);
+  }
+</style>
+
+<script>
+  document.addEventListener("astro:page-load", () => {
+    const sections = document.querySelectorAll("section");
+    const navItems = document.querySelectorAll("header nav a");
+
+    const callback = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        navItems.forEach((item) => {
+          const isLinkActive =
+            item.getAttribute("aria-label") === entry.target.id;
+          item.classList.toggle("link-active", isLinkActive);
+        });
+      });
+    };
+
+    const observer = new IntersectionObserver(callback, {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.3,
+    });
+
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
+
+    // Cleanup function
+    window.addEventListener("beforeunload", () => {
+      observer.disconnect();
+    });
+  });
+</script>

@@ -1,0 +1,336 @@
+---
+import Cuenco from "../../public/svg/cuenco.astro";
+import Identificador from "../../public/svg/identificador.astro";
+import Linea from "../../public/svg/linea.astro";
+import SectionContainer from "./SectionContainer.astro";
+import About from "./About.astro";
+import Meetings from "./Meetings.astro";
+import Stats from "./Stats.astro";
+import Participants from "./Participants.astro";
+import Baseline from "./Baseline.astro";
+import Contact from "./Contact.astro";
+import Carousel from "./Carousel.astro";
+import HeroSection from "./HeroSection.astro";
+
+import Publications from "./Publications.astro";
+import Events from "./Events.astro";
+import Diffusion from "./Diffusion.astro";
+import StatsData from "./StatsData.astro";
+import Typologies from "./Typologies.astro";
+import HomeUrdimbre from "./HomeUrdimbre.astro";
+import NavBar from "./NavBar.astro";
+import ScrollToTop from "./ScrollToTop.astro";
+---
+
+<!-- <div class="bg-white rounded p-3 text-2xl fixed top-40 right-20 z-50">
+  <label for="my-background-color">Color de fondo:</label>
+  <input type="color" id="my-background-color" />
+</div> -->
+<div class="container my-5">
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs text-white" role="tablist">
+    <li role="presentation" class="active">
+      <a
+        href="#home-urdimbre"
+        aria-controls="home-urdimbre"
+        role="tab"
+        data-toggle="tab"><big>Inicio</big></a
+      >
+    </li>
+    <li role="presentation">
+      <a href="#subjects" aria-controls="subjects" role="tab" data-toggle="tab"
+        ><big>Asignaturas Interdisciplinares</big></a
+      >
+    </li>
+    <li role="presentation">
+      <a href="#cuenco" aria-controls="cuenco" role="tab" data-toggle="tab"
+        ><big>Cuenco</big></a
+      >
+    </li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane fade in active" id="home-urdimbre">
+      <HomeUrdimbre />
+    </div>
+
+    <div role="tabpanel" class="tab-pane fade" id="subjects">
+      <div>
+        <!-- Nav sub-tabs subjects-->
+        <ul class="nav nav-tabs text-white" role="tablist">
+          <li role="presentation" class="active">
+            <a
+              href="#typologies"
+              aria-controls="typologies"
+              role="tab"
+              data-toggle="tab">Tipologías</a
+            >
+          </li>
+          <li role="presentation">
+            <a
+              href="#stats-data"
+              aria-controls="stats-data"
+              role="tab"
+              data-toggle="tab">Datos Estadísticos</a
+            >
+          </li>
+          <li role="presentation">
+            <a
+              href="#diffusion"
+              aria-controls="diffusion"
+              role="tab"
+              data-toggle="tab">Difusión</a
+            >
+          </li>
+          <li role="presentation">
+            <a
+              href="#events"
+              aria-controls="events"
+              role="tab"
+              data-toggle="tab">Eventos</a
+            >
+          </li>
+          <li role="presentation">
+            <a
+              href="#publications"
+              aria-controls="publications"
+              role="tab"
+              data-toggle="tab">Publicaciones</a
+            >
+          </li>
+        </ul>
+
+        <!-- Sub-Tab panes -->
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane fade in active" id="typologies">
+            <Typologies />
+          </div>
+          <div role="tabpanel" class="tab-pane fade" id="stats-data">
+            <StatsData />
+          </div>
+          <div role="tabpanel" class="tab-pane fade" id="diffusion">
+            <Diffusion />
+          </div>
+          <div role="tabpanel" class="tab-pane fade" id="events">
+            <Events />
+          </div>
+          <div role="tabpanel" class="tab-pane fade" id="publications">
+            <Publications />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div role="tabpanel" class="tab-pane fade" id="cuenco">
+      <NavBar />
+      <section class="container mt-8">
+        <div class="bg-white">
+          <HeroSection id="home" class="rounded-xl" />
+          <About id="about" />
+        </div>
+      </section>
+      <SectionContainer id="meetings">
+        <Meetings />
+      </SectionContainer>
+      <SectionContainer id="stats">
+        <Stats class="" />
+      </SectionContainer>
+      <!-- <SectionContainer id="participants" class="overflow-x-auto"> -->
+      <section id="participants" class="container">
+        <Participants class="overflow-x-auto" />
+      </section>
+      <!-- </SectionContainer> -->
+      <div id="baseline" class="container my-10">
+        <Baseline />
+      </div>
+      <div id="contact" class="container my-10">
+        <Contact />
+      </div>
+    </div>
+  </div>
+</div>
+
+<ScrollToTop />
+
+<style is:global>
+  :root {
+  }
+
+  body {
+    flex: 1 0 auto;
+    /* color-scheme: light dark; */
+    /* background-color: #666666;
+    background-color: #b3288f;
+    background-color: #25b998;
+    background-color: #2b72b8;
+    background-color: #3c499e;
+    background: rgb(60, 73, 158);
+    background: linear-gradient(
+      90deg,
+      rgba(60, 73, 158, 1) 0%,
+      rgba(60, 73, 158, 1) 35%,
+      rgba(43, 114, 184, 1) 100%
+    );
+
+    background: rgb(60, 73, 158);
+    background: linear-gradient(
+      90deg,
+      rgba(60, 73, 158, 1) 0%,
+      rgba(43, 114, 184, 1) 35%,
+      rgba(37, 185, 152, 1) 100%
+    );
+    background: radial-gradient(
+      circle,
+      rgba(179, 40, 143, 0.3) 0%,
+      rgba(43, 114, 184, 0.5) 100%
+    );
+    background: radial-gradient(
+      circle,
+      rgba(179, 40, 143, 0.3) 0%,
+      rgba(60, 73, 158, 0.6) 100%
+      );
+      background: radial-gradient(
+        circle,
+        rgba(37, 185, 152, 0.3) 0%,
+        rgba(60, 73, 158, 0.8) 100%
+        );
+      */
+    /* background: radial-gradient(
+        circle,
+        rgba(37, 185, 152, 0.5) 0%,
+        rgba(43, 114, 184, 0.6) 100%
+        ); */
+    /* background-color: #211f23; */
+    /* background-color: #00235c; */
+    background-color: #344b6f;
+    /* background: rgb(200,200,200);
+    background: radial-gradient(circle, rgba(200,200,200,1) 0%, rgb(59, 59, 59) 70%); */
+  }
+
+  .card-container {
+    width: 50%;
+    height: 40%;
+    border: 2px solid #fafafa10;
+    border-radius: 1rem;
+  }
+
+  .glass-efect {
+    background-color: #fafafa10;
+    backdrop-filter: blur(4px);
+  }
+
+  .card {
+    border-radius: 0.5rem;
+    padding: 2rem;
+    border: 2px solid #fafafa10;
+    background-color: rgba(255, 255, 255, 0.9);
+    /* box-shadow: 0 0 1rem 0 rgba(255, 255, 255, 0.2); */
+    box-shadow: 0 0 1rem 0 rgba(31, 38, 135, 0.4);
+    backdrop-filter: blur(5px);
+  }
+
+  .shd-card {
+    transition: box-shadow 0.3s ease;
+  }
+
+  .shd-card:hover {
+    box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.4);
+    /* cursor: pointer; */
+  }
+
+  .title-bg {
+    background-color: white;
+    /* border-radius: 0.5rem; */
+  }
+  .line-title {
+    margin-bottom: -100px;
+  }
+
+  .section-title {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+
+  @media only screen and (max-width: 576px) {
+    .section-title {
+      font-size: 2.8rem;
+    }
+  }
+
+  @media only screen and (min-width: 577px) and (max-width: 768px) {
+    .section-title {
+      font-size: 3rem;
+    }
+  }
+
+  @media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .section-title {
+      font-size: 3.4rem;
+    }
+  }
+
+  @media only screen and (min-width: 1025px) and (max-width: 1280px) {
+    .section-title {
+      font-size: 3.75rem;
+    }
+  }
+</style>
+
+<script>
+  var backgroundColorInput = document.getElementById(
+    "my-background-color"
+  ) as HTMLInputElement | null;
+
+  if (backgroundColorInput) {
+    backgroundColorInput.addEventListener("input", function () {
+      var selectedColor = backgroundColorInput!.value;
+      document.body.style.backgroundColor = selectedColor;
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const tabs = Array.from(
+      document.querySelectorAll(".nav-tabs a")
+    ) as HTMLAnchorElement[];
+
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", function (event: MouseEvent) {
+        const tabId = this.getAttribute("href");
+        if (tabId) {
+          handleTabClick.call(this, event, tabId);
+        }
+      });
+    });
+
+    function handleTabClick(
+      this: HTMLAnchorElement,
+      event: MouseEvent,
+      tabId: string
+    ): void {
+      event.preventDefault();
+
+      switch (tabId) {
+        case "#home-urdimbre":
+        case "#subjects":
+          applyBackground("#344b6f");
+          break;
+        case "#cuenco":
+          applyRadialBackground();
+          break;
+        default:
+          applyBackground("#344b6f");
+          break;
+      }
+    }
+
+    function applyBackground(color: string): void {
+      document.body.style.background = color;
+    }
+
+    function applyRadialBackground(): void {
+      document.body.style.background = "rgb(200,200,200)";
+      document.body.style.background +=" radial-gradient(circle, rgba(200,200,200,1) 0%, rgb(59, 59, 59) 70%)";
+    }
+  });
+</script>

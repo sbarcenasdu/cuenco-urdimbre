@@ -22,11 +22,7 @@ import NavBar from "./NavBar.astro";
 import ScrollToTop from "./ScrollToTop.astro";
 ---
 
-<!-- <div class="bg-white rounded p-3 text-2xl fixed top-40 right-20 z-50">
-  <label for="my-background-color">Color de fondo:</label>
-  <input type="color" id="my-background-color" />
-</div> -->
-<div class="container my-5">
+<div class="my-4">
   <!-- Nav tabs -->
   <ul class="nav nav-tabs text-white" role="tablist">
     <li role="presentation" class="active">
@@ -124,9 +120,10 @@ import ScrollToTop from "./ScrollToTop.astro";
 
     <div role="tabpanel" class="tab-pane fade" id="cuenco">
       <NavBar />
-      <section class="container mt-8">
-        <div class="bg-white">
-          <HeroSection id="home" class="rounded-xl" />
+      <section class=" mt-6">
+        <!-- style="background-image:url('img-encuentros/background-cuenco.webp')" -->
+        <div class="bg-whiteSSS" >
+          <HeroSection id="home" />
           <About id="about" />
         </div>
       </section>
@@ -137,16 +134,17 @@ import ScrollToTop from "./ScrollToTop.astro";
         <Stats class="" />
       </SectionContainer>
       <!-- <SectionContainer id="participants" class="overflow-x-auto"> -->
-      <section id="participants" class="container">
-        <Participants class="overflow-x-auto" />
+      <section id="participants" class=" mt-14 min-h-[80vh] max-h-[900px] flex items-center " style="background-color:var(--cuenco-magenta)">
+        <Participants class=" w-full overflow-x-auto" />
       </section>
       <!-- </SectionContainer> -->
-      <div id="baseline" class="container my-10">
+      <div id="baseline" class=" my-10">
         <Baseline />
       </div>
-      <div id="contact" class="container my-10">
+      <div id="contact" class=" my-10">
         <Contact />
       </div>
+      <Identificador class="h-60 mx-auto -my-20" />
     </div>
   </div>
 </div>
@@ -158,54 +156,16 @@ import ScrollToTop from "./ScrollToTop.astro";
   }
 
   body {
-    flex: 1 0 auto;
-    /* color-scheme: light dark; */
-    /* background-color: #666666;
+    /* flex: 1 0 auto; */
+    /* color-scheme: light dark;
+    background-color: #666666;
     background-color: #b3288f;
     background-color: #25b998;
     background-color: #2b72b8;
     background-color: #3c499e;
-    background: rgb(60, 73, 158);
-    background: linear-gradient(
-      90deg,
-      rgba(60, 73, 158, 1) 0%,
-      rgba(60, 73, 158, 1) 35%,
-      rgba(43, 114, 184, 1) 100%
-    );
-
-    background: rgb(60, 73, 158);
-    background: linear-gradient(
-      90deg,
-      rgba(60, 73, 158, 1) 0%,
-      rgba(43, 114, 184, 1) 35%,
-      rgba(37, 185, 152, 1) 100%
-    );
-    background: radial-gradient(
-      circle,
-      rgba(179, 40, 143, 0.3) 0%,
-      rgba(43, 114, 184, 0.5) 100%
-    );
-    background: radial-gradient(
-      circle,
-      rgba(179, 40, 143, 0.3) 0%,
-      rgba(60, 73, 158, 0.6) 100%
-      );
-      background: radial-gradient(
-        circle,
-        rgba(37, 185, 152, 0.3) 0%,
-        rgba(60, 73, 158, 0.8) 100%
-        );
-      */
-    /* background: radial-gradient(
-        circle,
-        rgba(37, 185, 152, 0.5) 0%,
-        rgba(43, 114, 184, 0.6) 100%
-        ); */
-    /* background-color: #211f23; */
-    /* background-color: #00235c; */
-    background-color: #344b6f;
-    /* background: rgb(200,200,200);
+    background: rgb(200,200,200);
     background: radial-gradient(circle, rgba(200,200,200,1) 0%, rgb(59, 59, 59) 70%); */
+    background-image: url("img-urdimbre/background-urdimbre.webp");
   }
 
   .card-container {
@@ -278,17 +238,6 @@ import ScrollToTop from "./ScrollToTop.astro";
 </style>
 
 <script>
-  var backgroundColorInput = document.getElementById(
-    "my-background-color"
-  ) as HTMLInputElement | null;
-
-  if (backgroundColorInput) {
-    backgroundColorInput.addEventListener("input", function () {
-      var selectedColor = backgroundColorInput!.value;
-      document.body.style.backgroundColor = selectedColor;
-    });
-  }
-
   document.addEventListener("DOMContentLoaded", function () {
     const tabs = Array.from(
       document.querySelectorAll(".nav-tabs a")
@@ -312,14 +261,21 @@ import ScrollToTop from "./ScrollToTop.astro";
 
       switch (tabId) {
         case "#home-urdimbre":
+          document.body.style.backgroundImage =
+            'url("img-urdimbre/background-urdimbre.webp")';
+          break;
         case "#subjects":
-          applyBackground("#344b6f");
+          document.body.style.backgroundImage =
+            'url("img-urdimbre/background-subjects.webp")';
           break;
         case "#cuenco":
-          applyRadialBackground();
+          document.body.style.backgroundImage ='url("img-encuentros/background-cuenco.webp")';
+          document.body.style.backgroundRepeat = 'no-repeat';
+          // document.body.style.background = "#fff"
           break;
         default:
-          applyBackground("#344b6f");
+          document.body.style.backgroundImage =
+            'url("img-urdimbre/background-urdimbre.webp")';
           break;
       }
     }
@@ -330,7 +286,8 @@ import ScrollToTop from "./ScrollToTop.astro";
 
     function applyRadialBackground(): void {
       document.body.style.background = "rgb(200,200,200)";
-      document.body.style.background +=" radial-gradient(circle, rgba(200,200,200,1) 0%, rgb(59, 59, 59) 70%)";
+      document.body.style.background +=
+        " radial-gradient(circle, rgba(200,200,200,1) 0%, rgb(59, 59, 59) 70%)";
     }
   });
 </script>

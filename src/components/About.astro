@@ -4,13 +4,13 @@ import Identificador from "../../public/svg/identificador.astro";
 const {id, class:className} = Astro.props;
 ---
 
-<div id={id} class=`flex flex-col items-center ${className}`>
-  <div>
-    <h1 class="section-title font-bold text-gray-700 mt-10 md:mt-16 mb-1">¿Quiénes somos?</h1>
+<div id={id} class=`flex flex-col items-center  mt-10 md:mt-16 ${className}`>
+  <div class="title-bg p-3">
+    <h1 class="section-title font-bold mb-1">¿Quiénes somos?</h1>
     <Linea/>
   </div>
-  <div class="grid grid-cols-3 gap-4 py-10 m-3">
-    <p class="text-3xl col-span-2 flex items-center p-3 text-justify">
+  <div class="grid grid-cols-3 gap-4 py-10 m-3 bg-slate-950s">
+    <p class="text-white text-3xl col-span-2 flex items-center p-3 text-justify">
       El Instituto Nacional es una entidad pionera comprometida con la
       representación de las diversas culturas colombianas. Nos destacamos como un
       espacio colaborativo, inter y transdisciplinario, consolidándonos como un

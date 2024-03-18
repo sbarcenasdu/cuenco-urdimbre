@@ -130,21 +130,22 @@ import ScrollToTop from "./ScrollToTop.astro";
       <SectionContainer id="meetings">
         <Meetings />
       </SectionContainer>
-      <SectionContainer id="stats">
-        <Stats class="" />
+      <SectionContainer id="stats" class=" bg-slate-700">
+        <Stats class="w-[70vw]" />
       </SectionContainer>
       <!-- <SectionContainer id="participants" class="overflow-x-auto"> -->
-      <section id="participants" class=" mt-14 min-h-[80vh] max-h-[900px] flex items-center " style="background-color:var(--cuenco-magenta)">
+      <section id="participants" class=" my-20 min-h-[80vh] max-h-[900px] flex items-center " style="background-color:var(--cuenco-magenta)">
         <Participants class=" w-full overflow-x-auto" />
       </section>
       <!-- </SectionContainer> -->
-      <div id="baseline" class=" my-10">
+      <div id="baseline" class="my-10">
         <Baseline />
       </div>
-      <div id="contact" class=" my-10">
+      <div id="contact" class="min-h-[60vh] my-10">
         <Contact />
       </div>
-      <Identificador class="h-60 mx-auto -my-20" />
+      <Linea class="w-full" />
+      <Identificador class="h-60 mx-auto -mb-20 -mt-10" />
     </div>
   </div>
 </div>

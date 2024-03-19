@@ -50,23 +50,21 @@ export const navItems = [
     icon: Contact,
   },
 ];
-
 ---
-<!-- class="hidden md:flex md:justify-center md:w-full items-center -->
 
+<!-- class="hidden md:flex md:justify-center md:w-full items-center -->
 <div
-  class="hidden md:flex justify-center items-center
+  class="hidden md:flex items-center
     mx-auto pb-5 z-10
     sticky top-0 text-black"
 >
   <nav
-    class="border border-white rounded-xlSSS opacity-95SSS
-      flex flex-row items-center
-      bg-whiteSSS bg-slate-50 w-full
+    class="bg-opacity-30sss
+      flex flex-row items-center w-full justify-around
       backdrop-blur-2xl"
-  >
+      style="background-color:rgb(230, 230, 230)"  >
     <Cuenco class="w-[6.5rem] lg:w-24" />
-          <!-- sm:flex-col sm:py-2 sm:px-0 lg:flex-row  -->
+    <!-- sm:flex-col sm:py-2 sm:px-0 lg:flex-row  -->
     {
       navItems.map((link) => (
         <a
@@ -78,13 +76,13 @@ export const navItems = [
           aria-label={link.label}
           href={link.url}
         >
-          {link.icon && <link.icon fill={"#47123a"} class="w-5 h-5 m-1" />}
           {link.title}
         </a>
       ))
     }
   </nav>
 </div>
+<!-- {link.icon && <link.icon fill={"#47123a"} class="w-5 h-5 m-1" />} -->
 
 <style>
   nav {

@@ -4,21 +4,18 @@ import Identificador from "../../public/svg/identificador.astro";
 const {id, class:className} = Astro.props;
 ---
 
-<div id={id} class=`flex flex-col items-center  mt-10 md:mt-16 ${className}`>
-  <div class="title-bg p-3">
+<div id={id} class=`flex flex-col items-center mt-5 md:mt-16 bg-gray-100 py-4 ${className}`>
+  <div class="title-bgSSS p-3">
     <h1 class="section-title font-bold mb-1">¿Quiénes somos?</h1>
     <Linea/>
   </div>
-  <div class="grid grid-cols-3 gap-4 py-10 m-3 bg-slate-950s">
-    <p class="text-white text-3xl col-span-2 flex items-center p-3 text-justify">
-      El Instituto Nacional es una entidad pionera comprometida con la
-      representación de las diversas culturas colombianas. Nos destacamos como un
-      espacio colaborativo, inter y transdisciplinario, consolidándonos como un
-      instituto nacional integral. Nuestro equipo de profesores lidera en
-      investigación e innovación, contribuyendo al liderazgo académico nacional y
-      global en el marco del Plan de Gestión y Desarrollo 2024.
+  <div class="grid grid-cols-5 gap-2 my-5 mx-32">
+    <p class="text-3xl text-justify col-span-3 2xl:pl-20">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque consequatur, porro illum numquam consequuntur corporis temporibus minus deleniti. Ratione, fugit est. Ex repellat illo corporis ducimus deserunt autem molestias blanditiis.
+      Tempore tempora dolor sit consequuntur! Neque beatae aliquam enim amet in laudantium inventore quis, ducimus veritatis vitae culpa corrupti quod! Iure recusandae eveniet maxime reiciendis molestias, sit quas nam quidem.
+      Nam, id dolores assumenda quibusdam nisi sapiente laudantium, distinctio atque esse obcaecati aspernatur, error quam dolorum quae quaerat accusamus cum? Nisi at eum cumque ab laudantium id doloremque voluptate. Illum?
     </p>
-    <Identificador/>
+    <Identificador class="max-h-56 mx-auto col-span-2"/>
   </div>
 </div>
 

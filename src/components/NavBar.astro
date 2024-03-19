@@ -61,14 +61,15 @@ export const navItems = [
   <nav
     class="flex flex-row items-center w-full justify-around backdrop-blur-2xl"
       style="background-color:rgb(230, 230, 230)"  >
-    <Cuenco class="w-[6.5rem] lg:w-24" />
+    <Cuenco style="height: 55px;" />
+    <!-- <Cuenco class=" w-[6.5rem] lg:w-24" /> -->
     <!-- sm:flex-col sm:py-2 sm:px-0 lg:flex-row  -->
     {
       navItems.map((link) => (
         <a
           class="pill flex items-center hover:bg-white/10 sm:text-base md:text-xs
           transition ease-in lg:whitespace-nowrap
-          md:px-3 md:py-2s lg:px-3 xl:px-6 2xl:px-10
+          md:px-3 md:py-2 lg:px-3 xl:px-6 2xl:px-10
           sm:flex-col sm:py-2 sm:px-0 lg:flex-row 
           "
           aria-label={link.label}

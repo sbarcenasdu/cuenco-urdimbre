@@ -146,7 +146,6 @@ export const navItems = [
   window.addEventListener('scroll', () => {
     const navbar = document.getElementById('my-navbar');
     const headerHeight = document.querySelector('header')!.offsetHeight + 60;
-    console.log(headerHeight);
 
     if (window.scrollY >= headerHeight) {
       navbar?.classList.add('navbar-fixed-top');

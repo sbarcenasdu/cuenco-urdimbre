@@ -46,15 +46,15 @@ import ScrollToTop from "./ScrollToTop.astro";
   </ul>
 
   <!-- Tab panes -->
-  <div class="tab-content" >
+  <div class="tab-content">
     <div role="tabpanel" class="tab-pane fade in active" id="home-urdimbre">
       <HomeUrdimbre />
       <div class="w-full bg-zinc-100 -mb-4">
         <img
-            class="max-h-36 py-4 object-cover mx-auto overflow-hidden"
-            src="img-urdimbre/logo-urdimbre.webp"
-            alt="logo"
-          />
+          class="max-h-36 py-4 object-cover mx-auto overflow-hidden"
+          src="img-urdimbre/logo-urdimbre.webp"
+          alt="logo"
+        />
       </div>
     </div>
 
@@ -125,25 +125,32 @@ import ScrollToTop from "./ScrollToTop.astro";
       </div>
       <div class="w-full bg-zinc-100 -mb-4">
         <img
-            class="max-h-36 py-4 object-cover  mx-auto overflow-hidden"
-            src="img-urdimbre/logo-urdimbre.webp"
-            alt="logo"
-          />
+          class="max-h-36 py-4 object-cover mx-auto overflow-hidden"
+          src="img-urdimbre/logo-urdimbre.webp"
+          alt="logo"
+        />
       </div>
     </div>
 
     <div role="tabpanel" class="tab-pane fade" id="cuenco">
       <NavBar />
       <section class="mt-6">
-        <!-- style="background-image:url('img-encuentros/background-cuenco.webp')" -->
         <div class="bg-whiteSSS">
           <HeroSection id="home" />
           <About id="about" />
         </div>
       </section>
-      <SectionContainer id="meetings">
-        <Meetings />
-      </SectionContainer>
+
+      <div id="meetings" class=" mt-20">
+        <div class="mb-5 pb-2 mx-auto title-bg">
+          <h1 class="section-title font-bold text-gray-700 text-center">
+            Encuentros Intersedes
+          </h1>
+          <Linea class="lg:w-[36rem] mx-auto" />
+        </div>
+        <div class="bg-blue-300 pt-6 pb-16"><Meetings /></div>
+      </div>
+
       <SectionContainer id="stats" class="bg-gray-200">
         <Stats class="" />
       </SectionContainer>
@@ -152,15 +159,22 @@ import ScrollToTop from "./ScrollToTop.astro";
         id="participants"
         class="my-20 h-[500px] bg-opacity-30 flex flex-col items-center justify-center"
         style="background-color:var(--cuenco-accent)"
-        >
+      >
         <div class="title-bg w-full -mt-[50px] mb-10">
-          <h1 class="font-semibold section-title leading-6 text-gray-700 mb-1 text-center">Participantes</h1>
+          <h1
+            class="font-semibold section-title leading-6 text-gray-700 mb-1 text-center"
+          >
+            Participantes
+          </h1>
           <Linea class="max-w-[22rem] mx-auto mb-4" />
         </div>
         <Participants class="w-10/12 overflow-x-auto mx-auto" />
       </section>
 
-      <div id="baseline" class="min-h-[610px] mt-32 bg-[var(--cuenco-secondary)]">
+      <div
+        id="baseline"
+        class="min-h-[610px] mt-32 bg-[var(--cuenco-secondary)]"
+      >
         <Baseline />
       </div>
 
@@ -288,13 +302,16 @@ import ScrollToTop from "./ScrollToTop.astro";
       event.preventDefault();
       switch (tabId) {
         case "#home-urdimbre":
-          document.body.style.backgroundImage = 'url("/img-urdimbre/background-urdimbre.webp")';
+          document.body.style.backgroundImage =
+            'url("/img-urdimbre/background-urdimbre.webp")';
           document.body.style.backgroundSize = "cover";
           document.body.style.backgroundRepeat = "no-repeat";
           document.body.style.backgroundPosition = "80% 100%";
-          var navTabs = document.querySelectorAll('.nav-tabs a') as NodeListOf<HTMLAnchorElement>;
-          navTabs.forEach(function(tab) {
-            tab.style.color = ''; 
+          var navTabs = document.querySelectorAll(
+            ".nav-tabs a"
+          ) as NodeListOf<HTMLAnchorElement>;
+          navTabs.forEach(function (tab) {
+            tab.style.color = "";
           });
           break;
         case "#subjects":
@@ -303,25 +320,31 @@ import ScrollToTop from "./ScrollToTop.astro";
         case "#diffusion":
         case "#publications":
         case "#events":
-          document.body.style.backgroundImage = 'url("/img-urdimbre/background-subjects.webp")';
+          document.body.style.backgroundImage =
+            'url("/img-urdimbre/background-subjects.webp")';
           document.body.style.backgroundSize = "100% auto";
           document.body.style.backgroundRepeat = "repeat-y";
           document.body.style.backgroundPosition = "top left";
-          var navTabs = document.querySelectorAll('.nav-tabs a') as NodeListOf<HTMLAnchorElement>;
-          navTabs.forEach(function(tab) {
-            tab.style.color = '';
+          var navTabs = document.querySelectorAll(
+            ".nav-tabs a"
+          ) as NodeListOf<HTMLAnchorElement>;
+          navTabs.forEach(function (tab) {
+            tab.style.color = "";
           });
           break;
         case "#cuenco":
           document.body.style.backgroundImage = "none";
           document.body.style.backgroundColor = "rgb(255,255,255)";
-          var navTabs = document.querySelectorAll('.nav-tabs a') as NodeListOf<HTMLAnchorElement>;
-          navTabs.forEach(function(tab) {
-            tab.style.color = 'black'; 
+          var navTabs = document.querySelectorAll(
+            ".nav-tabs a"
+          ) as NodeListOf<HTMLAnchorElement>;
+          navTabs.forEach(function (tab) {
+            tab.style.color = "black";
           });
           break;
         default:
-          document.body.style.backgroundImage = 'url("/img-urdimbre/background-urdimbre.webp")';
+          document.body.style.backgroundImage =
+            'url("/img-urdimbre/background-urdimbre.webp")';
           document.body.style.backgroundSize = "cover";
           document.body.style.backgroundRepeat = "no-repeat";
           document.body.style.backgroundPosition = "80% 100%";

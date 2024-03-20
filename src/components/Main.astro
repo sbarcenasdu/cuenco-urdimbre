@@ -189,11 +189,10 @@ import ScrollToTop from "./ScrollToTop.astro";
     background-color: #2b72b8;
     background-color: #3c499e;
     background: radial-gradient(circle, rgba(200,200,200,1) 0%, rgb(59, 59, 59) 70%); */
-    background-image: url("img-urdimbre/background-urdimbre.webp");
+    background-image: url("/img-urdimbre/background-urdimbre.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 80% 100%;
-    background-position: 
   }
 
   .card-container {
@@ -288,7 +287,7 @@ import ScrollToTop from "./ScrollToTop.astro";
       event.preventDefault();
       switch (tabId) {
         case "#home-urdimbre":
-          document.body.style.backgroundImage = 'url("img-urdimbre/background-urdimbre.webp")';
+          document.body.style.backgroundImage = 'url("/img-urdimbre/background-urdimbre.webp")';
           document.body.style.backgroundSize = "cover";
           document.body.style.backgroundRepeat = "no-repeat";
           document.body.style.backgroundPosition = "80% 100%";
@@ -303,7 +302,7 @@ import ScrollToTop from "./ScrollToTop.astro";
         case "#diffusion":
         case "#publications":
         case "#events":
-          document.body.style.backgroundImage = 'url("img-urdimbre/background-subjects.webp")';
+          document.body.style.backgroundImage = 'url("/img-urdimbre/background-subjects.webp")';
           document.body.style.backgroundSize = "100% auto";
           document.body.style.backgroundRepeat = "repeat-y";
           document.body.style.backgroundPosition = "top left";
@@ -321,7 +320,7 @@ import ScrollToTop from "./ScrollToTop.astro";
           });
           break;
         default:
-          document.body.style.backgroundImage = 'url("img-urdimbre/background-urdimbre.webp")';
+          document.body.style.backgroundImage = 'url("/img-urdimbre/background-urdimbre.webp")';
           document.body.style.backgroundSize = "cover";
           document.body.style.backgroundRepeat = "no-repeat";
           document.body.style.backgroundPosition = "80% 100%";

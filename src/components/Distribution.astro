@@ -3,7 +3,7 @@ const { class: className } = Astro.props;
 import Linea from "../../public/svg/linea.astro";
 ---
 
-<div class=`${className} mx-32`>
+<div class={`${className} mx-32`}>
   <!-- <div class="pb-1 title-bg mb-5">
     <h1 class="section-title text-center font-bold text-gray-700 mb-1">
       Estadísticas de participación
@@ -11,27 +11,27 @@ import Linea from "../../public/svg/linea.astro";
     <Linea class="lg:w-[48rem] mx-auto" />
   </div> -->
 
-  <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-    <div class="col-span-2">
+  <div class="row">
+    <div class="col-xs-12 col-md-8">
       <img
-        class="h-auto max-w-full rounded-lg"
-        src="img-encuentros/mapas/map-00.webp"
+        class="img-responsive rounded-lg"
+        src="img-encuentros/mapas/map-00.png"
         alt=""
         loading="lazy"
       />
     </div>
-    <div class="grid gap-4">
-      <div>
+    <div class="col-xs-12 col-md-4">
+      <div class="col-12">
         <img
-          class="h-auto max-w-full rounded-lg"
+          class="img-responsive rounded-lg"
           src="img-encuentros/mapas/map-01.webp"
           alt=""
           loading="lazy"
         />
       </div>
-      <div>
+      <div class="col-12 mt-8">
         <img
-          class="h-auto max-w-full rounded-lg"
+          class="img-responsive rounded-lg"
           src="img-encuentros/mapas/map-02.webp"
           alt=""
           loading="lazy"
@@ -40,26 +40,26 @@ import Linea from "../../public/svg/linea.astro";
     </div>
   </div>
 
-  <div class="grid grid-cols-3 gap-4 mt-4">
-    <div>
+  <div class="row mt-8">
+    <div class="">
       <img
-        class="h-auto max-w-full rounded-lg"
+        class="img-responsive rounded-lg"
         src="img-encuentros/mapas/map-03.webp"
         alt=""
         loading="lazy"
       />
     </div>
-    <div>
+    <div class="">
       <img
-        class="h-auto max-w-full rounded-lg"
+        class="img-responsive rounded-lg"
         src="img-encuentros/mapas/map-04.webp"
         alt=""
         loading="lazy"
       />
     </div>
-    <div>
+    <div class="">
       <img
-        class="h-auto max-w-full rounded-lg"
+        class="img-responsive rounded-lg"
         src="img-encuentros/mapas/map-05.webp"
         alt=""
         loading="lazy"

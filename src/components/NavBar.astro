@@ -17,51 +17,50 @@ export const navItems = [
     title: "¿Quiénes Somos?",
     url: "#about",
     label: "about",
-    icon: About,
+    icon: "/svg/about.png",
   },
   {
     title: "Encuentros Intersedes",
     url: "#meetings",
     label: "meetings",
-    icon: Meetings,
+    icon: "/svg/meetings.png",
   },
   {
     title: "Estadísticas de participación",
     url: "#stats",
     label: "stats",
-    icon: Stats,
+    icon: "/svg/stats.png",
   },
   {
     title: "Participantes",
     url: "#participants",
     label: "participants",
-    icon: Participants,
+    icon: "/svg/participants.png",
   },
   {
     title: "Línea Base",
     url: "#baseline",
     label: "baseline",
-    icon: Baseline,
+    icon: "/svg/baseline.png",
   },
   {
     title: "Contacto",
     url: "#contact",
     label: "contact",
-    icon: Contact,
+    icon: "/svg/contact.png",
   },
 ];
 ---
 
-<!-- class="hidden md:flex md:justify-center md:w-full items-center -->
 <div
   class="hidden md:flex items-center mx-auto pb-5 z-10 text-black"
   id="my-navbar"
 >
   <nav
     class="flex flex-row items-center w-full justify-around backdrop-blur-2xl"
-      style="background-color:rgb(230, 230, 230)"  >
+    style="background-color:rgb(230, 230, 230)"
+  >
     <Cuenco style="height: 55px;" />
-    <!-- <Cuenco class=" w-[6.5rem] lg:w-24" /> -->
     <!-- sm:flex-col sm:py-2 sm:px-0 lg:flex-row  -->
     {
       navItems.map((link) => (
@@ -74,17 +73,21 @@ export const navItems = [
           aria-label={link.label}
           href={link.url}
         >
+          {link.icon && <img src={link.icon} class="icon-navbar" />}
           {link.title}
         </a>
       ))
     }
   </nav>
 </div>
-<!-- {link.icon && <link.icon fill={"#47123a"} class="w-5 h-5 m-1" />} -->
-
-
 
 <style>
+  .icon-navbar {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+  }
+  
   nav {
     animation: nav-shadow 1s linear both;
     animation-timeline: scroll();
@@ -142,15 +145,14 @@ export const navItems = [
     });
   });
 
-
-  window.addEventListener('scroll', () => {
-    const navbar = document.getElementById('my-navbar');
-    const headerHeight = document.querySelector('header')!.offsetHeight + 60;
+  window.addEventListener("scroll", () => {
+    const navbar = document.getElementById("my-navbar");
+    const headerHeight = document.querySelector("header")!.offsetHeight + 60;
 
     if (window.scrollY >= headerHeight) {
-      navbar?.classList.add('navbar-fixed-top');
+      navbar?.classList.add("navbar-fixed-top");
     } else {
-      navbar?.classList.remove('navbar-fixed-top');
+      navbar?.classList.remove("navbar-fixed-top");
     }
   });
 </script>

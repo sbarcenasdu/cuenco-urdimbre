@@ -54,8 +54,8 @@ export const navItems = [
 
 <!-- class="hidden md:flex md:justify-center md:w-full items-center -->
 <div
-  class="hidden md:flex items-center
-    mx-auto pb-5 z-10 navbar-fixed-top text-black"
+  class="hidden md:flex items-center mx-auto pb-5 z-10  text-black"
+  id="my-navbar"
 >
   <nav
     class="flex flex-row items-center w-full justify-around backdrop-blur-2xl"
@@ -99,8 +99,6 @@ export const navItems = [
   .pill {
     text-align: center;
     font-size: medium;
-    /* border-radius: 1rem; */
-    /* padding: 0.3rem 1rem; */
     cursor: pointer;
     transition:
       background-color 0.3s ease,
@@ -108,7 +106,7 @@ export const navItems = [
     will-change: transform;
   }
   .pill:hover {
-    /*background-color: #9db4d7;*/
+    /* background-color: #9db4d7; */
     text-decoration: none;
     transform: scale(1.12);
   }
@@ -139,9 +137,21 @@ export const navItems = [
       observer.observe(section);
     });
 
-    // Cleanup function
     window.addEventListener("beforeunload", () => {
       observer.disconnect();
     });
+  });
+
+
+  window.addEventListener('scroll', () => {
+    const navbar = document.getElementById('my-navbar');
+    const headerHeight = document.querySelector('header')!.offsetHeight + 60;
+    console.log(headerHeight);
+
+    if (window.scrollY >= headerHeight) {
+      navbar?.classList.add('navbar-fixed-top');
+    } else {
+      navbar?.classList.remove('navbar-fixed-top');
+    }
   });
 </script>

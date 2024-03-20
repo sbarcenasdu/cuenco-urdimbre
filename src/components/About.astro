@@ -4,18 +4,23 @@ import Identificador from "../../public/svg/identificador.astro";
 const {id, class:className} = Astro.props;
 ---
 
-<div id={id} class=`flex flex-col items-center mt-5 md:mt-16 bg-gray-100 py-4 ${className}`>
-  <div class="title-bgSSS p-3">
-    <h1 class="section-title font-bold mb-1">¿Quiénes somos?</h1>
-    <Linea/>
+<div id={id} class=`flex flex-col md:flex-row items-center mt-5 md:mt-16 bg-gray-100 py-10 ${className}` >
+  <div class="col-md-8 pl-24">
+    <div class="pb-10">
+      <h1 class="section-title font-bold mb-1">¿Quiénes somos?</h1>
+      <Linea class="max-w-[28rem]"/>
+    </div>
+    <div>
+      <p class="text-3xl text-justify">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque consequatur, porro illum numquam consequuntur corporis temporibus minus deleniti. Ratione, fugit est. Ex repellat illo corporis ducimus deserunt autem molestias blanditiis.
+        Tempore tempora dolor sit consequuntur! Neque beatae aliquam enim amet in laudantium inventore quis, ducimus veritatis vitae culpa corrupti quod! Iure recusandae eveniet maxime reiciendis molestias, sit quas nam quidem.
+        Nam, id dolores assumenda quibusdam nisi sapiente laudantium, distinctio atque esse obcaecati aspernatur
+      </p>
+    </div>
   </div>
-  <div class="grid grid-cols-5 gap-2 my-5 mx-32">
-    <p class="text-3xl text-justify col-span-3 2xl:pl-20">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque consequatur, porro illum numquam consequuntur corporis temporibus minus deleniti. Ratione, fugit est. Ex repellat illo corporis ducimus deserunt autem molestias blanditiis.
-      Tempore tempora dolor sit consequuntur! Neque beatae aliquam enim amet in laudantium inventore quis, ducimus veritatis vitae culpa corrupti quod! Iure recusandae eveniet maxime reiciendis molestias, sit quas nam quidem.
-      Nam, id dolores assumenda quibusdam nisi sapiente laudantium, distinctio atque esse obcaecati aspernatur, error quam dolorum quae quaerat accusamus cum? Nisi at eum cumque ab laudantium id doloremque voluptate. Illum?
-    </p>
-    <Identificador class="max-h-56 mx-auto col-span-2"/>
+
+  <div class="my-5s col-md-4">
+    <Identificador class="min-h-40 max-h-72 mx-auto"/>
   </div>
 </div>
 

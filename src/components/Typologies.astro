@@ -1,5 +1,16 @@
-<div class="min-h-[60vh]">
-  <div class="contenedor-menu bg-white rounded ">
+<div class="flex flex-col items-center justify-center w-10/12 mx-auto rounded-xl my-5 text-white
+  bg-[#c2c2c2] bg-opacity-50sss"
+>
+  <div class="w-full flex flex-row items-center justify-between bg-zinc-100 p-2 rounded-t-xl px-32">
+    <h1 class="text-4xl text-black">Tipologías</h1>
+    <img
+      class="max-h-24 object-cover overflow-hidden"
+      src="img-urdimbre/logo-urdimbre.webp"
+      alt="logo"
+    />
+  </div>
+  
+  <div class="contenedor-menu bg-white w-10/12">
     <a href="#" class="btn-menu">Menu<i class="icono fa fa-bars"></i></a>
   
     <ul class="menu">
@@ -10,7 +21,7 @@
           <i class="icono derecha fa fa-chevron-down"></i></a>
         <ul>
           <div class="bg-white mx-auto my-8 p-4 rounded carousel-item">
-            <div class="bg-gray-300 w-full text-center text-xl rounded">
+            <div class="bg-gray-400 w-full text-center text-xl rounded">
               <p>Libre elección - Cod: 4200742 - 4 Créditos</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mt-8">
@@ -85,7 +96,7 @@
           <i class="icono derecha fa fa-chevron-down"></i></a>
         <ul>
           <div class="bg-white mx-auto my-8 p-4 rounded carousel-item">
-            <div class="bg-gray-300 w-full text-center text-xl rounded">
+            <div class="bg-gray-400 w-full text-center text-xl rounded">
               <p>Libre elección - Cod: 4200742 - 4 Créditos</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mt-8">
@@ -148,7 +159,7 @@
           <i class="icono derecha fa fa-chevron-down"></i></a>
         <ul>
           <div class="bg-white mx-auto my-8 p-4 rounded carousel-item">
-            <div class="bg-gray-300 w-full text-center text-xl rounded">
+            <div class="bg-gray-400 w-full text-center text-xl rounded">
               <p>Libre elección - Cod: 4200742 - 4 Créditos</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mt-8">
@@ -211,7 +222,7 @@
           <i class="icono derecha fa fa-chevron-down"></i></a>
         <ul>
           <div class="bg-white mx-auto my-8 p-4 rounded carousel-item">
-            <div class="bg-gray-300 w-full text-center text-xl rounded">
+            <div class="bg-gray-400 w-full text-center text-xl rounded">
               <p>Libre elección - Cod: 4200742 - 4 Créditos</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mt-8">
@@ -271,197 +282,199 @@
       
     </ul>
   </div>
-</div>
+  </div>
 
-<style>
-  * {
-    margin: 0;
-    padding: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-  }
 
-  a {
-    text-decoration: none;
-    color: #fff;
-    font-size: large;
-  }
-
-  .btn-menu {
-    display: none;
-    padding: 20px;
-    background: #0d2c44;
-    color: #fff;
-  }
-
-  .btn-menu .icono {
-    float: right;
-  }
-
-  .contenedor-menu {
-    display: inline-block;
-    margin: 2rem;
-    line-height: 18px;
-  }
-
-  .contenedor-menu .menu {
-    width: 100%;
-  }
-
-  .contenedor-menu ul {
-    list-style: none;
-  }
-
-  .contenedor-menu .menu li a {
-    color: #6c6c6c;
-    display: block;
-    padding: 15px 20px;
-    background: #c2c2c2;
-  }
-
-  .contenedor-menu .menu li a:hover {
-    background: #1a95d5;
-    color: #fff;
-  }
-
-  .contenedor-menu .menu .icono {
-    font-size: 12px;
-    line-height: 18px;
-  }
-
-  .contenedor-menu .menu .icono.izquierda {
-    float: left;
-    margin-right: 10px;
-  }
-
-  .contenedor-menu .menu .icono.derecha {
-    float: right;
-    margin-left: 10px;
-  }
-
-  .contenedor-menu .menu ul {
-    display: none;
-  }
-
-  .contenedor-menu .menu ul li a {
-    background: #424242;
-    color: #e9e9e9;
-  }
-
-  .contenedor-menu .menu .activado > a {
-    background: #1a95d5;
-    color: #fff;
-  }
-
-  @media screen and (max-width: 450px) {
-    .contenedor-menu {
-      margin: 0;
-      width: 100%;
-      position: fixed;
-      top: 0;
-      z-index: 1000;
+  <style>
+    * {
+      /* margin: 0;
+      padding: 0; */
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
     }
-
+  
+    a {
+      text-decoration: none;
+      color: #fff;
+      font-size: large;
+    }
+  
     .btn-menu {
-      display: block;
+      display: none;
+      padding: 20px;
+      background: #0d2c44;
+      color: #fff;
     }
-
+  
+    .btn-menu .icono {
+      float: right;
+    }
+  
+    .contenedor-menu {
+      display: inline-block;
+      line-height: 18px;
+    }
+  
     .contenedor-menu .menu {
+      width: 100%;
+    }
+  
+    .contenedor-menu ul {
+      list-style: none;
+    }
+  
+    .contenedor-menu .menu li a {
+      color: #6c6c6c;
+      display: block;
+      padding: 15px 20px;
+      background: #c2c2c2;
+    }
+  
+    .contenedor-menu .menu li a:hover {
+      background: #586064;
+      color: #fff;
+    }
+  
+    .contenedor-menu .menu .icono {
+      font-size: 12px;
+      line-height: 18px;
+    }
+  
+    .contenedor-menu .menu .icono.izquierda {
+      float: left;
+      margin-right: 10px;
+    }
+  
+    .contenedor-menu .menu .icono.derecha {
+      float: right;
+      margin-left: 10px;
+    }
+  
+    .contenedor-menu .menu ul {
       display: none;
     }
-  }
-
-  .carousel-item{
-    margin: 1rem;
-  }
-
-  .carousel-card {
-    background-color: aliceblue;
-    border-radius: 0.5rem;
-    padding: 1.5rem ;
-    font-size: medium;
-    margin: 1rem 0;
-  }
-  .carousel-card h2 {
-    margin-bottom: 1rem;
-    font-size: x-large;
-  }
-
-  .carousel-video{
-    /* margin: 1rem auto; */
-  }
-  .carousel-video h2{
-    font-size: large;
-  }
-
-</style>
-
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const menuItemsWithSubmenu =
-      document.querySelectorAll<HTMLElement>(".menu li:has(ul)");
-    const menuButton = document.querySelector<HTMLElement>(".btn-menu");
-    const menuContainer = document.querySelector<HTMLElement>(
-      ".contenedor-menu .menu"
-    );
-
-    menuItemsWithSubmenu.forEach((item) => {
-      item.addEventListener("click", (e) => {
-        e.preventDefault();
-
-        if (item.classList.contains("activado")) {
+  
+    .contenedor-menu .menu ul li a {
+      background: #424242;
+      color: #e9e9e9;
+    }
+  
+    .contenedor-menu .menu .activado > a {
+      /* blue */
+      background: #586064;
+      color: #fff;
+    }
+  
+    @media screen and (max-width: 450px) {
+      .contenedor-menu {
+        margin: 0;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 1000;
+      }
+  
+      .btn-menu {
+        display: block;
+      }
+  
+      .contenedor-menu .menu {
+        display: none;
+      }
+    }
+  
+    .carousel-item{
+      margin: 1rem;
+    }
+  
+    .carousel-card {
+      background-color: aliceblue;
+      border-radius: 0.5rem;
+      padding: 1.5rem ;
+      font-size: medium;
+      margin: 1rem 0;
+      color: black;
+    }
+    .carousel-card h2 {
+      margin-bottom: 1rem;
+      font-size: x-large;
+    }
+  
+    .carousel-video{
+      /* margin: 1rem auto; */
+    }
+    .carousel-video h2{
+      font-size: large;
+    }
+  
+  </style>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const menuItemsWithSubmenu =
+        document.querySelectorAll<HTMLElement>(".menu li:has(ul)");
+      const menuButton = document.querySelector<HTMLElement>(".btn-menu");
+      const menuContainer = document.querySelector<HTMLElement>(
+        ".contenedor-menu .menu"
+      );
+  
+      menuItemsWithSubmenu.forEach((item) => {
+        item.addEventListener("click", (e) => {
+          e.preventDefault();
+  
+          if (item.classList.contains("activado")) {
+            item.classList.remove("activado");
+            const submenu = item.children[1] as HTMLElement | undefined; // ul
+            if (submenu) {
+              submenu.style.display = "none";
+            }
+          } else {
+            closeAllSubmenus();
+            item.classList.add("activado");
+            const submenu = item.children[1] as HTMLElement | undefined; // ul
+            if (submenu) {
+              submenu.style.display = "block";
+            }
+          }
+        });
+      });
+  
+      menuButton?.addEventListener("click", () => {
+        if (menuContainer)
+          menuContainer.style.display =
+            menuContainer.style.display === "none" ||
+            menuContainer.style.display === ""
+              ? "block"
+              : "none";
+      });
+  
+      window.addEventListener("resize", () => {
+        if (menuContainer)
+          if (document.documentElement.clientWidth > 450) {
+            menuContainer.style.display = "block";
+          } else {
+            menuContainer.style.display = "none";
+            closeAllSubmenus();
+          }
+      });
+  
+      const submenuLinks =
+        document.querySelectorAll<HTMLElement>(".menu li ul li a");
+      submenuLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          window.location.href = link.getAttribute("href") || "";
+        });
+      });
+  
+      function closeAllSubmenus() {
+        menuItemsWithSubmenu.forEach((item) => {
           item.classList.remove("activado");
           const submenu = item.children[1] as HTMLElement | undefined; // ul
           if (submenu) {
             submenu.style.display = "none";
           }
-        } else {
-          closeAllSubmenus();
-          item.classList.add("activado");
-          const submenu = item.children[1] as HTMLElement | undefined; // ul
-          if (submenu) {
-            submenu.style.display = "block";
-          }
-        }
-      });
+        });
+      }
     });
-
-    menuButton?.addEventListener("click", () => {
-      if (menuContainer)
-        menuContainer.style.display =
-          menuContainer.style.display === "none" ||
-          menuContainer.style.display === ""
-            ? "block"
-            : "none";
-    });
-
-    window.addEventListener("resize", () => {
-      if (menuContainer)
-        if (document.documentElement.clientWidth > 450) {
-          menuContainer.style.display = "block";
-        } else {
-          menuContainer.style.display = "none";
-          closeAllSubmenus();
-        }
-    });
-
-    const submenuLinks =
-      document.querySelectorAll<HTMLElement>(".menu li ul li a");
-    submenuLinks.forEach((link) => {
-      link.addEventListener("click", () => {
-        window.location.href = link.getAttribute("href") || "";
-      });
-    });
-
-    function closeAllSubmenus() {
-      menuItemsWithSubmenu.forEach((item) => {
-        item.classList.remove("activado");
-        const submenu = item.children[1] as HTMLElement | undefined; // ul
-        if (submenu) {
-          submenu.style.display = "none";
-        }
-      });
-    }
-  });
-</script>
+  </script>

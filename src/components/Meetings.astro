@@ -16,12 +16,13 @@ import Linea from "../../public/svg/linea.astro";
     <ol class="carousel-indicators">
       <li data-target="#my-pics" data-slide-to="0" class="active"></li>
       <li data-target="#my-pics" data-slide-to="1"></li>
+      <li data-target="#my-pics" data-slide-to="2"></li>
     </ol>
     <!-- Content -->
     <div class="carousel-inner" role="listbox">
       <div class="item active">
         <div class="row">
-          <div class="col-md-4">
+          <div class="col-md-6">
             <a href="#" data-toggle="modal" data-target="#abrirModal">
               <img
                 src="img-encuentros/1-encuentro/1-enc-01.webp"
@@ -32,7 +33,7 @@ import Linea from "../../public/svg/linea.astro";
               />
             </a>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-6">
             <a href="#" data-toggle="modal" data-target="#abrirModal">
               <img
                 src="img-encuentros/2-encuentro/2-enc-01.webp"
@@ -43,7 +44,12 @@ import Linea from "../../public/svg/linea.astro";
               />
             </a>
           </div>
-          <div class="col-md-4">
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="row">
+          <div class="col-md-6">
             <a href="#" data-toggle="modal" data-target="#abrirModal">
               <img
                 src="img-encuentros/3-encuentro/3-enc-01.webp"
@@ -54,12 +60,7 @@ import Linea from "../../public/svg/linea.astro";
               />
             </a>
           </div>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="row">
-          <div class="col-md-4">
+          <div class="col-md-6">
             <a href="#" data-toggle="modal" data-target="#abrirModal">
               <img
                 src="img-encuentros/4-encuentro/4-enc-01.webp"
@@ -70,7 +71,12 @@ import Linea from "../../public/svg/linea.astro";
               />
             </a>
           </div>
-          <div class="col-md-4">
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="row">
+          <div class="col-md-6">
             <a href="#" data-toggle="modal" data-target="#abrirModal">
               <img
                 src="img-encuentros/5-encuentro/5-enc-01.webp"
@@ -81,7 +87,7 @@ import Linea from "../../public/svg/linea.astro";
               />
             </a>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-6">
             <a href="#" data-toggle="modal" data-target="#abrirModal">
               <img
                 src="img-encuentros/5-encuentro/5-enc-01.webp"
@@ -155,7 +161,7 @@ import Linea from "../../public/svg/linea.astro";
   .carousel-indicators {
     margin-bottom: -60px;
     text-align: center;
-    z-index:auto;
+    z-index: auto;
   }
   .carousel-indicators li {
     background-color: #c2c2c2; /* Color de fondo para los indicadores inactivos */

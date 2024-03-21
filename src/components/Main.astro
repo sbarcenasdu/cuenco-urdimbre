@@ -23,9 +23,9 @@ import NavBar from "./NavBar.astro";
 import ScrollToTop from "./ScrollToTop.astro";
 ---
 
-<div class="my-4">
+<div class="">
   <!-- Nav tabs -->
-  <ul class="nav nav-tabs text-white" role="tablist" style="">
+  <ul class="nav nav-tabs text-white bg-tab" role="tablist" style="">
     <li role="presentation" class="active">
       <a
         href="#home-urdimbre"
@@ -49,6 +49,14 @@ import ScrollToTop from "./ScrollToTop.astro";
   <!-- Tab panes -->
   <div class="tab-content">
     <div role="tabpanel" class="tab-pane fade in active" id="home-urdimbre">
+      <div class="row">
+        <div class="col-md-1" style="position: relative;">
+          <img src="img-urdimbre/franja-v.png" alt="" style="position: absolute; top: 0; width:40px; height:1200px">
+        </div>
+        <div class="col-md-11">
+
+        </div>
+      </div>
       <HomeUrdimbre />
       <div class="w-full bg-zinc-100 -mb-4">
         <img
@@ -62,7 +70,7 @@ import ScrollToTop from "./ScrollToTop.astro";
     <div role="tabpanel" class="tab-pane fade" id="subjects">
       <div>
         <!-- Nav sub-tabs subjects-->
-        <ul class="nav nav-tabs text-white" role="tablist">
+        <ul class="nav nav-tabs text-white bg-tab" role="tablist">
           <li role="presentation" class="active">
             <a
               href="#typologies"
@@ -155,7 +163,7 @@ import ScrollToTop from "./ScrollToTop.astro";
       <div id="stats" class="mt-32">
         <div class="pb-1 title-bg mb-6">
           <h1 class="section-title text-center font-bold text-gray-700 mb-1">
-            Distribución por Sedes
+            Distribución por sedes
           </h1>
           <Linea class="lg:w-[38rem] mx-auto" />
         </div>
@@ -169,7 +177,7 @@ import ScrollToTop from "./ScrollToTop.astro";
           </h1>
           <Linea class="lg:w-[48rem] mx-auto" />
         </div>
-          <div class="bg-[var(--cuenco-secondary)]"><Stats /></div>
+          <div class="bg-[var(--cuenco-primary)]"><Stats /></div>
       </div>
 
       <div
@@ -204,8 +212,8 @@ import ScrollToTop from "./ScrollToTop.astro";
     background-color: #2b72b8;
     background-color: #3c499e;
     background: radial-gradient(circle, rgba(200,200,200,1) 0%, rgb(59, 59, 59) 70%); */
-    background-color: #666;
-    background-image: url("/img-urdimbre/background-urdimbre.webp");
+    /* background-color: #666; */
+    background-image: url("/img-urdimbre/urdimbre-green.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 80% 100%;
@@ -300,11 +308,12 @@ import ScrollToTop from "./ScrollToTop.astro";
       event: MouseEvent,
       tabId: string
     ): void {
+      // 'url("/img-urdimbre/Imgenes fondo pag_Mesa de trabajo 1 copia 6.png")';
       event.preventDefault();
       switch (tabId) {
         case "#home-urdimbre":
           document.body.style.backgroundImage =
-            'url("/img-urdimbre/background-urdimbre.webp")';
+          'url("/img-urdimbre/urdimbre-green.webp")';
           document.body.style.backgroundSize = "cover";
           document.body.style.backgroundRepeat = "no-repeat";
           document.body.style.backgroundPosition = "80% 100%";
@@ -314,6 +323,10 @@ import ScrollToTop from "./ScrollToTop.astro";
           navTabs.forEach(function (tab) {
             tab.style.color = "";
           });
+          (document.querySelectorAll(".nav.nav-tabs") as NodeListOf<HTMLElement>).forEach(function(div){
+            div.classList.remove("bg-tab-blue", "bg-tab-green", "bg-tab-purple", "bg-tab", "bg-tab-white");
+            div.classList.add("bg-tab-green");
+          })
           break;
         case "#subjects":
         case "#typologies":
@@ -322,7 +335,7 @@ import ScrollToTop from "./ScrollToTop.astro";
         case "#publications":
         case "#events":
           document.body.style.backgroundImage =
-            'url("/img-urdimbre/background-subjects.webp")';
+            'url("/img-urdimbre/estud-blue.webp")';
           document.body.style.backgroundSize = "100% auto";
           document.body.style.backgroundRepeat = "repeat-y";
           document.body.style.backgroundPosition = "top left";
@@ -332,6 +345,10 @@ import ScrollToTop from "./ScrollToTop.astro";
           navTabs.forEach(function (tab) {
             tab.style.color = "";
           });
+          (document.querySelectorAll(".nav.nav-tabs") as NodeListOf<HTMLElement>).forEach(function(div){
+            div.classList.remove("bg-tab-blue", "bg-tab-green", "bg-tab-purple", "bg-tab", "bg-tab-white");
+            div.classList.add("bg-tab-blue");
+          })
           break;
         case "#cuenco":
           document.body.style.backgroundImage = "none";
@@ -342,6 +359,10 @@ import ScrollToTop from "./ScrollToTop.astro";
           navTabs.forEach(function (tab) {
             tab.style.color = "black";
           });
+          (document.querySelectorAll(".nav.nav-tabs") as NodeListOf<HTMLElement>).forEach(function(div){
+            div.classList.remove("bg-tab-blue", "bg-tab-green", "bg-tab-purple", "bg-tab", "bg-tab-white");
+            div.classList.add("bg-tab-white");
+          })
           break;
         default:
           document.body.style.backgroundImage =
@@ -369,5 +390,25 @@ import ScrollToTop from "./ScrollToTop.astro";
   .Limg {
     object-position: top left;
     object-fit: cover;
+  }
+
+  .bg-tab {
+    background-color: #0b4237;
+    opacity: 0.94;
+  }
+  .bg-tab-blue {
+    background-color: rgb(23, 53, 79);
+    opacity: 0.94;
+  }
+  .bg-tab-green {
+    background-color: #0b4237;
+    opacity: 0.94;
+  }
+  .bg-tab-purple {
+    background-color: #681b54;
+    opacity: 0.94;
+  }
+  .bg-tab-white {
+    background-color: #fff;
   }
 </style>

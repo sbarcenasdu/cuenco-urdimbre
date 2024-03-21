@@ -4,11 +4,11 @@ import Identificador from "../../public/svg/identificador.astro";
 const {id, class:className} = Astro.props;
 ---
 
-<div id={id} class=`flex flex-col md:flex-row items-center mt-5 md:mt-16 bg-gray-100 py-10 ${className}` >
+<div id={id} class=`flex flex-col md:flex-row items-center mt-7 bg-gray-100 py-10 ${className}` >
   <div class="col-md-8 pl-24">
     <div class="pb-10">
-      <h1 class="section-title font-bold mb-1">¿Quiénes somos?</h1>
-      <Linea class="max-w-[28rem]"/>
+      <h1 class="section-title font-bold mb-1 text-center">¿Quiénes somos?</h1>
+      <Linea class="max-w-[28rem] mx-auto"/>
     </div>
     <div>
       <p class="text-3xl text-justify">

@@ -51,11 +51,13 @@ import ScrollToTop from "./ScrollToTop.astro";
     <div role="tabpanel" class="tab-pane fade in active" id="home-urdimbre">
       <div class="row">
         <div class="col-md-1" style="position: relative;">
-          <img src="img-urdimbre/franja-v.png" alt="" style="position: absolute; top: 0; width:40px; height:1200px">
+          <img
+            src="img-urdimbre/franja-v.png"
+            alt=""
+            style="position: absolute; top: 0; width:40px; height:1200px"
+          />
         </div>
-        <div class="col-md-11">
-
-        </div>
+        <div class="col-md-11"></div>
       </div>
       <HomeUrdimbre />
       <div class="w-full bg-zinc-100 -mb-4">
@@ -143,14 +145,12 @@ import ScrollToTop from "./ScrollToTop.astro";
 
     <div role="tabpanel" class="tab-pane fade" id="cuenco">
       <NavBar />
-      <section class="mt-6">
-        <div class="bg-whiteSSS">
-          <HeroSection id="home" />
-          <About id="about" />
-        </div>
+      <section class="">
+        <HeroSection id="home" />
+        <About id="about" />
       </section>
 
-      <div id="meetings" class=" my-28">
+      <section id="meetings" class="">
         <div class="mb-6 mx-auto title-bg">
           <h1 class="section-title font-bold text-gray-700 text-center">
             Encuentros Intersedes
@@ -158,38 +158,35 @@ import ScrollToTop from "./ScrollToTop.astro";
           <Linea class="lg:w-[36rem] mx-auto" />
         </div>
         <div class="bg-[var(--svg-primary)] pt-6 pb-16"><Meetings /></div>
-      </div>
-      
-      <div id="stats" class="mt-32">
+      </section>
+
+      <section id="stats" class="mx-32">
         <div class="pb-1 title-bg mb-6">
           <h1 class="section-title text-center font-bold text-gray-700 mb-1">
             Distribución por sedes
           </h1>
           <Linea class="lg:w-[38rem] mx-auto" />
         </div>
-          <Distribution />
-      </div>
+        <Distribution />
+      </section>
 
-      <div class="my-28">
+      <section class="">
         <div class="pb-1 title-bg mb-6">
           <h1 class="section-title text-center font-bold text-gray-700 mb-1">
             Estadísticas de participación
           </h1>
           <Linea class="lg:w-[48rem] mx-auto" />
         </div>
-          <div class="bg-[var(--cuenco-primary)]"><Stats /></div>
-      </div>
+        <div class="bg-[var(--cuenco-primary)]"><Stats /></div>
+      </section>
 
-      <div
-        id="baseline"
-        class="min-h-[610px] mt-32 bg-[var(--cuenco-secondary)]"
-      >
+      <section id="baseline" class="min-h-[610px] bg-[var(--cuenco-secondary)]">
         <Baseline />
-      </div>
+      </section>
 
-      <div id="contact" class="min-h-[400px] mt-16 self-center">
+      <section id="contact" class="min-h-[400px] self-center">
         <Contact />
-      </div>
+      </section>
 
       <Cuenco class="h-20 mx-auto -mb-5" />
       <Linea class="w-full" />
@@ -313,7 +310,7 @@ import ScrollToTop from "./ScrollToTop.astro";
       switch (tabId) {
         case "#home-urdimbre":
           document.body.style.backgroundImage =
-          'url("/img-urdimbre/urdimbre-green.webp")';
+            'url("/img-urdimbre/urdimbre-green.webp")';
           document.body.style.backgroundSize = "cover";
           document.body.style.backgroundRepeat = "no-repeat";
           document.body.style.backgroundPosition = "80% 100%";
@@ -323,10 +320,20 @@ import ScrollToTop from "./ScrollToTop.astro";
           navTabs.forEach(function (tab) {
             tab.style.color = "";
           });
-          (document.querySelectorAll(".nav.nav-tabs") as NodeListOf<HTMLElement>).forEach(function(div){
-            div.classList.remove("bg-tab-blue", "bg-tab-green", "bg-tab-purple", "bg-tab", "bg-tab-white");
+          (
+            document.querySelectorAll(
+              ".nav.nav-tabs"
+            ) as NodeListOf<HTMLElement>
+          ).forEach(function (div) {
+            div.classList.remove(
+              "bg-tab-blue",
+              "bg-tab-green",
+              "bg-tab-purple",
+              "bg-tab",
+              "bg-tab-white"
+            );
             div.classList.add("bg-tab-green");
-          })
+          });
           break;
         case "#subjects":
         case "#typologies":
@@ -345,10 +352,20 @@ import ScrollToTop from "./ScrollToTop.astro";
           navTabs.forEach(function (tab) {
             tab.style.color = "";
           });
-          (document.querySelectorAll(".nav.nav-tabs") as NodeListOf<HTMLElement>).forEach(function(div){
-            div.classList.remove("bg-tab-blue", "bg-tab-green", "bg-tab-purple", "bg-tab", "bg-tab-white");
+          (
+            document.querySelectorAll(
+              ".nav.nav-tabs"
+            ) as NodeListOf<HTMLElement>
+          ).forEach(function (div) {
+            div.classList.remove(
+              "bg-tab-blue",
+              "bg-tab-green",
+              "bg-tab-purple",
+              "bg-tab",
+              "bg-tab-white"
+            );
             div.classList.add("bg-tab-blue");
-          })
+          });
           break;
         case "#cuenco":
           document.body.style.backgroundImage = "none";
@@ -359,10 +376,20 @@ import ScrollToTop from "./ScrollToTop.astro";
           navTabs.forEach(function (tab) {
             tab.style.color = "black";
           });
-          (document.querySelectorAll(".nav.nav-tabs") as NodeListOf<HTMLElement>).forEach(function(div){
-            div.classList.remove("bg-tab-blue", "bg-tab-green", "bg-tab-purple", "bg-tab", "bg-tab-white");
+          (
+            document.querySelectorAll(
+              ".nav.nav-tabs"
+            ) as NodeListOf<HTMLElement>
+          ).forEach(function (div) {
+            div.classList.remove(
+              "bg-tab-blue",
+              "bg-tab-green",
+              "bg-tab-purple",
+              "bg-tab",
+              "bg-tab-white"
+            );
             div.classList.add("bg-tab-white");
-          })
+          });
           break;
         default:
           document.body.style.backgroundImage =
@@ -387,6 +414,12 @@ import ScrollToTop from "./ScrollToTop.astro";
 </script>
 
 <style>
+  #cuenco section {
+    margin-top: 5rem;
+  }
+  .mt-section {
+    margin-top: 3rem;
+  }
   .Limg {
     object-position: top left;
     object-fit: cover;

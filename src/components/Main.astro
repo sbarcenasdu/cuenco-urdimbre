@@ -48,15 +48,20 @@ import ScrollToTop from "./ScrollToTop.astro";
 
   <!-- Tab panes -->
   <div class="tab-content">
-    <div role="tabpanel" class="tab-pane fade in active" id="home-urdimbre">
+    <div
+      role="tabpanel"
+      class="tab-pane fade in active franja"
+      id="home-urdimbre"
+    >
       <div class="row">
-        <div class="col-md-1" style="position: relative;">
+        <!-- <div class="col-md-1" style="position: relative;">
           <img
             src="img-urdimbre/franja-v.png"
             alt=""
             style="position: absolute; top: 0; width:40px; height:1200px"
           />
-        </div>
+        </div> -->
+
         <div class="col-md-11"></div>
       </div>
       <HomeUrdimbre />
@@ -70,6 +75,13 @@ import ScrollToTop from "./ScrollToTop.astro";
     </div>
 
     <div role="tabpanel" class="tab-pane fade" id="subjects">
+      <!-- <div class="col-md-1" style="position: relative;">
+        <img
+          src="img-urdimbre/franja-v.png"
+          alt=""
+          style="position: absolute; top: 0; width:40px; height:1200px"
+        />
+      </div> -->
       <div>
         <!-- Nav sub-tabs subjects-->
         <ul class="nav nav-tabs text-white bg-tab" role="tablist">
@@ -117,19 +129,23 @@ import ScrollToTop from "./ScrollToTop.astro";
 
         <!-- Sub-Tab panes -->
         <div class="tab-content">
-          <div role="tabpanel" class="tab-pane fade in active" id="typologies">
+          <div
+            role="tabpanel"
+            class="tab-pane fade in active franja"
+            id="typologies"
+          >
             <Typologies />
           </div>
-          <div role="tabpanel" class="tab-pane fade" id="stats-data">
+          <div role="tabpanel" class="tab-pane fade franja" id="stats-data">
             <StatsData />
           </div>
-          <div role="tabpanel" class="tab-pane fade" id="diffusion">
+          <div role="tabpanel" class="tab-pane fade franja" id="diffusion">
             <Diffusion />
           </div>
-          <div role="tabpanel" class="tab-pane fade" id="events">
+          <div role="tabpanel" class="tab-pane fade franja" id="events">
             <Events />
           </div>
-          <div role="tabpanel" class="tab-pane fade" id="publications">
+          <div role="tabpanel" class="tab-pane fade franja" id="publications">
             <Publications />
           </div>
         </div>
@@ -145,8 +161,8 @@ import ScrollToTop from "./ScrollToTop.astro";
 
     <div role="tabpanel" class="tab-pane fade" id="cuenco">
       <NavBar />
-      <section class="">
-        <HeroSection id="home" />
+      <section id="home">
+        <HeroSection />
         <About id="about" />
       </section>
 
@@ -177,20 +193,32 @@ import ScrollToTop from "./ScrollToTop.astro";
           </h1>
           <Linea class="lg:w-[48rem] mx-auto" />
         </div>
-        <div class="bg-[var(--cuenco-primary)]"><Stats /></div>
+        <div class="bg-[var(--cuenco-secondary)]"><Stats /></div>
       </section>
 
-      <section id="baseline" class="min-h-[610px] bg-[var(--cuenco-secondary)]">
-        <Baseline />
+      <section id="baseline" class="min-h-[610px]">
+        <div class="mb-6">
+          <h1 class="section-title font-bold text-gray-700 text-center">
+            Línea Base
+          </h1>
+          <Linea class="max-w-[20rem] mx-auto" />
+        </div>
+        <div class="bg-[var(--cuenco-primary)]"><Baseline /></div>
       </section>
 
-      <section id="contact" class="min-h-[400px] self-center">
+      <section id="contact" class="min-h-[400px]">
+        <div class="mb-6">
+          <h1 class="section-title font-bold text-gray-700 text-center">
+            Contacto
+          </h1>
+          <Linea class="max-w-[19rem] mx-auto" />
+        </div>
         <Contact />
       </section>
 
       <Cuenco class="h-20 mx-auto -mb-5" />
       <Linea class="w-full" />
-      <Identificador class="h-44 mx-auto -mt-8 -mb-14" />
+      <Identificador class="h-44 mx-auto -mt-8 -mb-10" />
     </div>
   </div>
 </div>
@@ -214,6 +242,22 @@ import ScrollToTop from "./ScrollToTop.astro";
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 80% 100%;
+  }
+
+  .franja {
+    background-image: url("img-urdimbre/franja-v.png");
+    background-repeat: no-repeat;
+    background-size: 30px 100%;
+    background-position: left top;
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+  
+  @media screen and (max-height: 2000px) {
+    .franja {
+    background-repeat: repeat-y;
+    background-size: 30px 100vh;
+    }
   }
 
   .card-container {
@@ -281,6 +325,125 @@ import ScrollToTop from "./ScrollToTop.astro";
   @media only screen and (min-width: 1025px) and (max-width: 1280px) {
     .section-title {
       font-size: 3.75rem;
+    }
+  }
+
+  #cuenco section {
+    margin-top: 5rem;
+  }
+  .mt-section {
+    margin-top: 3rem;
+  }
+  .Limg {
+    object-position: top left;
+    object-fit: cover;
+  }
+
+  .bg-tab {
+    background-color: #0b4237;
+    opacity: 0.94;
+  }
+  .bg-tab-blue {
+    background-color: rgb(23, 53, 79);
+    opacity: 0.94;
+  }
+  .bg-tab-green {
+    background-color: #0b4237;
+    opacity: 0.94;
+  }
+  .bg-tab-purple {
+    background-color: #681b54;
+    opacity: 0.94;
+  }
+  .bg-tab-white {
+    background-color: #fff;
+  }
+  /* carrusel */
+  .carousel-indicators {
+    margin-bottom: -60px;
+    text-align: center;
+    z-index: auto;
+  }
+  .carousel-indicators li {
+    background-color: #c2c2c2;
+    border: none;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .carousel-indicators li.active {
+    background-color: #707070;
+  }
+  .carousel-control .glyphicon-chevron-left {
+    margin: -1rem -1.3rem;
+  }
+  .carousel-control .glyphicon-chevron-right {
+    margin: -1.1rem -1.1rem;
+  }
+  .carousel-control {
+    background-image: none !important;
+    background-color: rgb(50, 50, 50);
+    margin: auto 100px;
+    width: 60px;
+    height: 60px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+    border-radius: 50%;
+  }
+
+  /* modal */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .content-modal {
+    border-radius: 5px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 6px;
+    max-width: 100%;
+    width: 100%;
+    animation: fadeIn 0.3s ease-in;
+  }
+  @media screen and (min-width: 1024px) {
+    .content-modal {
+      width: 70%;
+    }
+  }
+
+  .close {
+    color: black;
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
     }
   }
 </style>
@@ -412,36 +575,3 @@ import ScrollToTop from "./ScrollToTop.astro";
     }
   });
 </script>
-
-<style>
-  #cuenco section {
-    margin-top: 5rem;
-  }
-  .mt-section {
-    margin-top: 3rem;
-  }
-  .Limg {
-    object-position: top left;
-    object-fit: cover;
-  }
-
-  .bg-tab {
-    background-color: #0b4237;
-    opacity: 0.94;
-  }
-  .bg-tab-blue {
-    background-color: rgb(23, 53, 79);
-    opacity: 0.94;
-  }
-  .bg-tab-green {
-    background-color: #0b4237;
-    opacity: 0.94;
-  }
-  .bg-tab-purple {
-    background-color: #681b54;
-    opacity: 0.94;
-  }
-  .bg-tab-white {
-    background-color: #fff;
-  }
-</style>

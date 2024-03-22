@@ -15,7 +15,7 @@
   
     <ul class="menu">
       <!-- 1 -->
-      <li>
+      <li class="activado">
         <a href="#"><i class="icono izquierda fa fa-star"></i>
           Tipología 1: Cátedra Novus. Innovación y Emprendimiento: De la creatividad a la acción
           <i class="icono derecha fa fa-chevron-down"></i></a>
@@ -477,4 +477,10 @@
         });
       }
     });
+    document.addEventListener("DOMContentLoaded", () => {
+  const firstMenuItem = document.querySelector(".menu li.activado");
+  const firstSubmenu = firstMenuItem.querySelector("ul");
+  
+  firstSubmenu.style.display = "block";
+});
   </script>

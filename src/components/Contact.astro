@@ -1,31 +1,51 @@
 ---
 import Linea from "../../public/svg/linea.astro";
-const {id, class:className} = Astro.props;
+const { id, class: className } = Astro.props;
 ---
 
 <div class=`flex flex-col items-center text-xl ${className}`>
-    <h1 class="section-title font-bold text-gray-700" >Contacto</h1>
-    <Linea class="max-w-[19rem] mb-5" />
-        <div class="w-full md:w-[700px] mb-4 rounded bg-gray-300 p-7 border border-gray-700">
-            <form action="#" class="">
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div class="grid gap-3">
-                        <div>
-                            <label for="email" class="block mb-2 font-medium">Correo</label>
-                            <input type="email" id="email" class="bg-gray-50 shadow-sm border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 " placeholder="usuario@correo.com" required>
-                        </div>
-                        <div>
-                            <label for="subject" class="block mb-2 font-medium ">Asunto</label>
-                            <input type="text" id="subject" class="bg-gray-50 block p-3 w-full text-gray-900 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500" placeholder="Asunto" required>
-                        </div>
-                    </div>
-                    <div class="">
-                        <label for="message" class="block mb-2 font-medium ">Mensaje</label>
-                        <textarea id="message" rows="5" class="bg-gray-50 block p-2.5 w-full text-gray-900 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500" placeholder="Mensaje..."></textarea>
-                    </div>
-                </div>
-                <button type="submit" class="bg-blue-300 py-3 px-5 mt-5 font-medium text-center text-black rounded-lg bg-primary-300 sm:w-fit hover:bg-blue-500 focus:ring-4 focus:outline-none focus:ring-primary-300">Enviar Mensaje</button>
-            </form>
+  <div
+    class="w-full md:w-[700px] mb-4 rounded bg-gray-300 p-7 border border-gray-700"
+  >
+    <form action="#" class="">
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="grid gap-3">
+          <div>
+            <label for="email" class="block mb-2 font-medium">Correo</label>
+            <input
+              type="email"
+              id="email"
+              class="bg-gray-50 shadow-sm border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
+              placeholder="usuario@correo.com"
+              required
+            />
+          </div>
+          <div>
+            <label for="subject" class="block mb-2 font-medium">Asunto</label>
+            <input
+              type="text"
+              id="subject"
+              class="bg-gray-50 block p-3 w-full text-gray-900 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500"
+              placeholder="Asunto"
+              required
+            />
+          </div>
         </div>
-    <!-- <Linea class="w-full mb-[-20px]" /> -->
+        <div class="">
+          <label for="message" class="block mb-2 font-medium">Mensaje</label>
+          <textarea
+            id="message"
+            rows="5"
+            class="bg-gray-50 block p-2.5 w-full text-gray-900 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500"
+            placeholder="Mensaje..."></textarea>
+        </div>
+      </div>
+      <button
+        type="submit"
+        class="bg-blue-300 py-3 px-5 mt-5 font-medium text-center text-black rounded-lg bg-primary-300 sm:w-fit hover:bg-blue-500 focus:ring-4 focus:outline-none focus:ring-primary-300"
+        >Enviar Mensaje</button
+      >
+    </form>
+  </div>
+  <!-- <Linea class="w-full mb-[-20px]" /> -->
 </div>

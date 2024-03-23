@@ -206,7 +206,7 @@ import ScrollToTop from "./ScrollToTop.astro";
         <div class="bg-[var(--cuenco-primary)]"><Baseline /></div>
       </section>
 
-      <section id="contact" class="min-h-[400px]">
+      <section id="contact" >
         <div class="mb-6">
           <h1 class="section-title font-bold text-gray-700 text-center">
             Contacto
@@ -216,7 +216,7 @@ import ScrollToTop from "./ScrollToTop.astro";
         <Contact />
       </section>
 
-      <Cuenco class="h-20 mx-auto -mb-5" />
+      <Cuenco class="h-20 mx-auto -mb-5 mt-16" />
       <Linea class="w-full" />
       <Identificador class="h-44 mx-auto -mt-8 -mb-10" />
     </div>
@@ -252,11 +252,11 @@ import ScrollToTop from "./ScrollToTop.astro";
     overflow-y: hidden;
     overflow-x: hidden;
   }
-  
+
   @media screen and (max-height: 2000px) {
     .franja {
-    background-repeat: repeat-y;
-    background-size: 30px 100vh;
+      background-repeat: repeat-y;
+      background-size: 30px 100vh;
     }
   }
 
@@ -385,12 +385,16 @@ import ScrollToTop from "./ScrollToTop.astro";
   }
   .carousel-control {
     background-image: none !important;
-    background-color: rgb(50, 50, 50);
+    /* background-color: rgb(168, 168, 168); */
     margin: auto 100px;
     width: 60px;
     height: 60px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.9); */
     border-radius: 50%;
+  }
+  .carousel-control:hover {
+    background-color: rgb(81, 81, 81);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
   }
 
   /* modal */

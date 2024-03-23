@@ -2,16 +2,28 @@
 import Linea from "../../public/svg/linea.astro";
 const { class: className } = Astro.props;
 ---
+
 <!-- mt-20 -->
 <div class=`py-8 flex flex-col items-center justify-center ${className}`>
   <div class="card grid grid-cols-2 gap-1 mx-20">
     <div class="pl-10 p-3 m-3 self-center">
       <h3 class="text-4xl my-3 bold">Title</h3>
-      <p class=" text-2xl text-justify">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque porro molestias nulla, cumque dignissimos possimus alias quo explicabo laboriosam dolores sint id ut, perspiciatis iure labore ipsam cupiditate voluptate. Quasi.
-      Dolores odio at, mollitia ut dolor cupiditate, omnis excepturi esse aspernatur fuga adipisci numquam repudiandae facilis debitis officia dicta, placeat quidem sed earum? Sit molestiae id enim excepturi soluta obcaecati.
-      Explicabo dolor ipsa hic eaque fuga possimus ratione quasi fugit blanditiis quas assumenda repellendus modi, nesciunt aliquid asperiores quia quis praesentium consequatur architecto. Deserunt similique cupiditate fugiat? Molestiae, eum rerum!</p>
+      <p class="text-2xl text-justify">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque porro
+        molestias nulla, cumque dignissimos possimus alias quo explicabo
+        laboriosam dolores sint id ut, perspiciatis iure labore ipsam cupiditate
+        voluptate. Quasi. Dolores odio at, mollitia ut dolor cupiditate, omnis
+        excepturi esse aspernatur fuga adipisci numquam repudiandae facilis
+        debitis officia dicta, placeat quidem sed earum? Sit molestiae id enim
+        excepturi soluta obcaecati. Explicabo dolor ipsa hic eaque fuga possimus
+        ratione quasi fugit blanditiis quas assumenda repellendus modi, nesciunt
+        aliquid asperiores quia quis praesentium consequatur architecto.
+        Deserunt similique cupiditate fugiat? Molestiae, eum rerum!
+      </p>
     </div>
-    <div class="max-w-sm bg-gray-200 border border-gray-200 rounded-lg shadow-md mx-auto">
+    <div
+      class="max-w-sm bg-gray-200 border border-gray-200 rounded-lg shadow-md mx-auto"
+    >
       <a href="#">
         <img
           class="rounded-t-lg"
@@ -28,7 +40,7 @@ const { class: className } = Astro.props;
         <p class="mb-3 text-xl py-8">Corta descripción de contenido</p>
         <a
           href="#"
-          class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          class="inline-flex items-center px-5 py-2.5 text-xl text-center text-white/70 bg-[var(--cuenco-primary)] bg-opacity-80 rounded-lg hover:bg-[var(--cuenco-primary)] focus:ring-4 focus:outline-none focus:ring-blue-300 hover:no-underline hover:text-white"
         >
           Ver más
           <svg

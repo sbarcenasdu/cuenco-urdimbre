@@ -9,7 +9,6 @@ const { class: className } = Astro.props;
         class="img-responsive rounded-lg"
         src="img-encuentros/mapas/map-00.png"
         alt=""
-        loading="lazy"
       />
     </div>
     <div class="col-xs-12 col-md-4">
@@ -18,7 +17,6 @@ const { class: className } = Astro.props;
           class="img-responsive rounded-lg"
           src="img-encuentros/mapas/map-01.webp"
           alt=""
-          loading="lazy"
         />
       </div>
       <div class="col-12 mt-8">
@@ -26,7 +24,6 @@ const { class: className } = Astro.props;
           class="img-responsive rounded-lg"
           src="img-encuentros/mapas/map-02.webp"
           alt=""
-          loading="lazy"
         />
       </div>
     </div>
@@ -38,7 +35,6 @@ const { class: className } = Astro.props;
         class="img-responsive rounded-lg"
         src="img-encuentros/mapas/map-03.webp"
         alt=""
-        loading="lazy"
       />
     </div>
     <div class="col-md-4">
@@ -46,7 +42,6 @@ const { class: className } = Astro.props;
         class="img-responsive rounded-lg"
         src="img-encuentros/mapas/map-04.webp"
         alt=""
-        loading="lazy"
       />
     </div>
     <div class="col-md-4">
@@ -54,8 +49,86 @@ const { class: className } = Astro.props;
         class="img-responsive rounded-lg"
         src="img-encuentros/mapas/map-05.webp"
         alt=""
-        loading="lazy"
       />
     </div>
   </div>
 </div>
+
+<!-- modal -->
+<div id="maps-modal" class="modal">
+  <div class="content-modal">
+    <img id="map-modal-img" src="" alt="distribution img modal" />
+  </div>
+</div>
+
+<script>
+  var modal = document.getElementById("maps-modal");
+  var images = document.querySelectorAll(".img-responsive");
+  images.forEach(function (image) {
+    image.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      var imgSrc = this.getAttribute("src");
+      var modalImg = document.getElementById(
+        "map-modal-img"
+      ) as HTMLImageElement;
+      modalImg.src = imgSrc;
+      modal.style.display = "block";
+    });
+  });
+  window.addEventListener("click", function (event) {
+    if (event.target == modal) modal.style.display = "none";
+  });
+</script>
+
+<style>
+  img:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: all ease 0.3s;
+  }
+
+  .content-modal {
+    width: 50%;
+  }
+
+  @media screen and (max-width: 680px){
+    .content-modal {
+      width: 95%;
+    }
+  }
+
+  @media screen and (min-width: 681px) and (max-width: 790px) {
+    .content-modal {
+      width: 85%;
+      left: 50%;
+      top: 55%;
+    }
+  }
+
+  @media screen and (min-width: 791px) and (max-width: 970px){
+    .content-modal {
+      width: 75%;
+      left: 50%;
+      top: 55%;
+    }
+  }
+  @media screen and (min-width: 971px) and (max-width: 1200px){
+    .content-modal {
+      width: 60%;
+      left: 50%;
+      top: 55%;
+    }
+  }
+  @media screen and (min-width: 1201px){
+    .content-modal {
+      width: 46%;
+      left: 50%;
+      top: 54%;
+    }
+  }
+  
+  /* .content-modal{
+    left: 50%;
+    top: 52%;
+  } */
+</style>

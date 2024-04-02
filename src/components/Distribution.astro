@@ -4,15 +4,15 @@ const { class: className } = Astro.props;
 
 <div class={`${className}`}>
   <div class="row">
-    <div class="col-xs-12 col-md-8">
+    <div class="col-12 col-md-8">
       <img
         class="img-responsive rounded-lg"
         src="img-encuentros/mapas/map-00.png"
         alt=""
       />
     </div>
-    <div class="col-xs-12 col-md-4">
-      <div class="col-12">
+    <div class="col-12 col-md-4">
+      <div class="col-12 mt-map">
         <img
           class="img-responsive rounded-lg"
           src="img-encuentros/mapas/map-01.webp"
@@ -37,14 +37,14 @@ const { class: className } = Astro.props;
         alt=""
       />
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4 mt-map">
       <img
         class="img-responsive rounded-lg"
         src="img-encuentros/mapas/map-04.webp"
         alt=""
       />
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4 mt-map">
       <img
         class="img-responsive rounded-lg"
         src="img-encuentros/mapas/map-05.webp"
@@ -131,4 +131,10 @@ const { class: className } = Astro.props;
     left: 50%;
     top: 52%;
   } */
+
+  @media screen and (max-width: 991px) {
+    .mt-map {
+      margin-top: 2rem;
+    }  
+  }
 </style>

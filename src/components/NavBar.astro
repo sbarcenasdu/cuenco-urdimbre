@@ -74,22 +74,29 @@ export const navItems = [
 </div>
 
 <style>
-  .icon-navbar {
-    height: 20px;
-    margin-right: 8px;
-    filter: invert(10%) sepia(20%) saturate(3000%) hue-rotate(190deg) brightness(100%) contrast(100%);
-
-  }
-
   nav {
     animation: nav-shadow 1s linear both;
     animation-timeline: scroll();
     animation-range: 0 400px;
   }
+
+  @media screen and (max-width: 640px) {
+    nav {
+      display: none;
+    }
+  }
+
   @keyframes nav-shadow {
     to {
       @apply shadow-xl;
     }
+  }
+
+  .icon-navbar {
+    height: 20px;
+    margin-right: 8px;
+    filter: invert(10%) sepia(20%) saturate(3000%) hue-rotate(190deg)
+      brightness(100%) contrast(100%);
   }
 
   .pill {

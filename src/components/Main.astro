@@ -158,7 +158,7 @@ import ScrollToTop from "./ScrollToTop.astro";
         <div class="bg-[var(--svg-primary)] pt-6 pb-16"><Meetings /></div>
       </section>
 
-      <section id="stats" class="mx-32">
+      <section id="stats" class="mx-2 xs:mx-6 md:mx-10 xl:mx-32">
         <div class="pb-1 title-bg mb-6">
           <h1 class="section-title text-center font-bold text-gray-700 mb-1">
             Distribución por sedes
@@ -178,12 +178,12 @@ import ScrollToTop from "./ScrollToTop.astro";
         <div class="bg-[var(--cuenco-secondary)]"><Stats /></div>
       </section>
 
-      <section id="baseline" class="min-h-[610px]">
+      <section id="baseline" class="">
         <div class="mb-6">
           <h1 class="section-title font-bold text-gray-700 text-center">
             Línea Base
           </h1>
-          <Linea class="max-w-[20rem] mx-auto" />
+          <Linea class="max-w-[46rem] mx-auto" />
         </div>
         <div class="bg-[var(--cuenco-primary)]"><Baseline /></div>
       </section>
@@ -193,12 +193,12 @@ import ScrollToTop from "./ScrollToTop.astro";
           <h1 class="section-title font-bold text-gray-700 text-center">
             Contacto
           </h1>
-          <Linea class="max-w-[19rem] mx-auto" />
+          <Linea class="md:w-[700px] mx-auto" />
         </div>
         <Contact />
       </section>
 
-      <Cuenco class="h-20 mx-auto -mb-5 mt-16" />
+      <Cuenco class="w-32 mx-auto -mb-5 mt-10 md:mt-16" />
       <Linea class="w-full" />
       <Identificador class="h-44 mx-auto -mt-8 -mb-10" />
     </div>
@@ -313,7 +313,7 @@ import ScrollToTop from "./ScrollToTop.astro";
 
   @media screen and (max-width: 767px){
     #cuenco section {
-      margin-top: 3rem;
+      margin-top: 4rem;
     }
   }
     

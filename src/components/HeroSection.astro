@@ -2,7 +2,7 @@
 const { class: className, id } = Astro.props;
 ---
 
-<section id={id} class=`bg-white ${className}`>
+<div id={id} class=`bg-white ${className}`>
   <div class="">
     <img
       class="w-full max-w-[1300px] mx-auto"
@@ -10,12 +10,12 @@ const { class: className, id } = Astro.props;
       alt="header cuenco"
     />
   </div>
-</section>
+</div>
 
 <style>
   @media screen and (max-width: 640px){
     img{
-      content: url('/img-encuentros/header-tr-mobile.jpg');
+      content: url('/img-encuentros/hero-sm-test.jpg');
     }
   }
   @media screen and (min-width: 641px){

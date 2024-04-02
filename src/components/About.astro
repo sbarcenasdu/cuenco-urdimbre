@@ -4,7 +4,7 @@ import Identificador from "../../public/svg/identificador.astro";
 const {id, class:className} = Astro.props;
 ---
 
-<section id={id} class=`flex flex-col md:flex-row items-center md:mt-7 bg-gray-100 py-10 ${className}` >
+<div id={id} class=`flex flex-col md:flex-row items-center mt-5 md:mt-7 bg-gray-100 pt-4 md:py-10 ${className}` >
   <div class="col-md-8 md:pl-24">
     <div class="pb-10">
       <h1 class="section-title font-bold mb-1 text-center">¿Quiénes somos?</h1>
@@ -22,5 +22,5 @@ const {id, class:className} = Astro.props;
   <div class="my-5s col-md-4">
     <Identificador class="min-h-40 max-h-72 mx-auto"/>
   </div>
-</section>
+</div>
 

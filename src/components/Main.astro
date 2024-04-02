@@ -143,10 +143,10 @@ import ScrollToTop from "./ScrollToTop.astro";
 
     <div role="tabpanel" class="tab-pane fade" id="cuenco">
       <NavBar />    
-      <section id="home">
+      <div class="home" id="home">
         <HeroSection />
         <About id="about" />
-      </section>
+      </div>
 
       <section id="meetings" class="">
         <div class="mb-6 mx-auto title-bg">
@@ -236,6 +236,16 @@ import ScrollToTop from "./ScrollToTop.astro";
     .franja {
       background-repeat: repeat-y;
       background-size: 30px 100vh;
+    }
+  }
+
+  .home{
+    margin-top: 2rem;
+  }
+
+  @media screen and (min-width: 641px){
+    .home{
+      margin-top: 5rem;
     }
   }
 

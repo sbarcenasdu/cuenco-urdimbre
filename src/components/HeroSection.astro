@@ -1,26 +1,23 @@
 ---
 const { class: className, id } = Astro.props;
 ---
-
-<div id={id} class=`bg-white ${className}`>
-  <div class="">
-    <img
-      class="w-full max-w-[1300px] mx-auto"
-      src="/img-encuentros/header-tr.png"
-      alt="header cuenco"
-    />
-  </div>
+<div id={id} class=`${className}`>
+  <img
+    class="w-full max-w-[1300px] mx-auto"
+    src="/img-cuenco/header-tr.png"
+    alt="header cuenco"
+  />
 </div>
 
 <style>
-  @media screen and (max-width: 640px){
-    img{
-      content: url('/img-encuentros/hero-sm-test.jpg');
+  @media screen and (max-width: 640px) {
+    img {
+      content: url("/img-cuenco/header-tr-mobile.png");
     }
   }
-  @media screen and (min-width: 641px){
+  @media screen and (min-width: 641px) {
     img {
-      content: url('/img-encuentros/header-tr.png');
+      content: url("/img-cuenco/header-tr.png");
     }
   }
 </style>

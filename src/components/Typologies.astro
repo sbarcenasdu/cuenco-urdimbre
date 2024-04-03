@@ -2,7 +2,7 @@
   bg-[#c2c2c2] "
 >
   <div class="w-full flex flex-row items-center justify-between bg-zinc-100 p-2 rounded-t-xl px-32">
-    <h1 class="text-4xl text-black">Tipologías</h1>
+    <h1 class="text-5xl text-black">Tipologías</h1>
     <img
       class="max-h-32 object-cover overflow-hidden"
       src="/img-urdimbre/logo-urdimbre.webp"
@@ -287,8 +287,6 @@
 
   <style>
     * {
-      /* margin: 0;
-      padding: 0; */
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box;
@@ -361,7 +359,6 @@
     }
   
     .contenedor-menu .menu .activado > a {
-      /* blue */
       background: #586064;
       color: #fff;
     }
@@ -425,14 +422,14 @@
   
           if (item.classList.contains("activado")) {
             item.classList.remove("activado");
-            const submenu = item.children[1] as HTMLElement | undefined; // ul
+            const submenu = item.children[1] as HTMLElement | undefined;
             if (submenu) {
               submenu.style.display = "none";
             }
           } else {
             closeAllSubmenus();
             item.classList.add("activado");
-            const submenu = item.children[1] as HTMLElement | undefined; // ul
+            const submenu = item.children[1] as HTMLElement | undefined;
             if (submenu) {
               submenu.style.display = "block";
             }
@@ -470,7 +467,7 @@
       function closeAllSubmenus() {
         menuItemsWithSubmenu.forEach((item) => {
           item.classList.remove("activado");
-          const submenu = item.children[1] as HTMLElement | undefined; // ul
+          const submenu = item.children[1] as HTMLElement | undefined;
           if (submenu) {
             submenu.style.display = "none";
           }

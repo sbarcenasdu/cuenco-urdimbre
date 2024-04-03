@@ -26,12 +26,12 @@ export const navItems = [
     label: "stats",
     icon: "/svg/stats.png",
   },
-  // {
-  //   title: "Videos",
-  //   url: "#videos",
-  //   label: "videos",
-  //   icon: "/svg/youtube.png",
-  // },
+  /* {
+    title: "Videos",
+    url: "#videos",
+    label: "videos",
+    icon: "/svg/youtube.png",
+  }, */
   {
     title: "Línea Base",
     url: "#baseline",
@@ -53,7 +53,6 @@ export const navItems = [
     style="background-color:rgb(230, 230, 230)"
   >
     <Cuenco style="height: 55px;" />
-    <!-- sm:flex-col sm:py-2 sm:px-0 lg:flex-row  -->
     {
       navItems.map((link) => (
         <a
@@ -109,7 +108,6 @@ export const navItems = [
     will-change: transform;
   }
   .pill:hover {
-    /* background-color: #9db4d7; */
     text-decoration: none;
     transform: scale(1.12);
   }

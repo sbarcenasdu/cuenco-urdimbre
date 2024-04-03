@@ -1,7 +1,4 @@
 ---
-// import SectionContainer from "./SectionContainer.astro";
-// import Carousel from "./Carousel.astro";
-// import Participants from "./Participants.astro";
 import Cuenco from "../../public/svg/cuenco.astro";
 import Identificador from "../../public/svg/identificador.astro";
 import Linea from "../../public/svg/linea.astro";
@@ -142,17 +139,17 @@ import ScrollToTop from "./ScrollToTop.astro";
       </div>
 
       <section id="meetings" class="">
-        <div class="mb-6 mx-auto title-bg">
+        <div class="mb-6 mx-auto">
           <h1 class="section-title font-bold text-gray-700 text-center">
             Encuentros Intersedes
           </h1>
           <Linea class="lg:w-[36rem] mx-auto" />
         </div>
-        <div class="bg-[var(--svg-primary)] pt-6 pb-16"><Meetings /></div>
+        <div class="bg-[var(--cuenco-azul-claro)] pt-6 pb-16"><Meetings /></div>
       </section>
 
       <section id="stats" class="mx-2 xs:mx-6 md:mx-10 xl:mx-32">
-        <div class="pb-1 title-bg mb-6">
+        <div class="pb-1 mb-6">
           <h1 class="section-title text-center font-bold text-gray-700 mb-1">
             Distribución por sedes
           </h1>
@@ -162,13 +159,13 @@ import ScrollToTop from "./ScrollToTop.astro";
       </section>
 
       <section class="">
-        <div class="pb-1 title-bg mb-6">
+        <div class="pb-1 mb-6">
           <h1 class="section-title text-center font-bold text-gray-700 mb-1">
             Estadísticas de participación
           </h1>
           <Linea class="lg:w-[48rem] mx-auto" />
         </div>
-        <div class="bg-[var(--cuenco-secondary)]"><Stats /></div>
+        <div class="bg-[var(--cuenco-verde)]"><Stats /></div>
       </section>
 
       <section id="baseline" class="">
@@ -178,7 +175,7 @@ import ScrollToTop from "./ScrollToTop.astro";
           </h1>
           <Linea class="max-w-[46rem] mx-auto" />
         </div>
-        <div class="bg-[var(--cuenco-primary)]"><Baseline /></div>
+        <div class="bg-[var(--cuenco-azul-claro)]"><Baseline /></div>
       </section>
 
       <section id="contact">
@@ -202,14 +199,6 @@ import ScrollToTop from "./ScrollToTop.astro";
 
 <style is:global>
   body {
-    /* flex: 1 0 auto;
-    background-color: #666666;
-    background-color: #b3288f;
-    background-color: #25b998;
-    background-color: #2b72b8;
-    background-color: #3c499e;
-    background: radial-gradient(circle, rgba(200,200,200,1) 0%, rgb(59, 59, 59) 70%); */
-    /* background-color: #666; */
     background-image: url("/img-urdimbre/urdimbre-green.webp");
     background-size: cover;
     background-repeat: no-repeat;
@@ -259,7 +248,6 @@ import ScrollToTop from "./ScrollToTop.astro";
     padding: 2rem;
     border: 2px solid #fafafa10;
     background-color: rgba(255, 255, 255, 0.9);
-    /* box-shadow: 0 0 1rem 0 rgba(255, 255, 255, 0.2); */
     box-shadow: 0 0 1rem 0 rgba(31, 38, 135, 0.4);
     backdrop-filter: blur(5px);
   }
@@ -270,13 +258,9 @@ import ScrollToTop from "./ScrollToTop.astro";
 
   .shd-card:hover {
     box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.4);
-    /* cursor: pointer; */
   }
 
-  .title-bg {
-    background-color: white;
-    /* border-radius: 0.5rem; */
-  }
+  
   .line-title {
     margin-bottom: -100px;
   }
@@ -339,6 +323,7 @@ import ScrollToTop from "./ScrollToTop.astro";
   .bg-tab-white {
     background-color: #fff;
   }
+
   /* carrusel */
   .carousel-indicators {
     margin-bottom: -60px;
@@ -366,11 +351,9 @@ import ScrollToTop from "./ScrollToTop.astro";
   }
   .carousel-control {
     background-image: none !important;
-    /* background-color: rgb(168, 168, 168); */
     margin: auto 100px;
     width: 60px;
     height: 60px;
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.9); */
     border-radius: 50%;
   }
   .carousel-control:hover {
@@ -453,7 +436,6 @@ import ScrollToTop from "./ScrollToTop.astro";
       event: MouseEvent,
       tabId: string
     ): void {
-      // 'url("/img-urdimbre/Imgenes fondo pag_Mesa de trabajo 1 copia 6.png")';
       event.preventDefault();
       switch (tabId) {
         case "#home-urdimbre":

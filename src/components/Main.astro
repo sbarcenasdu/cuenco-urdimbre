@@ -54,13 +54,6 @@ import ScrollToTop from "./ScrollToTop.astro";
       id="home-urdimbre"
     >
       <HomeUrdimbre />
-      <div class="w-full bg-zinc-100 -mb-4">
-        <img
-          class="max-h-36 py-4 object-cover mx-auto overflow-hidden"
-          src="/img-urdimbre/logo-urdimbre.webp"
-          alt="logo"
-        />
-      </div>
     </div>
 
     <div role="tabpanel" class="tab-pane fade" id="subjects">
@@ -142,7 +135,7 @@ import ScrollToTop from "./ScrollToTop.astro";
     </div>
 
     <div role="tabpanel" class="tab-pane fade" id="cuenco">
-      <NavBar />    
+      <NavBar />
       <div class="home" id="home">
         <HeroSection />
         <About id="about" />
@@ -188,7 +181,7 @@ import ScrollToTop from "./ScrollToTop.astro";
         <div class="bg-[var(--cuenco-primary)]"><Baseline /></div>
       </section>
 
-      <section id="contact" >
+      <section id="contact">
         <div class="mb-6">
           <h1 class="section-title font-bold text-gray-700 text-center">
             Contacto
@@ -239,12 +232,12 @@ import ScrollToTop from "./ScrollToTop.astro";
     }
   }
 
-  .home{
+  .home {
     margin-top: 2rem;
   }
 
-  @media screen and (min-width: 641px){
-    .home{
+  @media screen and (min-width: 641px) {
+    .home {
       margin-top: 5rem;
     }
   }
@@ -321,12 +314,12 @@ import ScrollToTop from "./ScrollToTop.astro";
     margin-top: 5rem;
   }
 
-  @media screen and (max-width: 767px){
+  @media screen and (max-width: 767px) {
     #cuenco section {
       margin-top: 4rem;
     }
   }
-    
+
   .bg-tab {
     background-color: #0b4237;
     opacity: 0.94;
@@ -524,7 +517,7 @@ import ScrollToTop from "./ScrollToTop.astro";
           break;
         case "#cuenco":
           document.body.style.backgroundImage = "none";
-          document.body.style.backgroundColor = "rgb(255,255,255)";
+          document.body.style.backgroundColor = "rgb(240, 240, 219)";
           var navTabs = document.querySelectorAll(
             ".nav-tabs a"
           ) as NodeListOf<HTMLAnchorElement>;
@@ -554,16 +547,6 @@ import ScrollToTop from "./ScrollToTop.astro";
           document.body.style.backgroundPosition = "80% 100%";
           break;
       }
-    }
-
-    function applyBackground(color: string): void {
-      document.body.style.background = color;
-    }
-
-    function applyRadialBackground(): void {
-      document.body.style.background = "rgb(255,255,255)";
-      document.body.style.background +=
-        " radial-gradient(circle, rgba(200,200,200,1) 0%, rgb(59, 59, 59) 70%)";
     }
   });
 </script>

@@ -111,14 +111,12 @@ const { class: className } = Astro.props;
 
 <div id="ventanaModal" class="modal">
   <div class="content-modal">
-    <span class="close">&times;</span>
     <img id="modalImage" src="/" alt="Imagen en modal" />
   </div>
 </div>
 
 <script>
   var modal = document.getElementById("ventanaModal");
-  var span = document.getElementsByClassName("close")[0];
   var images = document.querySelectorAll(".img-thumbnail");
   images.forEach(function (image) {
     image.addEventListener("click", function (evt) {
@@ -130,10 +128,6 @@ const { class: className } = Astro.props;
       modalImage.src = imgSrc;
       modal.style.display = "block";
     });
-  });
-
-  span.addEventListener("click", function () {
-    modal.style.display = "none";
   });
 
   window.addEventListener("click", function (event) {

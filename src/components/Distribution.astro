@@ -61,24 +61,6 @@ const { class: className } = Astro.props;
   </div>
 </div>
 
-<script>
-  var modal = document.getElementById("maps-modal");
-  var images = document.querySelectorAll(".img-responsive");
-  images.forEach(function (image) {
-    image.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      var imgSrc = this.getAttribute("src");
-      var modalImg = document.getElementById(
-        "map-modal-img"
-      ) as HTMLImageElement;
-      modalImg.src = imgSrc;
-      modal.style.display = "block";
-    });
-  });
-  window.addEventListener("click", function (event) {
-    if (event.target == modal) modal.style.display = "none";
-  });
-</script>
 
 <style>
   img:hover {
@@ -127,14 +109,28 @@ const { class: className } = Astro.props;
     }
   }
   
-  /* .content-modal{
-    left: 50%;
-    top: 52%;
-  } */
-
   @media screen and (max-width: 991px) {
     .mt-map {
       margin-top: 2rem;
     }  
   }
 </style>
+
+<script>
+  var modal = document.getElementById("maps-modal");
+  var images = document.querySelectorAll(".img-responsive");
+  images.forEach(function (image) {
+    image.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      var imgSrc = this.getAttribute("src");
+      var modalImg = document.getElementById(
+        "map-modal-img"
+      ) as HTMLImageElement;
+      modalImg.src = imgSrc;
+      modal.style.display = "block";
+    });
+  });
+  window.addEventListener("click", function (event) {
+    if (event.target == modal) modal.style.display = "none";
+  });
+</script>

@@ -1,4 +1,4 @@
-<div class="w-[80vw] my-8 md:my-16 mx-auto">
+<div id="events-images" class="w-[80vw] my-8 md:my-16 mx-auto">
   <div
     class="flex flex-row items-center justify-between bg-zinc-100 p-2 rounded-t-xl px-32"
   >
@@ -75,16 +75,16 @@
         alt="franja-urdimbre"
         class="mx-auto md:h-2 md:w-full"
       />
-      <div class="m-10 grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4">
+      <div class="m-10 grid sm:grid-cols-2 xl:grid-cols-6 gap-4">
         <img
           src="/img-urdimbre/eventos/agencia-UNAL-01.webp"
           alt="agencia-UNAL"
-          class="img-thumbnail col-start-2"
+          class="img-thumbnail xl:col-start-2 xl:col-span-2"
         />
         <img
           src="/img-urdimbre/eventos/agencia-UNAL-02.webp"
           alt="agencia-UNAL"
-          class="img-thumbnail col-start-3"
+          class="img-thumbnail xl:col-start-4 xl:col-span-2"
         />
       </div>
     </div>
@@ -110,12 +110,7 @@
   </div>
 </div>
 
-<!-- modal -->
-<div id="modal-events" class="modal">
-  <div class="content-modal">
-    <img id="img-modal" src="" alt="img modal events" />
-  </div>
-</div>
+
 
 <style>
   .grid img {
@@ -136,74 +131,4 @@
     font-size: xx-large;
     text-align: center;
   }
-
-  .content-modal {
-    width: 50%;
-  }
-
-  @media screen and (max-width: 680px) {
-    .content-modal {
-      width: 95%;
-    }
-  }
-
-  @media screen and (min-width: 681px) and (max-width: 790px) {
-    .content-modal {
-      width: 85%;
-      left: 50%;
-      top: 50%;
-    }
-  }
-
-  @media screen and (min-width: 791px) and (max-width: 970px) {
-    .content-modal {
-      width: 75%;
-      left: 50%;
-      top: 50%;
-    }
-  }
-  @media screen and (min-width: 971px) and (max-width: 1200px) {
-    .content-modal {
-      width: 60%;
-      left: 50%;
-      top: 50%;
-    }
-  }
-  @media screen and (min-width: 1201px) {
-    .content-modal {
-      width: 46%;
-      left: 50%;
-      top: 50%;
-    }
-  }
-
-  .img-modal {
-    max-height: 80vh;
-  }
-
-  .content-modal img {
-    max-height: 80vh;
-    margin: 0 auto;
-  }
-</style>
-
-<script>
-  const images = document.querySelectorAll(".img-thumbnail");
-  const modal = document.getElementById("modal-events");
-
-  images.forEach((img) => {
-    img.addEventListener("click", (evt) => {
-      evt.preventDefault();
-      const src = img.getAttribute("src");
-      const imgModal = document.getElementById("img-modal");
-      imgModal.setAttribute("src", src);
-      modal.style.display = "block";
-    });
-  });
-
-  window.addEventListener("click", (evt) => {
-    if (evt.target === modal) {
-      modal.style.display = "none";
-    }
-  });
-</script>
+  </style>

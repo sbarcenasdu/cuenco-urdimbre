@@ -197,6 +197,13 @@ import ScrollToTop from "./ScrollToTop.astro";
 
 <ScrollToTop />
 
+<!-- modal -->
+<div class="modal">
+  <div class="content-modal">
+    <img class="modal-image" />
+  </div>
+</div>
+
 <style is:global>
   body {
     background-image: url("/img-urdimbre/urdimbre-green.webp");
@@ -260,7 +267,6 @@ import ScrollToTop from "./ScrollToTop.astro";
     box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.4);
   }
 
-  
   .line-title {
     margin-bottom: -100px;
   }
@@ -365,7 +371,7 @@ import ScrollToTop from "./ScrollToTop.astro";
   .modal {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 10;
     left: 0;
     top: 0;
     width: 100%;
@@ -382,13 +388,42 @@ import ScrollToTop from "./ScrollToTop.astro";
     transform: translate(-50%, -50%);
     background-color: white;
     padding: 6px;
-    max-width: 100%;
-    width: 100%;
     animation: fadeIn 0.3s ease-in;
   }
-  @media screen and (min-width: 1024px) {
+
+  @media screen and (max-width: 680px) {
     .content-modal {
-      width: 70%;
+      width: 95%;
+    }
+  }
+
+  @media screen and (min-width: 681px) and (max-width: 790px) {
+    .content-modal {
+      width: 85%;
+      left: 50%;
+      top: 50%;
+    }
+  }
+
+  @media screen and (min-width: 791px) and (max-width: 970px) {
+    .content-modal {
+      width: 75%;
+      left: 50%;
+      top: 50%;
+    }
+  }
+  @media screen and (min-width: 971px) and (max-width: 1200px) {
+    .content-modal {
+      width: 60%;
+      left: 50%;
+      top: 50%;
+    }
+  }
+  @media screen and (min-width: 1201px) {
+    .content-modal {
+      width: 46%;
+      left: 50%;
+      top: 50%;
     }
   }
 
@@ -530,5 +565,30 @@ import ScrollToTop from "./ScrollToTop.astro";
           break;
       }
     }
+  });
+
+  import { ModalService } from "../services/ModalService.ts";
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const images = document.querySelectorAll(".img-thumbnail");
+
+    images.forEach(function (image: HTMLImageElement) {
+      image.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        const modal = document.querySelector(".modal") as HTMLElement;
+        ModalService.openModal(image, modal);
+        ModalService.closeOnKey(modal);
+      });
+    });
+
+    const modals = document.querySelectorAll(".modal");
+
+    modals.forEach(function (modal: HTMLElement) {
+      modal.addEventListener("click", function (event) {
+        if (event.target === modal) {
+          ModalService.closeModal(modal);
+        }
+      });
+    });
   });
 </script>

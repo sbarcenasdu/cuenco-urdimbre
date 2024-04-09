@@ -15,22 +15,20 @@ const { class: className } = Astro.props;
       <div class="item active">
         <div class="row">
           <div class="col-md-6">
-            <a href="#" data-toggle="modal" data-target="#abrirModal">
+            <a href="#" data-toggle="modal" data-target="#stats-modal">
               <img
                 src="/img-cuenco/metricas/stats-00.png"
                 alt="Primer encuentro"
                 class="img-thumbnail"
-                data-img="img-cuenco/metricas/stats-00.png"
               />
             </a>
           </div>
           <div class="col-md-6">
-            <a href="#" data-toggle="modal" data-target="#abrirModal">
+            <a href="#" data-toggle="modal" data-target="#stats-modal">
               <img
                 src="/img-cuenco/metricas/stats-01.png"
                 alt="Segundo encuentro"
                 class="img-thumbnail"
-                data-img="img-cuenco/metricas/stats-01.png"
               />
             </a>
           </div>
@@ -40,22 +38,20 @@ const { class: className } = Astro.props;
       <div class="item">
         <div class="row">
           <div class="col-md-6">
-            <a href="#" data-toggle="modal" data-target="#abrirModal">
+            <a href="#" data-toggle="modal" data-target="#stats-modal">
               <img
                 src="/img-cuenco/metricas/stats-02.png"
                 alt="Tercer encuentro"
                 class="img-thumbnail"
-                data-img="img-cuenco/metricas/stats-02.png"
                 />
             </a>
           </div>
           <div class="col-md-6">
-            <a href="#" data-toggle="modal" data-target="#abrirModal">
+            <a href="#" data-toggle="modal" data-target="#stats-modal">
               <img
                 src="/img-cuenco/metricas/stats-03.png"
                 alt="Tercer encuentro"
                 class="img-thumbnail"
-                data-img="img-cuenco/metricas/stats-03.png"
               />
             </a>
           </div>
@@ -65,22 +61,20 @@ const { class: className } = Astro.props;
       <div class="item">
         <div class="row">
           <div class="col-md-6">
-            <a href="#" data-toggle="modal" data-target="#abrirModal">
+            <a href="#" data-toggle="modal" data-target="#stats-modal">
               <img
                 src="/img-cuenco/metricas/stats-04.png"
                 alt="Tercer encuentro"
                 class="img-thumbnail"
-                data-img="img-cuenco/metricas/stats-04.png"
               />
             </a>
           </div>
           <div class="col-md-6">
-            <a href="#" data-toggle="modal" data-target="#abrirModal">
+            <a href="#" data-toggle="modal" data-target="#stats-modal">
               <img
                 src="/img-cuenco/metricas/stats-05.png"
                 alt="Tercer encuentro"
                 class="img-thumbnail"
-                data-img="img-cuenco/metricas/stats-05.png"
               />
             </a>
           </div>
@@ -108,32 +102,3 @@ const { class: className } = Astro.props;
     </a>
   </div>
 </div>
-
-<div id="ventanaModal" class="modal">
-  <div class="content-modal">
-    <img id="modalImage" src="/" alt="Imagen en modal" />
-  </div>
-</div>
-
-<script>
-  var modal = document.getElementById("ventanaModal");
-  var images = document.querySelectorAll(".img-thumbnail");
-  images.forEach(function (image) {
-    image.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      var imgSrc = this.getAttribute("data-img");
-      var modalImage = document.getElementById(
-        "modalImage"
-      ) as HTMLImageElement;
-      modalImage.src = imgSrc;
-      modal.style.display = "block";
-    });
-  });
-
-  window.addEventListener("click", function (event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-  });
-</script>
-

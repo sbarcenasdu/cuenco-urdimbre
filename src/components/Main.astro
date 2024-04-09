@@ -331,12 +331,14 @@ import ScrollToTop from "./ScrollToTop.astro";
   }
 
   /* carrusel */
-  .carousel-indicators {
+  #stats-pics .carousel-indicators,
+  #meetings-pics .carousel-indicators {
     margin-bottom: -60px;
     text-align: center;
     z-index: auto;
   }
-  .carousel-indicators li {
+  #stats-pics .carousel-indicators li,
+  #meetings-pics .carousel-indicators li {
     background-color: #c2c2c2;
     border: none;
     border-radius: 50%;
@@ -346,23 +348,31 @@ import ScrollToTop from "./ScrollToTop.astro";
     cursor: pointer;
     transition: background-color 0.3s;
   }
-  .carousel-indicators li.active {
+  #stats-pics .carousel-indicators li.active,
+  #meetings-pics .carousel-indicators li.active {
     background-color: #707070;
   }
-  .carousel-control .glyphicon-chevron-left {
+  #stats-pics .carousel-control .glyphicon-chevron-left,
+  #meetings-pics .carousel-control .glyphicon-chevron-left {
     margin: -1rem -1.3rem;
   }
-  .carousel-control .glyphicon-chevron-right {
+
+  #stats-pics .carousel-control .glyphicon-chevron-right,
+  #meetings-pics .carousel-control .glyphicon-chevron-right {
     margin: -1.1rem -1.1rem;
   }
-  .carousel-control {
+
+  #stats-pics .carousel-control,
+  #meetings-pics .carousel-control {
     background-image: none !important;
     margin: auto 100px;
     width: 60px;
     height: 60px;
     border-radius: 50%;
   }
-  .carousel-control:hover {
+
+  #stats-pics .carousel-control:hover,
+  #meetings-pics .carousel-control:hover {
     background-color: rgb(81, 81, 81);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
   }

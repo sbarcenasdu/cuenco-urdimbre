@@ -3,11 +3,11 @@ const { class: className } = Astro.props;
 ---
 
 <div class=`${className} mt-10`>
-  <div id="my-pics" class="carousel slide" data-ride="carousel">
+  <div id="meetings-pics" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
-      <li data-target="#my-pics" data-slide-to="0" class="active"></li>
-      <li data-target="#my-pics" data-slide-to="1"></li>
-      <li data-target="#my-pics" data-slide-to="2"></li>
+      <li data-target="#meetings-pics" data-slide-to="0" class="active"></li>
+      <li data-target="#meetings-pics" data-slide-to="1"></li>
+      <li data-target="#meetings-pics" data-slide-to="2"></li>
     </ol>
     <!-- Content -->
     <div class="carousel-inner" role="listbox">
@@ -244,7 +244,7 @@ const { class: className } = Astro.props;
     <!-- Previous/Next controls -->
     <a
       class="left carousel-control"
-      href="#my-pics"
+      href="#meetings-pics"
       role="button"
       data-slide="prev"
     >
@@ -253,7 +253,7 @@ const { class: className } = Astro.props;
     </a>
     <a
       class="right carousel-control"
-      href="#my-pics"
+      href="#meetings-pics"
       role="button"
       data-slide="next"
     >

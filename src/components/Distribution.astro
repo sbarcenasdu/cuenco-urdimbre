@@ -52,6 +52,30 @@ const { class: className } = Astro.props;
       />
     </div>
   </div>
+
+  <div class="row mt-8">
+    <div class="col-md-4 mt-map">
+      <img
+        class="img-thumbnail rounded-lg"
+        src="/img-cuenco/mapas/map-06.webp"
+        alt=""
+      />
+    </div>
+    <div class="col-md-4 mt-map">
+      <!-- <img
+        class="img-thumbnail rounded-lg"
+        src="/img-cuenco/mapas/map-04.webp"
+        alt=""
+      /> -->
+    </div>
+    <div class="col-md-4 mt-map">
+      <!-- <img
+        class="img-thumbnail rounded-lg"
+        src="/img-cuenco/mapas/map-05.webp"
+        alt=""
+      /> -->
+    </div>
+  </div>
 </div>
 
 
@@ -59,9 +83,8 @@ const { class: className } = Astro.props;
   img:hover {
     cursor: pointer;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    transition: all ease 0.3s;
-    transform: scale(1.05);
-
+    transition: all ease 0.4s;
+    transform: scale(1.03);
   }
   @media screen and (max-width: 991px) {
     .mt-map {

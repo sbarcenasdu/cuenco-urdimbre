@@ -6,7 +6,7 @@ const { id, class: className } = Astro.props;
 
 <div
   id={id}
-  class=`flex flex-col  items-center mt-5 md:mt-16 bg-gray-100 pt-4 md:py-10 ${className}`
+  class=`w-10/12 mx-auto flex flex-row items-center justify-between bg-zinc-100 p-2 rounded-t-xl px-32 ${className}`
 >
   <div class="scol-md-9 mx-20">
     <div>
@@ -16,7 +16,7 @@ const { id, class: className } = Astro.props;
     <div class="scol-md-3">
       <Identificador class="w-[300px] mx-auto" />
     </div>
-    <div class="text-about text-2xl text-justify grid md:grid-cols-2 gap-10">
+    <div class="text-about text-2xl text-justify grid md:grid-cols-1 gap-10">
       <div>
         <p>
           El Proyecto Instituto Nacional de Investigación, Innovación y Política

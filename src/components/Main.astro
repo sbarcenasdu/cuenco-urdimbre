@@ -140,7 +140,7 @@ import ScrollToTop from "./ScrollToTop.astro";
 
       <section id="meetings" class="">
         <div class="mb-6 mx-auto">
-          <h1 class="section-title font-bold text-gray-700 text-center">
+          <h1 class="section-title font-bold text-white text-center">
             Encuentros Intersedes
           </h1>
           <Linea class="lg:w-[36rem] mx-auto" />
@@ -150,7 +150,7 @@ import ScrollToTop from "./ScrollToTop.astro";
 
       <section id="stats" class="mx-2 xs:mx-6 md:mx-10 xl:mx-32">
         <div class="pb-1 mb-6">
-          <h1 class="section-title text-center font-bold text-gray-700 mb-1">
+          <h1 class="section-title text-center font-bold text-white mb-1">
             Distribución por sedes
           </h1>
           <Linea class="lg:w-[38rem] mx-auto" />
@@ -160,7 +160,7 @@ import ScrollToTop from "./ScrollToTop.astro";
 
       <section class="mt-10 mx-auto w-10/12">
         <div class="pb-1 mb-6">
-          <h1 class="section-title text-center font-bold text-gray-700 mb-1">
+          <h1 class="section-title text-center font-bold text-white mb-1">
             Estadísticas de participación
           </h1>
           <Linea class="lg:w-[48rem] mx-auto" />
@@ -170,7 +170,7 @@ import ScrollToTop from "./ScrollToTop.astro";
 
       <section id="baseline" class="mt-10 mx-auto w-10/12">
         <div class="mb-6">
-          <h1 class="section-title font-bold text-gray-700 text-center">
+          <h1 class="section-title font-bold text-white text-center">
             Línea Base
           </h1>
           <Linea class="max-w-[46rem] mx-auto" />
@@ -180,7 +180,7 @@ import ScrollToTop from "./ScrollToTop.astro";
 
       <section id="contact">
         <div class="mb-6">
-          <h1 class="section-title font-bold text-gray-700 text-center">
+          <h1 class="section-title font-bold text-white text-center">
             Contacto
           </h1>
           <Linea class="md:w-[700px] mx-auto" />
@@ -206,10 +206,10 @@ import ScrollToTop from "./ScrollToTop.astro";
 
 <style is:global>
   body {
-    background-image: url("/img-urdimbre/Imagen-de-fondo-inicio.webp") !important;
-    background-size: cover !important;
-    background-repeat: no-repeat !important;
-    background-position: 80% 100% !important;
+    background-image: url("/img-urdimbre/Imagen-de-fondo-inicio.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 80% 100%;
   }
 
   .franja {
@@ -311,15 +311,15 @@ import ScrollToTop from "./ScrollToTop.astro";
   }
 
   .bg-tab {
-    background-color: #0b4237;
+    background-color: hsl(221, 88%, 14%);
     opacity: 0.94;
   }
   .bg-tab-blue {
-    background-color: rgb(23, 53, 79);
+    background-color: rgb(2, 53, 29);
     opacity: 0.94;
   }
   .bg-tab-green {
-    background-color: #0b4237;
+    background-color: hsl(221, 88%, 14%);
     opacity: 0.94;
   }
   .bg-tab-purple {
@@ -327,7 +327,7 @@ import ScrollToTop from "./ScrollToTop.astro";
     opacity: 0.94;
   }
   .bg-tab-white {
-    background-color: #fff;
+    background-color: #681b54;
   }
 
   /* carrusel */
@@ -396,7 +396,7 @@ import ScrollToTop from "./ScrollToTop.astro";
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.637);
     padding: 6px;
     animation: fadeIn 0.3s ease-in;
   }
@@ -485,7 +485,7 @@ import ScrollToTop from "./ScrollToTop.astro";
       switch (tabId) {
         case "#home-urdimbre":
           document.body.style.backgroundImage =
-            'url("/img-urdimbre/urdimbre-green.webp")';
+            'url("/img-urdimbre/urdimbre-blue.webp")';
           document.body.style.backgroundSize = "cover";
           document.body.style.backgroundRepeat = "no-repeat";
           document.body.style.backgroundPosition = "80% 100%";
@@ -517,7 +517,7 @@ import ScrollToTop from "./ScrollToTop.astro";
         case "#publications":
         case "#events":
           document.body.style.backgroundImage =
-            'url("/img-urdimbre/estud-blue.webp")';
+            'url("/img-urdimbre/estud-green.webp")';
           document.body.style.backgroundSize = "100% auto";
           document.body.style.backgroundRepeat = "repeat-y";
           document.body.style.backgroundPosition = "top left";
@@ -543,13 +543,16 @@ import ScrollToTop from "./ScrollToTop.astro";
           });
           break;
         case "#cuenco":
-          document.body.style.backgroundImage = "none";
-          document.body.style.backgroundColor = "rgba(240, 240, 219, 0.5)";
+        document.body.style.backgroundImage =
+            'url("/img-cuenco/background-cuenco-purple.webp")';
+          document.body.style.backgroundSize = "100% auto";
+          document.body.style.backgroundRepeat = "repeat-y";
+          document.body.style.backgroundPosition = "top left";
           var navTabs = document.querySelectorAll(
             ".nav-tabs a"
           ) as NodeListOf<HTMLAnchorElement>;
           navTabs.forEach(function (tab) {
-            tab.style.color = "black";
+            tab.style.color = "";
           });
           (
             document.querySelectorAll(
@@ -563,7 +566,7 @@ import ScrollToTop from "./ScrollToTop.astro";
               "bg-tab",
               "bg-tab-white"
             );
-            div.classList.add("bg-tab-white");
+            div.classList.add("bg-tab-purple");
           });
           break;
         default:

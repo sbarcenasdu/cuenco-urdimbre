@@ -138,59 +138,69 @@ import ScrollToTop from "./ScrollToTop.astro";
         <About id="about" />
       </div>
 
-      <section id="meetings" class="">
-        <div class="mb-6 mx-auto">
-          <h1 class="section-title font-bold text-white text-center">
+      <section id="meetings" class="flex flex-col items-center justify-center w-10/12 mx-auto rounded-xl my-8 md:my-16 text-black bg-white">
+        <div class="w-full flex flex-col items-center justify-center bg-zinc-100 p-10 rounded-t-xl px-32">
+          <h1 class="section-title text-center font-bold text-black mb-1">
             Encuentros Intersedes
           </h1>
           <Linea class="lg:w-[36rem] mx-auto" />
         </div>
-        <div class="bg-[var(--cuenco-azul-claro)] pt-6 pb-16 mt-10 mx-auto w-10/12"><Meetings /></div>
+        <div class="bg-[var(--cuenco-azul-claro)] pt-6 pb-16 mt-10 mx-auto w-10/12 mb-8"><Meetings /></div>
       </section>
 
-      <section id="stats" class="mx-2 xs:mx-6 md:mx-10 xl:mx-32">
-        <div class="pb-1 mb-6">
-          <h1 class="section-title text-center font-bold text-white mb-1">
+      <section id="stats" class="flex flex-col items-center justify-center w-10/12 mx-auto rounded-xl my-8 md:my-16 text-black bg-white">
+        <div class="w-full flex flex-col items-center justify-center bg-zinc-100 p-10 rounded-t-xl px-32">
+          <h1 class="section-title text-center font-bold text-black mb-1">
             Distribución por sedes
           </h1>
           <Linea class="lg:w-[38rem] mx-auto" />
         </div>
-        <Distribution class="mx-auto w-10/12"/>
+        <div class="mx-auto w-11/12 mb-8 flex items-center justify-center"> 
+          <Distribution />
+        </div>
       </section>
 
-      <section class="mt-10 mx-auto w-10/12">
-        <div class="pb-1 mb-6">
-          <h1 class="section-title text-center font-bold text-white mb-1">
+      <section class="flex flex-col items-center justify-center w-10/12 mx-auto rounded-xl my-8 md:my-16 text-black bg-white">
+        <div class="w-full flex flex-col items-center justify-center bg-zinc-100 p-10 rounded-t-xl px-32">
+          <h1 class="section-title text-center font-bold text-black mb-1">
             Estadísticas de participación
           </h1>
           <Linea class="lg:w-[48rem] mx-auto" />
         </div>
-        <div class="bg-[var(--cuenco-verde)]"><Stats /></div>
+        <div class="bg-[var(--cuenco-verde)] pt-6 pb-16 mt-10 mx-auto w-10/12 mb-8"> 
+          <Stats />
+        </div>
       </section>
 
-      <section id="baseline" class="mt-10 mx-auto w-10/12">
-        <div class="mb-6">
-          <h1 class="section-title font-bold text-white text-center">
+      <section id="baseline" class="flex flex-col items-center justify-center w-10/12 mx-auto rounded-xl my-8 md:my-16 text-black bg-white">
+        <div class="w-full flex flex-col items-center justify-center bg-zinc-100 p-10 rounded-t-xl px-32">
+          <h1 class="section-title text-center font-bold text-black mb-1">
             Línea Base
           </h1>
           <Linea class="max-w-[46rem] mx-auto" />
         </div>
-        <div class="bg-[var(--cuenco-azul-claro)]"><Baseline /></div>
+        <div class="bg-[var(--cuenco-azul-claro)] pt-6 pb-16 mt-10 mx-auto w-10/12 mb-8">
+          <Baseline />
+        </div>
       </section>
 
-      <section id="contact">
-        <div class="mb-6">
-          <h1 class="section-title font-bold text-white text-center">
+      <section id="contact" class="flex flex-col items-center justify-center w-10/12 mx-auto rounded-xl my-8 md:my-16 text-black bg-white">
+        <div class="w-full flex flex-col items-center justify-center bg-zinc-100 p-10 rounded-t-xl px-32">
+          <h1 class="section-title text-center font-bold text-black mb-1">
             Contacto
           </h1>
           <Linea class="md:w-[700px] mx-auto" />
         </div>
-        <Contact />
+        <div class="w-full mx-auto pb-16"> 
+          <Contact /> 
+        </div>
       </section>
 
+      <div class="w-full bg-white -mb-4"> <!-- esto es el recuadro blanco del final de cuenco-->
       <Cuenco class="w-[14rem] mx-auto mt-1" />
       <Linea class="w-full" />
       <Identificador class="h-44 mx-auto -mt-8 -mb-10" />
+      </div>
     </div>
   </div>
 </div>

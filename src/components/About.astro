@@ -4,21 +4,17 @@ import Identificador from "../../public/svg/identificador.astro";
 const { id, class: className } = Astro.props;
 ---
 
-<div
-  id={id}
-  class=`flex flex-col  items-center mt-5 md:mt-16 bg-gray-100 pt-4 md:py-10 ${className}`
->
-  <div class="scol-md-9 mx-20">
-    <div>
-      <h1 class="section-title font-bold mb-1 text-center">¿Quiénes somos?</h1>
-      <Linea class="max-w-[28rem] mx-auto" />
-    </div>
-    <div class="scol-md-3">
-      <Identificador class="w-[300px] mx-auto" />
-    </div>
-    <div class="text-about text-2xl text-justify grid md:grid-cols-2 gap-10">
+
+<div class="flex flex-col items-center justify-center w-10/12 mx-auto rounded-xl my-8 md:my-16 text-black bg-white">
+  <div class="w-full flex flex-col items-center justify-center bg-zinc-100 p-10 rounded-t-xl px-32">
+    <h1 class="section-title text-center font-bold text-black mb-1">¿Quiénes somos?</h1>
+    <Linea class="max-w-[30rem]" />
+  </div>
+  <div class="mx-20s mt-8 mb-8 flex flex-col items-center w-full px-32"> 
+    <Identificador class="w-[300px] mx-auto" style="margin-top: -4px; margin-bottom: -4px;" />
+    <div class="grid md:grid-cols-2 gap-8 w-full">
       <div>
-        <p>
+        <p class="text-about text-xl text-justify">
           El Proyecto Instituto Nacional de Investigación, Innovación y Política
           Educativa consiste en el acto de creación de un espacio colaborativo
           inter y transdisciplinar, desde el modelo intersedes. Este instituto
@@ -33,7 +29,7 @@ const { id, class: className } = Astro.props;
           utilidad de un recipiente reside en el vacío, dada su capacidad de
           albergar un contenido (Tiao Chang, 2011).
         </p>
-        <p>
+        <p class="text-about text-xl text-justify">
           En consecuencia, Cuenco es una provocación a la academia para que se
           vacíe de preconcepciones y de la presunción de poseer la verdad y el
           conocimiento, con el objeto de dar cabida a diálogos de saberes en el
@@ -48,7 +44,7 @@ const { id, class: className } = Astro.props;
           en diálogo con las distintas expresiones de la comunidad
           universitaria, sus representaciones y sus manifestaciones colectivas.
         </p>
-        <p>
+        <p class="text-about text-xl text-justify">
           Cuenco es una conciencia desde la cual la universidad se piensa a sí
           misma; propicia el encuentro para la formación, la escucha y el
           diálogo como lugar idóneo para la toma decisiones de universidad,
@@ -65,7 +61,7 @@ const { id, class: className } = Astro.props;
         </p>
       </div>
       <div>
-        <p>
+        <p class="text-about text-xl text-justify">
           la articulación de los ejes misionales: docencia, investigación y
           extensión; la percepción que tienen estudiantes de docentes, así como
           el acompañamiento en la formación en pedagogía y en humanidades a
@@ -80,7 +76,7 @@ const { id, class: className } = Astro.props;
           más allá de la académica, desde una cultura contemporánea que va,
           desde lo local hasta un entorno global.
         </p>
-        <p>
+        <p class="text-about text-xl text-justify">
           El Instituto Nacional se proyecta como agente de cambio en la
           transformación educativa a través del intercambio de saberes con los
           territorios y la construcción de conocimientos con otros seres
@@ -96,7 +92,7 @@ const { id, class: className } = Astro.props;
           tres dimensiones en su conjunto: investigación en educación,
           innovación académica y política educativa.
         </p>
-        <p>
+        <p class="text-about text-xl text-justify">
           Sin embargo, diferentes Facultades, Dependencias y Unidades Académico
           Administrativas de las Sedes Andinas (Bogotá, Medellín, Manizales,
           Palmira y De La Paz) y de las Sedes de Presencia Nacional (Amazonía,

@@ -2,127 +2,93 @@
 const { class: className } = Astro.props;
 ---
 
-<div class=`${className} py-4 md:py-16 mx-2 md:mx-auto mt-10 w-10/12`>
+<div class={`${className} `}>
   <!-- Carousel container -->
   <div id="stats-pics" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
-      <li data-target="#stats-pics" data-slide-to="0" class="active"></li>
-      <li data-target="#stats-pics" data-slide-to="1"></li>
-      <li data-target="#stats-pics" data-slide-to="2"></li>
-      <li data-target="#stats-pics" data-slide-to="3"></li>
+        <li data-target="#stats-pics" data-slide-to="0" class="active"></li>
+        <li data-target="#stats-pics" data-slide-to="1"></li>
+        <li data-target="#stats-pics" data-slide-to="2"></li>
+        <li data-target="#stats-pics" data-slide-to="3"></li>
+        <li data-target="#stats-pics" data-slide-to="4"></li>
+        <li data-target="#stats-pics" data-slide-to="5"></li>
+        <li data-target="#stats-pics" data-slide-to="6"></li> 
+        <li data-target="#stats-pics" data-slide-to="7"></li>
     </ol>
-    <!-- Content -->
     <div class="carousel-inner" role="listbox">
-      <div class="item active">
-        <div class="row">
-          <div class="col-md-6">
-            <a href="#" data-toggle="modal" data-target="#stats-modal">
-              <img
-                src="/img-cuenco/metricas/stats-00.png"
-                alt="Total de encuentros"
-                class="img-thumbnail"
-              />
-            </a>
-          </div>
-          <div class="col-md-6">
-            <a href="#" data-toggle="modal" data-target="#stats-modal">
-              <img
-                src="/img-cuenco/metricas/stats-01.png"
-                alt="Primer encuentro"
-                class="img-thumbnail"
-              />
-            </a>
-          </div>
+        <div class="item active">
+            <div class="row">
+                <div class="col-md-12">
+                    <img src="/img-cuenco/metricas/stats-00.webp" alt="Total de encuentros"
+                         class="img-thumbnail img-responsive" />
+                </div>
+            </div>
         </div>
-      </div>
-
-      <div class="item">
-        <div class="row">
-          <div class="col-md-6">
-            <a href="#" data-toggle="modal" data-target="#stats-modal">
-              <img
-                src="/img-cuenco/metricas/stats-02.png"
-                alt="Segundo encuentro"
-                class="img-thumbnail"
-                />
-            </a>
-          </div>
-          <div class="col-md-6">
-            <a href="#" data-toggle="modal" data-target="#stats-modal">
-              <img
-                src="/img-cuenco/metricas/stats-03.png"
-                alt="Tercer encuentro"
-                class="img-thumbnail"
-              />
-            </a>
-          </div>
+        <div class="item">
+            <div class="row">
+                <div class="col-md-12">
+                    <img src="/img-cuenco/metricas/stats-01.png" alt="Primer encuentro"
+                         class="img-thumbnail img-responsive" />
+                </div>
+            </div>
         </div>
-      </div>
-
-      <div class="item">
-        <div class="row">
-          <div class="col-md-6">
-            <a href="#" data-toggle="modal" data-target="#stats-modal">
-              <img
-                src="/img-cuenco/metricas/stats-04.png"
-                alt="Cuarto encuentro"
-                class="img-thumbnail"
-              />
-            </a>
-          </div>
-          <div class="col-md-6">
-            <a href="#" data-toggle="modal" data-target="#stats-modal">
-              <img
-                src="/img-cuenco/metricas/stats-05.png"
-                alt="Quinto encuentro"
-                class="img-thumbnail"
-              />
-            </a>
-          </div>
+        <div class="item">
+            <div class="row">
+                <div class="col-md-12">
+                    <img src="/img-cuenco/metricas/stats-02.png" alt="Segundo encuentro"
+                         class="img-thumbnail img-responsive" />
+                </div>
+            </div>
         </div>
-      </div>
-
-      <div class="item">
-        <div class="row">
-          <div class="col-md-6">
-            <a href="#" data-toggle="modal" data-target="#stats-modal">
-              <img
-                src="/img-cuenco/metricas/stats-06.png"
-                alt="Sexto encuentro"
-                class="img-thumbnail"
-              />
-            </a>
-          </div>
-          <div class="col-md-6">
-            <!-- <a href="#" data-toggle="modal" data-target="#stats-modal">
-              <img
-                src="/img-cuenco/metricas/stats-05.png"
-                alt="Tercer encuentro"
-                class="img-thumbnail"
-              />
-            </a> -->
-          </div>
+        <div class="item">
+            <div class="row">
+                <div class="col-md-12">
+                    <img src="/img-cuenco/metricas/stats-03.png" alt="Tercer encuentro"
+                         class="img-thumbnail img-responsive" />
+                </div>
+            </div>
         </div>
-      </div>
+        <div class="item">
+            <div class="row">
+                <div class="col-md-12">
+                    <img src="/img-cuenco/metricas/stats-04.png" alt="Cuarto encuentro"
+                         class="img-thumbnail img-responsive" />
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="row">
+                <div class="col-md-12">
+                    <img src="/img-cuenco/metricas/stats-05.png" alt="Quinto encuentro"
+                         class="img-thumbnail img-responsive" />
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="row">
+                <div class="col-md-12">
+                    <img src="/img-cuenco/metricas/stats-06.png" alt="Sexto encuentro"
+                         class="img-thumbnail img-responsive" />
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="row">
+                <div class="col-md-12">
+                    <img src="/img-cuenco/metricas/stats-07.png" alt="Septimo encuentro"
+                         class="img-thumbnail img-responsive" />
+                </div>
+            </div>
+        </div>
     </div>
+
     <!-- Previous/Next controls -->
-    <a
-      class="left carousel-control"
-      href="#stats-pics"
-      role="button"
-      data-slide="prev"
-    >
-      <span class="glyphicon glyphicon-chevron-left"></span>
-      <span class="sr-only">Previous</span>
+    <a class="left carousel-control" href="#stats-pics" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
     </a>
-    <a
-      class="right carousel-control"
-      href="#stats-pics"
-      role="button"
-      data-slide="next"
-    >
-      <span class="glyphicon glyphicon-chevron-right"></span>
-      <span class="sr-only">Next</span>
+    <a class="right carousel-control" href="#stats-pics" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
     </a>
-  </div>
 </div>

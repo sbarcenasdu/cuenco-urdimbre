@@ -22,26 +22,25 @@ import ScrollToTop from "./ScrollToTop.astro";
 
 <div class="">
   <!-- Nav tabs -->
-  <ul class="nav nav-tabs text-white bg-tab" role="tablist" style="">
+  <ul class="nav nav-tabs text-white bg-tab" role="tablist" style="display: flex; align-items: center;">
     <li role="presentation" class="active">
-      <a
-        href="#home-urdimbre"
-        aria-controls="home-urdimbre"
-        role="tab"
-        data-toggle="tab"><big>Inicio</big></a
-      >
+      <a href="#home-urdimbre" aria-controls="home-urdimbre" role="tab" data-toggle="tab" style="padding: 10px;">
+        <big>Inicio</big>
+      </a>
     </li>
     <li role="presentation">
-      <a href="#subjects" aria-controls="subjects" role="tab" data-toggle="tab"
-        ><big>Asignaturas Interdisciplinares</big></a
-      >
+      <a href="#subjects" aria-controls="subjects" role="tab" data-toggle="tab" style="padding: 10px;">
+        <big>Asignaturas Interdisciplinares</big>
+      </a>
     </li>
     <li role="presentation">
-      <a href="#cuenco" aria-controls="cuenco" role="tab" data-toggle="tab"
-        ><big>Cuenco</big></a
-      >
+      <a href="#cuenco" aria-controls="cuenco" role="tab" data-toggle="tab" style="padding: 10px;">
+        <big>Cuenco</big>
+      </a>
     </li>
   </ul>
+</div>
+
 
   <!-- Tab panes -->
   <div class="tab-content">
@@ -131,79 +130,147 @@ import ScrollToTop from "./ScrollToTop.astro";
       </div>
     </div>
 
-    <div role="tabpanel" class="tab-pane fade" id="cuenco">
-      <NavBar />
-      <div class="home" id="home">
-        <HeroSection />
-        <About id="about" />
+    <div role="tabpanel" class="tab-pane fade" id="cuenco" style="background-image: url('/img-cuenco/background-cuenco-purple.webp'); background-size: 100% auto; background-repeat: repeat-y; background-position: top left;">
+      <div>
+        <!-- Nav sub-tabs subjects-->
+        <ul class="nav nav-tabs text-white bg-tab" role="tablist">
+          <li role="presentation" class="active">
+            <a href="#home" aria-controls="home" role="tab" data-toggle="tab" style="display: flex; align-items: center;">
+              <img src="/svg/about-05.png" alt="Icono Quiénes Somos" class="mr-2 w-4 h-4" />
+              <span style="display: inline-block; vertical-align: middle;">Quiénes Somos</span>
+            </a>
+          </li>
+          <li role="presentation">
+            <a href="#meetings" aria-controls="meetings" role="tab" data-toggle="tab" style="display: flex; align-items: center;">
+              <img src="/svg/participants-04.png" alt="Icono Encuentros Intersedes" class="mr-2 w-4 h-4" />
+              <span style="display: inline-block; vertical-align: middle;">Encuentros Intersedes</span>
+            </a>
+          </li>
+          <li role="presentation">
+  <a href="#stats" aria-controls="stats" role="tab" data-toggle="tab" style="display: flex; align-items: center;">
+    <img src="/svg/meetings-06.png" alt="Icono Encuentros Intersedes" class="mr-2 w-4 h-4" />
+    <span style="display: inline-block; vertical-align: middle;">Distribución por sedes</span>
+  </a>
+</li>
+          <li role="presentation">
+            <a href="#participation-stats" aria-controls="participation-stats" role="tab" data-toggle="tab" style="display: flex; align-items: center;">
+              <img src="/svg/stats-03.png" alt="Icono Estadísticas de participación" class="mr-2 w-4 h-4" />
+              <span style="display: inline-block; vertical-align: middle;">Estadísticas de participación</span>
+            </a>
+          </li>
+          <li role="presentation">
+            <a href="#baseline" aria-controls="baseline" role="tab" data-toggle="tab" style="display: flex; align-items: center;">
+              <img src="/svg/baseline-01.png" alt="Icono Línea Base" class="mr-2 w-4 h-4" />
+              <span style="display: inline-block; vertical-align: middle;">Línea Base</span>
+            </a>
+          </li>
+          <li role="presentation">
+            <a href="#contact" aria-controls="contact" role="tab" data-toggle="tab" style="display: flex; align-items: center;">
+              <img src="/svg/Contact-02.png" alt="Icono Contacto" class="mr-2 w-4 h-4" />
+              <span style="display: inline-block; vertical-align: middle;">Contacto</span>
+            </a>
+          </li> 
+          <li role="presentation" style="top: -35px; right: -375px;">
+            <div class="youtube-corner" style="position: absolute; top: max(0px, 20% - 100px); right: 40px; z-index: 1000; width: 80px; height: auto;">
+              <a href="#" onclick="window.open('https://www.youtube.com/@ProyectoInstitutoCuenco', '_blank');" aria-controls="youtube" role="tab" rel="noopener noreferrer">
+                <img src="/svg/youtube.png" alt="Icono Youtube" class="hover:scale-110">
+              </a>                                               
+            </div>
+          </li>
+        </ul>
+        
+          
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane fade in active" id="home">
+            <!-- Contenido de Inicio -->
+            <div class="home">
+              <HeroSection />
+              <About id="about" />
+            </div>
+          </div>
+    
+          <div role="tabpanel" class="tab-pane fade" id="meetings">
+            <!-- Contenido de Encuentros Intersedes -->
+            <section class="flex flex-col items-center justify-center w-10/12 mx-auto rounded-xl my-8 md:my-16 text-black bg-white">
+              <div class="w-full flex flex-col items-center justify-center bg-zinc-100 p-10 rounded-t-xl px-32">
+                <h1 class="text-5xl text-black mb-1">
+                  Encuentros Intersedes
+                </h1>
+                <Linea class="lg:w-[36rem] mx-auto" />
+              </div>
+              <div class="mx-auto">
+                <Meetings />
+              </div>
+            </section>
+          </div>
+    
+          <div role="tabpanel" class="tab-pane fade" id="stats">
+            <!-- Contenido de Distribución por sedes -->
+            <section class="flex flex-col items-center justify-center w-10/12 mx-auto rounded-xl my-8 md:my-16 text-black bg-white">
+              <div class="w-full flex flex-col items-center justify-center bg-zinc-100 p-10 rounded-t-xl px-32">
+                <h1 class="text-5xl text-black mb-1">
+                  Distribución por sedes
+                </h1>
+                <Linea class="lg:w-[38rem] mx-auto" />
+              </div>
+              <div class="mx-auto w-11/12 mb-8 flex items-center justify-center pb-10"> 
+                <Distribution />
+              </div>
+            </section>
+          </div>
+
+          <div role="tabpanel" class="tab-pane fade" id="participation-stats">
+            <!-- Contenido de Estadísticas de participación -->
+            <section class="flex flex-col items-center justify-center w-10/12 mx-auto rounded-xl my-8 md:my-16 text-black bg-white">
+              <div class="w-full flex flex-col items-center justify-center bg-zinc-100 p-10 rounded-t-xl px-32">
+                <h1 class="text-5xl text-black mb-1">
+                  Estadísticas de participación
+                </h1>
+                <Linea class="lg:w-[48rem] mx-auto" />
+              </div>
+              <div class="mx-auto"> 
+                <Stats />
+              </div>
+            </section>
+          </div>
+          
+          <div role="tabpanel" class="tab-pane fade" id="baseline">
+            <!-- Contenido de Línea Base -->
+            <section class="flex flex-col items-center justify-center w-10/12 mx-auto rounded-xl my-8 md:my-16 text-black bg-white">
+              <div class="w-full flex flex-col items-center justify-center bg-zinc-100 p-10 rounded-t-xl px-32">
+                <h1 class="text-5xl text-black mb-1">Línea Base</h1>
+                <Linea class="max-w-\[46rem\] mx-auto" />
+              </div>
+              <div class="w-full mx-auto mt-10 mb-8">
+                <Baseline />
+              </div>
+            </section>
+          </div>
+          
+          <div role="tabpanel" class="tab-pane fade" id="contact">
+            <!-- Contenido de Contacto -->
+            <section class="flex flex-col items-center justify-center w-2/3 mx-auto rounded-xl my-8 md:my-16 text-black bg-white">
+              <div class="w-full flex flex-col items-center justify-center bg-zinc-100 p-10 rounded-t-xl px-32">
+                <h1 class="text-5xl text-black mb-1">
+                  Contacto
+                </h1>
+                <Linea class="md:w-[700px] mx-auto" />
+              </div>
+              <div class="w-96 mx-auto pb-16">
+                <Contact /> 
+              </div>
+            </section>
+          </div>          
+        </div>
       </div>
-
-      <section id="meetings" class="flex flex-col items-center justify-center w-10/12 mx-auto rounded-xl my-8 md:my-16 text-black bg-white">
-        <div class="w-full flex flex-col items-center justify-center bg-zinc-100 p-10 rounded-t-xl px-32">
-          <h1 class="section-title text-center font-bold text-black mb-1">
-            Encuentros Intersedes
-          </h1>
-          <Linea class="lg:w-[36rem] mx-auto" />
-        </div>
-        <div class="bg-[var(--cuenco-azul-claro)] pt-6 pb-16 mt-10 mx-auto w-10/12 mb-8"><Meetings /></div>
-      </section>
-
-      <section id="stats" class="flex flex-col items-center justify-center w-10/12 mx-auto rounded-xl my-8 md:my-16 text-black bg-white">
-        <div class="w-full flex flex-col items-center justify-center bg-zinc-100 p-10 rounded-t-xl px-32">
-          <h1 class="section-title text-center font-bold text-black mb-1">
-            Distribución por sedes
-          </h1>
-          <Linea class="lg:w-[38rem] mx-auto" />
-        </div>
-        <div class="mx-auto w-11/12 mb-8 flex items-center justify-center"> 
-          <Distribution />
-        </div>
-      </section>
-
-      <section class="flex flex-col items-center justify-center w-10/12 mx-auto rounded-xl my-8 md:my-16 text-black bg-white">
-        <div class="w-full flex flex-col items-center justify-center bg-zinc-100 p-10 rounded-t-xl px-32">
-          <h1 class="section-title text-center font-bold text-black mb-1">
-            Estadísticas de participación
-          </h1>
-          <Linea class="lg:w-[48rem] mx-auto" />
-        </div>
-        <div class="bg-[var(--cuenco-verde)] pt-6 pb-16 mt-10 mx-auto w-10/12 mb-8"> 
-          <Stats />
-        </div>
-      </section>
-
-      <section id="baseline" class="flex flex-col items-center justify-center w-10/12 mx-auto rounded-xl my-8 md:my-16 text-black bg-white">
-        <div class="w-full flex flex-col items-center justify-center bg-zinc-100 p-10 rounded-t-xl px-32">
-          <h1 class="section-title text-center font-bold text-black mb-1">
-            Línea Base
-          </h1>
-          <Linea class="max-w-[46rem] mx-auto" />
-        </div>
-        <div class="bg-[var(--cuenco-azul-claro)] pt-6 pb-16 mt-10 mx-auto w-10/12 mb-8">
-          <Baseline />
-        </div>
-      </section>
-
-      <section id="contact" class="flex flex-col items-center justify-center w-10/12 mx-auto rounded-xl my-8 md:my-16 text-black bg-white">
-        <div class="w-full flex flex-col items-center justify-center bg-zinc-100 p-10 rounded-t-xl px-32">
-          <h1 class="section-title text-center font-bold text-black mb-1">
-            Contacto
-          </h1>
-          <Linea class="md:w-[700px] mx-auto" />
-        </div>
-        <div class="w-full mx-auto pb-16"> 
-          <Contact /> 
-        </div>
-      </section>
-
-      <div class="w-full bg-white -mb-4"> <!-- esto es el recuadro blanco del final de cuenco-->
-      <Cuenco class="w-[14rem] mx-auto mt-1" />
-      <Linea class="w-full" />
-      <Identificador class="h-44 mx-auto -mt-8 -mb-10" />
+      <div class="w-full bg-white -mb-4">
+        <!-- esto es el recuadro blanco del final de cuenco-->
+        <Cuenco class="w-\[14rem\] mx-auto mt-1" />
+        <Linea class="w-full" />
+        <Identificador class="h-44 mx-auto -mt-8 -mb-10" />
       </div>
     </div>
-  </div>
-</div>
+    
 
 <ScrollToTop />
 

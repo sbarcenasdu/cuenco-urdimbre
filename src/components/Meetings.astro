@@ -2,8 +2,8 @@
 const { class: className } = Astro.props;
 ---
 
-<div class=`${className} mt-10 mx-auto`style="max-width: 83.333333%;">
-  <div id="meetings-pics" class="carousel slide" data-ride="carousel">
+<div class={`${className}`}>
+  <div id="meetings-pics" class="carousel slide" data-ride="carousel" data-interval="5000">
     <ol class="carousel-indicators">
       <li data-target="#meetings-pics" data-slide-to="0" class="active"></li>
       <li data-target="#meetings-pics" data-slide-to="1"></li>
@@ -20,21 +20,28 @@ const { class: className } = Astro.props;
     <div class="carousel-inner" role="listbox">
       <div class="item active">
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-12">
             <a href="#" data-toggle="modal" data-target="#meetings-modal">
               <img
                 src="/img-cuenco/1-encuentro/1-enc-01.webp"
                 alt="Primer encuentro"
-                class="img-thumbnail"
+                class="img-thumbnail img-responsive"
+                style="width: 100%; height: auto;"
               />
             </a>
           </div>
-          <div class="col-md-6">
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="row">
+          <div class="col-md-12">
             <a href="#" data-toggle="modal" data-target="#meetings-modal">
               <img
                 src="/img-cuenco/2-encuentro/2-enc-01.webp"
                 alt="Segundo encuentro"
-                class="img-thumbnail"
+                class="img-thumbnail img-responsive"
+                style="width: 100%; height: auto;"
               />
             </a>
           </div>
@@ -43,21 +50,28 @@ const { class: className } = Astro.props;
 
       <div class="item">
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-12">
             <a href="#" data-toggle="modal" data-target="#meetings-modal">
               <img
                 src="/img-cuenco/3-encuentro/3-enc-01.webp"
                 alt="Tercer encuentro"
-                class="img-thumbnail"
+                class="img-thumbnail img-responsive"
+                style="width: 100%; height: auto;"
               />
             </a>
           </div>
-          <div class="col-md-6">
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="row">
+          <div class="col-md-12">
             <a href="#" data-toggle="modal" data-target="#meetings-modal">
               <img
                 src="/img-cuenco/3-encuentro/3-enc-02.webp"
                 alt="Tercer encuentro"
-                class="img-thumbnail"
+                class="img-thumbnail img-responsive"
+                style="width: 100%; height: auto;"
               />
             </a>
           </div>
@@ -66,21 +80,28 @@ const { class: className } = Astro.props;
 
       <div class="item">
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-12">
             <a href="#" data-toggle="modal" data-target="#meetings-modal">
               <img
                 src="/img-cuenco/3-encuentro/3-enc-03.webp"
                 alt="Tercer encuentro"
-                class="img-thumbnail"
+                class="img-thumbnail img-responsive"
+                style="width: 100%; height: auto;"
               />
             </a>
           </div>
-          <div class="col-md-6">
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="row">
+          <div class="col-md-12">
             <a href="#" data-toggle="modal" data-target="#meetings-modal">
               <img
                 src="/img-cuenco/4-encuentro/4-enc-01.webp"
                 alt="Cuarto encuentro"
-                class="img-thumbnail"
+                class="img-thumbnail img-responsive"
+                style="width: 100%; height: auto;"
               />
             </a>
           </div>
@@ -89,21 +110,28 @@ const { class: className } = Astro.props;
 
       <div class="item">
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-12">
             <a href="#" data-toggle="modal" data-target="#meetings-modal">
               <img
                 src="/img-cuenco/4-encuentro/4-enc-02.webp"
                 alt="Cuarto encuentro"
-                class="img-thumbnail"
+                class="img-thumbnail img-responsive"
+                style="width: 100%; height: auto;"
               />
             </a>
           </div>
-          <div class="col-md-6">
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="row">
+          <div class="col-md-12">
             <a href="#" data-toggle="modal" data-target="#meetings-modal">
               <img
                 src="/img-cuenco/4-encuentro/4-enc-03.webp"
                 alt="Cuarto encuentro"
-                class="img-thumbnail"
+                class="img-thumbnail img-responsive"
+                style="width: 100%; height: auto;"
               />
             </a>
           </div>
@@ -112,21 +140,28 @@ const { class: className } = Astro.props;
 
       <div class="item">
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-12">
             <a href="#" data-toggle="modal" data-target="#meetings-modal">
               <img
                 src="/img-cuenco/4-encuentro/4-enc-04.webp"
                 alt="Cuarto encuentro"
-                class="img-thumbnail"
+                class="img-thumbnail img-responsive"
+                style="width: 100%; height: auto;"
               />
             </a>
           </div>
-          <div class="col-md-6">
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="row">
+          <div class="col-md-12">
             <a href="#" data-toggle="modal" data-target="#meetings-modal">
               <img
                 src="/img-cuenco/4-encuentro/4-enc-05.webp"
                 alt="Cuarto encuentro"
-                class="img-thumbnail"
+                class="img-thumbnail img-responsive"
+                style="width: 100%; height: auto;"
               />
             </a>
           </div>
@@ -135,21 +170,13 @@ const { class: className } = Astro.props;
 
       <div class="item">
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-12">
             <a href="#" data-toggle="modal" data-target="#meetings-modal">
               <img
                 src="/img-cuenco/5-encuentro/5-enc-01.webp"
                 alt="Quinto encuentro"
-                class="img-thumbnail"
-              />
-            </a>
-          </div>
-          <div class="col-md-6">
-            <a href="#" data-toggle="modal" data-target="#meetings-modal">
-              <img
-                src="/img-cuenco/5-encuentro/5-enc-03.webp"
-                alt="Quinto encuentro"
-                class="img-thumbnail"
+                class="img-thumbnail img-responsive"
+                style="width: 100%; height: auto;"
               />
             </a>
           </div>
@@ -158,21 +185,13 @@ const { class: className } = Astro.props;
 
       <div class="item">
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-12">
             <a href="#" data-toggle="modal" data-target="#meetings-modal">
               <img
-                src="/img-cuenco/5-encuentro/5-enc-04.webp"
-                alt="Quinto encuentro"
-                class="img-thumbnail"
-              />
-            </a>
-          </div>
-          <div class="col-md-6">
-            <a href="#" data-toggle="modal" data-target="#meetings-modal">
-              <img
-                src="/img-cuenco/5-encuentro/5-enc-05.webp"
-                alt="Quinto encuentro"
-                class="img-thumbnail"
+              src="/img-cuenco/5-encuentro/5-enc-03.webp"
+              alt="Quinto encuentro"
+              class="img-thumbnail img-responsive"
+              style="width: 100%; height: auto;"
               />
             </a>
           </div>
@@ -181,21 +200,13 @@ const { class: className } = Astro.props;
 
       <div class="item">
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-12">
             <a href="#" data-toggle="modal" data-target="#meetings-modal">
               <img
-                src="/img-cuenco/5-encuentro/5-enc-06.webp"
-                alt="Quinto encuentro"
-                class="img-thumbnail"
-              />
-            </a>
-          </div>
-          <div class="col-md-6">
-            <a href="#" data-toggle="modal" data-target="#meetings-modal">
-              <img
-                src="/img-cuenco/6-encuentro/6-enc-01.webp"
-                alt="Sexto encuentro"
-                class="img-thumbnail"
+              src="/img-cuenco/5-encuentro/5-enc-04.webp"
+              alt="Quinto encuentro"
+              class="img-thumbnail img-responsive"
+              style="width: 100%; height: auto;"
               />
             </a>
           </div>
@@ -204,21 +215,13 @@ const { class: className } = Astro.props;
 
       <div class="item">
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-12">
             <a href="#" data-toggle="modal" data-target="#meetings-modal">
               <img
-                src="/img-cuenco/6-encuentro/6-enc-02.webp"
-                alt="Sexto encuentro"
-                class="img-thumbnail"
-              />
-            </a>
-          </div>
-          <div class="col-md-6">
-            <a href="#" data-toggle="modal" data-target="#meetings-modal">
-              <img
-                src="/img-cuenco/6-encuentro/6-enc-03.webp"
-                alt="Sexto encuentro"
-                class="img-thumbnail"
+              src="/img-cuenco/5-encuentro/5-enc-05.webp"
+              alt="Quinto encuentro"
+              class="img-thumbnail img-responsive"
+              style="width: 100%; height: auto;"
               />
             </a>
           </div>
@@ -227,23 +230,165 @@ const { class: className } = Astro.props;
 
       <div class="item">
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-12">
+            <a href="#" data-toggle="modal" data-target="#meetings-modal">
+              <img
+              src="/img-cuenco/5-encuentro/5-enc-06.webp"
+              alt="Quinto encuentro"
+              class="img-thumbnail img-responsive"
+              style="width: 100%; height: auto;"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+          
+      <div class="item">
+        <div class="row">
+          <div class="col-md-12">
+            <a href="#" data-toggle="modal" data-target="#meetings-modal">
+              <img
+              src="/img-cuenco/6-encuentro/6-enc-01.webp"
+              alt="Quinto encuentro"
+              class="img-thumbnail img-responsive"
+              style="width: 100%; height: auto;"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="row">
+          <div class="col-md-12">
+            <a href="#" data-toggle="modal" data-target="#meetings-modal">
+              <img
+              src="/img-cuenco/6-encuentro/6-enc-02.webp"
+              alt="Quinto encuentro"
+              class="img-thumbnail img-responsive"
+              style="width: 100%; height: auto;"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="row">
+          <div class="col-md-12">
+            <a href="#" data-toggle="modal" data-target="#meetings-modal">
+              <img
+              src="/img-cuenco/6-encuentro/6-enc-03.webp"
+              alt="Quinto encuentro"
+              class="img-thumbnail img-responsive"
+              style="width: 100%; height: auto;"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="row">
+          <div class="col-md-12">
             <a href="#" data-toggle="modal" data-target="#meetings-modal">
               <img
                 src="/img-cuenco/6-encuentro/6-enc-04.webp"
-                alt="Sexto encuentro"
-                class="img-thumbnail"
+                alt="Quinto encuentro"
+                class="img-thumbnail img-responsive"
+                style="width: 100%; height: auto;"
               />
             </a>
           </div>
-          <div class="col-md-6">
-            <!-- <a href="#" data-toggle="modal" data-target="#meetings-modal">
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="row">
+          <div class="col-md-12">
+            <a href="#" data-toggle="modal" data-target="#meetings-modal">
               <img
-                src="/img-cuenco/6-encuentro/6-enc-03.webp"
-                alt="Tercer encuentro"
-                class="img-thumbnail"
+                src="/img-cuenco/7-encuentro/7-enc-01.webp"
+                alt="Quinto encuentro"
+                class="img-thumbnail img-responsive"
+                style="width: 100%; height: auto;"
               />
-            </a> -->
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="row">
+          <div class="col-md-12">
+            <a href="#" data-toggle="modal" data-target="#meetings-modal">
+              <img
+                src="/img-cuenco/7-encuentro/7-enc-02.webp"
+                alt="Quinto encuentro"
+                class="img-thumbnail img-responsive"
+                style="width: 100%; height: auto;"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="row">
+          <div class="col-md-12">
+            <a href="#" data-toggle="modal" data-target="#meetings-modal">
+              <img
+                src="/img-cuenco/7-encuentro/7-enc-03.webp"
+                alt="Quinto encuentro"
+                class="img-thumbnail img-responsive"
+                style="width: 100%; height: auto;"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="row">
+          <div class="col-md-12">
+            <a href="#" data-toggle="modal" data-target="#meetings-modal">
+              <img
+                src="/img-cuenco/7-encuentro/7-enc-04.webp"
+                alt="Quinto encuentro"
+                class="img-thumbnail img-responsive"
+                style="width: 100%; height: auto;"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="row">
+          <div class="col-md-12">
+            <a href="#" data-toggle="modal" data-target="#meetings-modal">
+              <img
+                src="/img-cuenco/7-encuentro/7-enc-05.webp"
+                alt="Quinto encuentro"
+                class="img-thumbnail img-responsive"
+                style="width: 100%; height: auto;"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="row">
+          <div class="col-md-12">
+            <a href="#" data-toggle="modal" data-target="#meetings-modal">
+              <img
+                src="/img-cuenco/7-encuentro/7-enc-06.webp"
+                alt="Quinto encuentro"
+                class="img-thumbnail img-responsive"
+                style="width: 100%; height: auto;"
+              />
+            </a>
           </div>
         </div>
       </div>
@@ -268,4 +413,154 @@ const { class: className } = Astro.props;
       <span class="sr-only">Next</span>
     </a>
   </div>
+</div>
+
+<div class="mt-20">
+  <div id="meetings-videos" class="carousel slide" data-ride="carousel" data-interval="5000">
+    <div class="carousel-inner">
+      <div class="item active">
+        <div class="row">
+          <div class="col-md-12">
+            <a href="#" data-toggle="modal" data-target="#meetings-modal">
+              <div class="video-container">
+                <iframe
+                  src="https://www.youtube.com/embed/JGJF1W8K0F4?rel=0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="row">
+          <div class="col-md-12">
+            <a href="#" data-toggle="modal" data-target="#meetings-modal">
+              <div class="video-container">
+                <iframe
+                  src="https://www.youtube.com/embed/PECNV0hvuzA?rel=0"
+                  title="Asignaturas Interdisciplinares: Taller Interdisciplinar"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-indicators-container">
+      <ol class="carousel-indicators custom-indicators">
+        <li data-target="#meetings-videos" data-slide-to="0" class="active"></li>
+        <li data-target="#meetings-videos" data-slide-to="1"></li>
+      </ol>
+    </div>
+
+    <a class="left carousel-control custom-control" href="#meetings-videos" role="button" data-slide="prev">
+      <span class="custom-arrow left-arrow"></span>
+    </a>
+    <a class="right carousel-control custom-control" href="#meetings-videos" role="button" data-slide="next">
+      <span class="custom-arrow right-arrow"></span>
+    </a>
+  </div>
+
+  <style>
+    .video-container {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border: 4px solid white;
+      border-radius: 4px;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .carousel-indicators-container {
+      background-color: rgba(255, 255, 255, 0.5);
+      border-radius: 20px;
+      padding: 5px 10px;
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+    .custom-indicators {
+      margin: 0;
+      display: flex;
+      align-items: center;
+    }
+
+    .custom-indicators li {
+      width: 12px;
+      height: 12px;
+      margin: 0 5px;
+      border-radius: 50%;
+      background-color: #ccc;
+    }
+
+    .custom-indicators .active {
+      background-color: #333;
+    }
+
+    .custom-control {
+      opacity: 1;
+      transition: opacity 0.3s ease;
+      width: 50px;
+      height: 50px;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 20px;
+    }
+
+    .custom-control:hover {
+      background-color: rgba(68, 63, 63, 0.8);
+    }
+
+    .custom-arrow {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      position: relative;
+    }
+
+    .left-arrow::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 10px;
+      height: 10px;
+      border-top: 2px solid #faf6f6;
+      border-left: 2px solid #faf6f6;
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    .right-arrow::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 10px;
+      height: 10px;
+      border-top: 2px solid #faf6f6;
+      border-right: 2px solid #faf6f6;
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+  </style>
 </div>

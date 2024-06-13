@@ -2,41 +2,43 @@
 const { class: className } = Astro.props;
 ---
 
-<div class=`py-8 flex flex-col items-center justify-center  ${className} mx-auto w-10/12`>
-  <div class="card grid md:grid-cols-2 gap-1 mx-2 md:mx-20 justify-evenly">
-    <div class="p-3 m-3 self-center">
-      <h3 class="text-4xl my-3 bold  text-center">Title</h3>
+<div class="py-8 flex flex-col items-center justify-center ${className}">
+  <div class="grid md:grid-cols-2 gap-1 mx-2 md:mx-20 justify-evenly">
+    <div class="p-3 m-3 self-center text-5xl">
       <p class="text-2xl text-justify">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque porro
-        molestias nulla, cumque dignissimos possimus alias quo explicabo
-        laboriosam dolores sint id ut, perspiciatis iure labore ipsam cupiditate
-        voluptate. Quasi. Dolores odio at, mollitia ut dolor cupiditate, omnis
-        excepturi esse aspernatur fuga adipisci numquam repudiandae facilis
-        debitis officia dicta, placeat quidem sed earum?
+        La línea base titulada &quot;Investigación en educación, innovación académica y
+        política educativa en la UNAL&quot; es un acervo documental sobre producción e
+        investigación en educación dentro de la Universidad Nacional de Colombia, y en
+        red con otras instituciones, durante el presente milenio. En este contexto, el
+        presente mapeo de procesos, actividades, discusiones, proyectos, colectivos y
+        producción académica tiene por objeto ser un insumo para investigaciones
+        provenientes de todas las disciplinas y orientadas al campo de la educación.
+        El documento consta de dos componentes principales: colectivos y ámbitos de
+        investigación, y producción académica, organizados por indicadores temáticos. Se
+        considera que esta recopilación es útil para visibilizar avances realizados desde la
+        universidad, reconocer retos educativos para el país y proyectar rutas de acción al
+        respecto.
       </p>
     </div>
-    <div
-      class="max-w-sm bg-gray-200 border border-gray-200 rounded-lg shadow-md mx-auto"
-    >
+    <div class="p-3 m-3 self-center" style="overflow: visible;">
       <img
         class="rounded-t-lg"
-        src="https://cdn.zendalibros.com/wp-content/uploads/2017/09/james-bold-343821.jpg"
+        src="/img-cuenco/Imagen-linea-base.webp"
         alt=""
+        style="width: 120%; height: 120%; object-fit: cover; margin-top: -60px; margin-bottom: 10px; margin-left: 20px;"
       />
-      <div class="p-5">
-        <a href="#" onclick="return false;">
-          <h5 class="mb-2 text-3xl font-bold tracking-tight">
-            Línea Base 2023-2024
-          </h5>
-        </a>
-        <p class="mb-3 text-xl py-8">Corta descripción de contenido</p>
-        <a
-          href="#" onclick="return false;"
-          class="inline-flex items-center px-5 py-2.5 text-xl text-center text-white/70 bg-[var(--cuenco-azul-claro)] bg-opacity-80 rounded-lg hover:bg-[var(--cuenco-azul-claro)] focus:ring-4 focus:outline-none focus:ring-blue-300 hover:no-underline hover:text-white"
+  
+      <div class="text-center">
+        <a 
+          href="/Baseline/Linea_ Base_Proyecto_Instituto_CUENCO_V24.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center justify-center px-5 py-2.5 text-xl text-center text-white bg-[#681b54] rounded-lg hover:bg-[#681b54] focus:ring-4 focus:outline-none focus:ring-[#681b54] hover:no-underline"
+          style="width: 30%; margin: 0 auto; display: block; margin-left: 180px;"
         >
           Ver más
           <svg
-            class="w-3.5 h-3.5 ms-2 rtl:rotate-180"
+            class="w-6 h-6 ml-2 rtl:rotate-180 inline-block"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -47,9 +49,10 @@ const { class: className } = Astro.props;
               stroke-linecap="round"
               stroke-linejoin="round"
               stroke-width="2"
-              d="M1 5h12m0 0L9 1m4 4L9 9"></path>
+              d="M1 5h12m0 0L9 1m4 4L9 9"
+            ></path>
           </svg>
-        </a>
+          </a>
       </div>
     </div>
   </div>

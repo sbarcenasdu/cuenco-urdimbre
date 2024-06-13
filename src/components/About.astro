@@ -7,10 +7,10 @@ const { id, class: className } = Astro.props;
 
 <div class="flex flex-col items-center justify-center w-10/12 mx-auto rounded-xl my-8 md:my-16 text-black bg-white">
   <div class="w-full flex flex-col items-center justify-center bg-zinc-100 p-10 rounded-t-xl px-32">
-    <h1 class="section-title text-center font-bold text-black mb-1">¿Quiénes somos?</h1>
+    <h1 class="text-5xl text-black mb-1">Quiénes somos</h1>
     <Linea class="max-w-[30rem]" />
   </div>
-  <div class="mx-20s mt-8 mb-8 flex flex-col items-center w-full px-32"> 
+  <div class="mx-20s mt-8 mb-8 flex flex-col items-center w-full px-32 pb-24"> 
     <Identificador class="w-[300px] mx-auto" style="margin-top: -4px; margin-bottom: -4px;" />
     <div class="grid md:grid-cols-2 gap-8 w-full">
       <div>
@@ -44,7 +44,7 @@ const { id, class: className } = Astro.props;
           en diálogo con las distintas expresiones de la comunidad
           universitaria, sus representaciones y sus manifestaciones colectivas.
         </p>
-        <p class="text-about text-xl text-justify">
+        <p class="text-about text-xl" style="width: 100%; text-align: justify;">
           Cuenco es una conciencia desde la cual la universidad se piensa a sí
           misma; propicia el encuentro para la formación, la escucha y el
           diálogo como lugar idóneo para la toma decisiones de universidad,
@@ -57,13 +57,15 @@ const { id, class: className } = Astro.props;
           propone tareas, a la vez que vislumbra posibilidades en temas tan
           álgidos como la articulación de los distintos niveles de formación; la
           revisión de los componentes de formación como Fundamentación,
-          Formación disciplinar o profesional y Libre elección en el pregrado;
+          Formación disciplinar o profesional y Libre elección en el pregrado; 
+          la articulación de los ejes misionales: docencia, investigación y
+          extensión; 
+          la percepción que tienen estudiantes de docentes, docencia,
         </p>
       </div>
       <div>
         <p class="text-about text-xl text-justify">
-          la articulación de los ejes misionales: docencia, investigación y
-          extensión; la percepción que tienen estudiantes de docentes, así como
+          investigación y extensión; la percepción que tienen estudiantes de docentes, así como
           el acompañamiento en la formación en pedagogía y en humanidades a
           docentes de reciente ingreso. En segunda instancia, Cuenco como campo
           de estudio, diálogo y transformación, cuenta con un espacio
@@ -114,6 +116,9 @@ const { id, class: className } = Astro.props;
 
 <style>
   .text-about p {
-    margin-bottom: 1rem;
+    font-size:large;
+    text-align: justify;
+    margin: 1rem 2rem;
+    line-height: normal;
   }
 </style>

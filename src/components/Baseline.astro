@@ -2,57 +2,61 @@
 const { class: className } = Astro.props;
 ---
 
-<div class="py-8 flex flex-col items-center justify-center ${className}">
-  <div class="grid md:grid-cols-2 gap-1 mx-2 md:mx-20 justify-evenly">
-    <div class="p-3 m-3 self-center text-5xl">
-      <p class="text-2xl text-justify">
-        La línea base titulada &quot;Investigación en educación, innovación académica y
-        política educativa en la UNAL&quot; es un acervo documental sobre producción e
-        investigación en educación dentro de la Universidad Nacional de Colombia, y en
-        red con otras instituciones, durante el presente milenio. En este contexto, el
-        presente mapeo de procesos, actividades, discusiones, proyectos, colectivos y
-        producción académica tiene por objeto ser un insumo para investigaciones
-        provenientes de todas las disciplinas y orientadas al campo de la educación.
-        El documento consta de dos componentes principales: colectivos y ámbitos de
-        investigación, y producción académica, organizados por indicadores temáticos. Se
-        considera que esta recopilación es útil para visibilizar avances realizados desde la
-        universidad, reconocer retos educativos para el país y proyectar rutas de acción al
-        respecto.
-      </p>
-    </div>
-    <div class="p-3 m-3 self-center" style="overflow: visible;">
-      <img
-        class="rounded-t-lg"
-        src="/img-cuenco/Imagen-linea-base.webp"
-        alt=""
-        style="width: 120%; height: 120%; object-fit: cover; margin-top: -60px; margin-bottom: 10px; margin-left: 20px;"
-      />
-  
-      <div class="text-center">
-        <a 
-          href="/Baseline/Linea_ Base_Proyecto_Instituto_CUENCO_V24.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="flex items-center justify-center px-5 py-2.5 text-xl text-center text-white bg-[#681b54] rounded-lg hover:bg-[#681b54] focus:ring-4 focus:outline-none focus:ring-[#681b54] hover:no-underline"
-          style="width: 30%; margin: 0 auto; display: block; margin-left: 180px;"
-        >
-          Ver más
-          <svg
-            class="w-6 h-6 ml-2 rtl:rotate-180 inline-block"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 14 10"
-          >
-            <path
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M1 5h12m0 0L9 1m4 4L9 9"
-            ></path>
-          </svg>
-          </a>
+<div class="container p-8 rounded-lg w-11/12 mx-auto bg-transparent">
+  <div class="py-8 flex flex-col items-center justify-center ${className}">
+    <div class="grid md:grid-cols-2 gap-1 mx-2 md:mx-20 justify-evenly">
+      <div class="p-3 m-3 self-center text-5xl">
+        <p class="text-2xl text-justify">
+          La línea base titulada &quot;Investigación en educación, innovación académica y
+          política educativa en la UNAL&quot; es un acervo documental sobre producción e
+          investigación en educación dentro de la Universidad Nacional de Colombia, y en
+          red con otras instituciones, durante el presente milenio. En este contexto, el
+          presente mapeo de procesos, actividades, discusiones, proyectos, colectivos y
+          producción académica tiene por objeto ser un insumo para investigaciones
+          provenientes de todas las disciplinas y orientadas al campo de la educación.
+          El documento consta de dos componentes principales: colectivos y ámbitos de
+          investigación, y producción académica, organizados por indicadores temáticos. Se
+          considera que esta recopilación es útil para visibilizar avances realizados desde la
+          universidad, reconocer retos educativos para el país y proyectar rutas de acción al
+          respecto.
+        </p>
+      </div>
+      <div class="p-3 m-3 self-center" style="overflow: visible;">
+        <div class="flex flex-col items-center justify-center bg-transparent ml-8" style="width: 120%; margin-top: -20px; padding-bottom: 20px;">
+          <img
+            class="rounded-t-lg"
+            src="/img-cuenco/Imagen-linea-base.webp"
+            alt=""
+            style="width: auto; height: 500px; max-width: 200%; object-fit: contain; margin-top: 0px; margin-bottom: 40px;"
+          />
+
+          <div class="text-center">
+            <a 
+              href="/Baseline/Linea_ Base_Proyecto_Instituto_CUENCO_V24.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center justify-center px-5 py-2.5 text-xl text-center text-white bg-[#681b54] rounded-lg hover:bg-[#681b54] focus:ring-4 focus:outline-none focus:ring-[#681b54] hover:no-underline"
+              style="display: inline-block; margin: 20px auto; padding: 12px 24px; margin-left: 20px;"
+            >
+              Ver más
+              <svg
+                class="w-6 h-6 ml-2 rtl:rotate-180 inline-block"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 10"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 5h12m0 0L9 1m4 4L9 9"
+                ></path>
+              </svg>
+            </a>
+          </div>                           
+        </div>
       </div>
     </div>
   </div>

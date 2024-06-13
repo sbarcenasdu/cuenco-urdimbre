@@ -13,8 +13,8 @@
     />
   </div>
 
-  <div class="contenedor-menuOLD bg-white w-10/12">
-    <a href="#" class="btn-menuOLD">Menu<i class="icono fa fa-bars"></i></a>
+  <div class="contenedor-menu bg-white w-10/12">
+    <a href="#" class="btn-menu">Menu<i class="icono fa fa-bars"></i></a>
     <!-- Presentación -->
     <div class="presentation text-justify">
       <h2 class="text-4xl py-6 text-center">
@@ -694,7 +694,7 @@
     color: #fff;
   }
 
-  @media screen and (max-width: 450px) {
+  /* @media screen and (max-width: 450px) {
     .contenedor-menu {
       margin: 0;
       width: 100%;
@@ -708,7 +708,7 @@
     .contenedor-menu .menu {
       display: none;
     }
-  }
+  } */
 
   .carousel-item {
     margin: 1rem;
@@ -735,52 +735,52 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    // const menuItemsWithSubmenu =
-    //   document.querySelectorAll<HTMLElement>(".menu li:has(ul)");
-    // const menuButton = document.querySelector<HTMLElement>(".btn-menu");
-    // const menuContainer = document.querySelector<HTMLElement>(
-    //   ".contenedor-menu .menu"
-    // );
+    const menuItemsWithSubmenu =
+      document.querySelectorAll<HTMLElement>(".menu li:has(ul)");
+    const menuButton = document.querySelector<HTMLElement>(".btn-menu");
+    const menuContainer = document.querySelector<HTMLElement>(
+      ".contenedor-menu .menu"
+    );
 
-    // menuItemsWithSubmenu.forEach((item) => {
-    //   item.addEventListener("click", (e) => {
-    //     e.preventDefault();
+    menuItemsWithSubmenu.forEach((item) => {
+      item.addEventListener("click", (e) => {
+        e.preventDefault();
 
-    //     if (item.classList.contains("activado")) {
-    //       item.classList.remove("activado");
-    //       const submenu = item.children[1] as HTMLElement | undefined;
-    //       if (submenu) {
-    //         submenu.style.display = "none";
-    //       }
-    //     } else {
-    //       closeAllSubmenus();
-    //       item.classList.add("activado");
-    //       const submenu = item.children[1] as HTMLElement | undefined;
-    //       if (submenu) {
-    //         submenu.style.display = "block";
-    //       }
-    //     }
-    //   });
-    // });
+        if (item.classList.contains("activado")) {
+          item.classList.remove("activado");
+          const submenu = item.children[1] as HTMLElement | undefined;
+          if (submenu) {
+            submenu.style.display = "none";
+          }
+        } else {
+          closeAllSubmenus();
+          item.classList.add("activado");
+          const submenu = item.children[1] as HTMLElement | undefined;
+          if (submenu) {
+            submenu.style.display = "block";
+          }
+        }
+      });
+    });
 
-    // menuButton?.addEventListener("click", () => {
-    //   if (menuContainer)
-    //     menuContainer.style.display =
-    //       menuContainer.style.display === "none" ||
-    //       menuContainer.style.display === ""
-    //         ? "block"
-    //         : "none";
-    // });
+    menuButton?.addEventListener("click", () => {
+      if (menuContainer)
+        menuContainer.style.display =
+          menuContainer.style.display === "none" ||
+          menuContainer.style.display === ""
+            ? "block"
+            : "none";
+    });
 
-    // window.addEventListener("resize", () => {
-    //   if (menuContainer)
-    //     if (document.documentElement.clientWidth > 450) {
-    //       menuContainer.style.display = "block";
-    //     } else {
-    //       menuContainer.style.display = "none";
-    //       closeAllSubmenus();
-    //     }
-    // });
+    window.addEventListener("resize", () => {
+      if (menuContainer)
+        if (document.documentElement.clientWidth > 450) {
+          menuContainer.style.display = "block";
+        } else {
+          menuContainer.style.display = "none";
+          closeAllSubmenus();
+        }
+    });
 
     const submenuLinks =
       document.querySelectorAll<HTMLElement>(".menu li ul li a");
@@ -790,15 +790,15 @@
       });
     });
 
-    // function closeAllSubmenus() {
-    //   menuItemsWithSubmenu.forEach((item) => {
-    //     item.classList.remove("activado");
-    //     const submenu = item.children[1] as HTMLElement | undefined;
-    //     if (submenu) {
-    //       submenu.style.display = "none";
-    //     }
-    //   });
-    // }
+    function closeAllSubmenus() {
+      menuItemsWithSubmenu.forEach((item) => {
+        item.classList.remove("activado");
+        const submenu = item.children[1] as HTMLElement | undefined;
+        if (submenu) {
+          submenu.style.display = "none";
+        }
+      });
+    }
   });
   document.addEventListener("DOMContentLoaded", () => {
     const firstMenuItem = document.querySelector(".menu li.activado");

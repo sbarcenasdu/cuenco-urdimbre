@@ -131,14 +131,15 @@ import ScrollToTop from "./ScrollToTop.astro";
     </div>
 
     <div role="tabpanel" class="tab-pane fade" id="cuenco" style="background-image: url('/img-cuenco/background-cuenco-purple.webp'); background-size: 100% auto; background-repeat: repeat-y; background-position: top left;">
-      <div class="contenedor-icono absolute top-40 right-20 z-50">
+      <div class="contenedor-icono absolute top-40 right-5 md:right-20 z-50">
         <a href="#" onclick="window.open('https://www.youtube.com/@ProyectoInstitutoCuenco', '_blank');" aria-controls="youtube" role="tab" rel="noopener noreferrer">
           <img src="/svg/youtube.png" alt="Icono Youtube" width="80" height="80" class="hover:scale-105 transition duration-300">
         </a>
       </div>
+      
       <div>
         <!-- Nav sub-tabs subjects-->
-        <ul class="nav nav-tabs text-white bg-tab" role="tablist">
+        <ul class="nav nav-tabs text-white bg-tab"  role="tablist">
           <li role="presentation" class="active">
             <a href="#home" aria-controls="home" role="tab" data-toggle="tab" style="display: flex; align-items: center;">
               <img src="/svg/about-05.png" alt="Icono Quiénes Somos" class="mr-2 w-4 h-4" />
@@ -190,11 +191,11 @@ import ScrollToTop from "./ScrollToTop.astro";
           <div role="tabpanel" class="tab-pane fade" id="meetings">
             <!-- Contenido de Encuentros Intersedes -->
             <section class="flex flex-col items-center justify-center w-10/12 mx-auto rounded-xl my-8 md:my-16 text-black bg-white">
-              <div class="w-full flex flex-col items-center justify-center bg-zinc-100 p-10 rounded-t-xl px-32">
-                <h1 class="text-5xl text-black mb-1">
+              <div class="w-full flex flex-col items-center justify-center bg-zinc-100 p-4 sm:p-6 md:p-8 lg:p-10 rounded-t-xl px-4 sm:px-8 md:px-16 lg:px-32">
+                <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-black mb-1 text-center">
                   Encuentros Intersedes
                 </h1>
-                <Linea class="lg:w-[36rem] mx-auto" />
+                <Linea class="w-full max-w-[16rem] sm:max-w-[24rem] md:max-w-[30rem] lg:max-w-[36rem] mx-auto" />
               </div>
               <div class="mx-auto">
                 <Meetings />
@@ -205,11 +206,11 @@ import ScrollToTop from "./ScrollToTop.astro";
           <div role="tabpanel" class="tab-pane fade" id="stats">
             <!-- Contenido de Distribución por sedes -->
             <section class="flex flex-col items-center justify-center w-10/12 mx-auto rounded-xl my-8 md:my-16 text-black bg-white">
-              <div class="w-full flex flex-col items-center justify-center bg-zinc-100 p-10 rounded-t-xl px-32">
-                <h1 class="text-5xl text-black mb-1">
+              <div class="w-full flex flex-col items-center justify-center bg-zinc-100 p-4 sm:p-6 md:p-8 lg:p-10 rounded-t-xl px-4 sm:px-8 md:px-16 lg:px-32">
+                <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-black mb-1 text-center">
                   Distribución por sedes
                 </h1>
-                <Linea class="lg:w-[38rem] mx-auto" />
+                <Linea class="w-full max-w-[18rem] sm:max-w-[26rem] md:max-w-[32rem] lg:max-w-[38rem] mx-auto" />
               </div>
               <div class="mx-auto w-11/12 mb-8 flex items-center justify-center pb-10"> 
                 <Distribution />
@@ -220,11 +221,11 @@ import ScrollToTop from "./ScrollToTop.astro";
           <div role="tabpanel" class="tab-pane fade" id="participation-stats">
             <!-- Contenido de Estadísticas de participación -->
             <section class="flex flex-col items-center justify-center w-10/12 mx-auto rounded-xl my-8 md:my-16 text-black bg-white">
-              <div class="w-full flex flex-col items-center justify-center bg-zinc-100 p-10 rounded-t-xl px-32">
-                <h1 class="text-5xl text-black mb-1">
+              <div class="w-full flex flex-col items-center justify-center bg-zinc-100 p-4 sm:p-6 md:p-8 lg:p-10 rounded-t-xl px-4 sm:px-8 md:px-16 lg:px-32">
+                <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-black mb-1 text-center">
                   Estadísticas de participación
                 </h1>
-                <Linea class="lg:w-[48rem] mx-auto" />
+                <Linea class="w-full max-w-[18rem] sm:max-w-[26rem] md:max-w-[32rem] lg:max-w-[38rem] mx-auto" />
               </div>
               <div class="mx-auto"> 
                 <Stats />
@@ -235,9 +236,9 @@ import ScrollToTop from "./ScrollToTop.astro";
           <div role="tabpanel" class="tab-pane fade" id="baseline">
             <!-- Contenido de Línea Base -->
             <section class="flex flex-col items-center justify-center w-10/12 mx-auto rounded-xl my-8 md:my-16 text-black bg-white">
-              <div class="w-full flex flex-col items-center justify-center bg-zinc-100 p-10 rounded-t-xl px-32">
-                <h1 class="text-5xl text-black mb-1">Línea Base</h1>
-                <Linea class="max-w-\[46rem\] mx-auto" />
+              <div class="w-full flex flex-col items-center justify-center bg-zinc-100 p-4 sm:p-6 md:p-8 lg:p-10 rounded-t-xl px-4 sm:px-8 md:px-16 lg:px-32">
+                <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-black mb-1 text-center">Línea Base</h1>
+                <Linea class="w-full max-w-[18rem] sm:max-w-[26rem] md:max-w-[32rem] lg:max-w-[38rem] mx-auto" />
               </div>
               <div class="w-full mx-auto mt-10 mb-8">
                 <Baseline />
@@ -248,11 +249,11 @@ import ScrollToTop from "./ScrollToTop.astro";
           <div role="tabpanel" class="tab-pane fade" id="contact">
             <!-- Contenido de Contacto -->
             <section class="flex flex-col items-center justify-center w-3/4 mx-auto rounded-xl my-8 md:my-16 text-black bg-white">
-              <div class="w-full flex flex-col items-center justify-center bg-zinc-100 p-10 rounded-t-xl px-32">
-                <h1 class="text-5xl text-black mb-1">
+              <div class="w-full flex flex-col items-center justify-center bg-zinc-100 p-4 sm:p-6 md:p-8 lg:p-10 rounded-t-xl px-4 sm:px-8 md:px-16 lg:px-32">
+                <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-black mb-1 text-center">
                   Contacto
                 </h1>
-                <Linea class="max-w-\[46rem\] mx-auto" />
+                <Linea class="w-full max-w-[18rem] sm:max-w-[26rem] md:max-w-[32rem] lg:max-w-[38rem] mx-auto" />
               </div>
               <div class="w-full mx-auto mt-10 mb-8">
                 <Contact /> 

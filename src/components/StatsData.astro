@@ -2,15 +2,12 @@
 const { class: className } = Astro.props;
 ---
 
-<div class=`${className} w-10/12 m-auto my-8 md:my-16`>
-  <div class="w-full flex flex-row items-center justify-between bg-zinc-100 p-2 rounded-t-xl px-32">
-    <h1 class="text-5xl text-black">Datos Estadísticos</h1>
-    <img
-      class="max-h-32 object-cover overflow-hidden"
-      src="/img-urdimbre/logo-urdimbre.webp"
-      alt="logo"
-    />
+<div class="${className} w-10/12 m-auto my-8 md:my-16">
+  <div class="w-full flex flex-col md:flex-row items-center justify-between bg-zinc-100 p-2 rounded-t-xl md:px-32">
+    <h1 class="text-3xl md:text-5xl text-black mb-2 md:mb-0">Datos Estadísticos</h1>
+    <img class="max-h-24 md:max-h-32 object-cover overflow-hidden" src="/img-urdimbre/logo-urdimbre.webp" alt="logo" />
   </div>
+
   <!-- Carousel container -->
   <div id="stats-stats-data" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
@@ -31,37 +28,37 @@ const { class: className } = Astro.props;
     <!-- Content -->
     <div class="carousel-inner" role="listbox">
         <div class="item active">
-            <img src="/img-urdimbre/stats/historicoest.png" class="d-block w-100" alt="historico estudiantes"/>
+            <img src="/img-urdimbre/stats/historicoest.webp" class="d-block w-100" alt="historico estudiantes"/>
           </div>
           <div class="item">
-            <img src="/img-urdimbre/stats/catedranovusEst.png" class="d-block w-100" alt="novus"/>
+            <img src="/img-urdimbre/stats/catedranovusEst.webp" class="d-block w-100" alt="novus"/>
           </div>
           <div class="item">
-            <img src="/img-urdimbre/stats/cursoempresafia1Est.png" class="d-block w-100" alt="ternium"/>
+            <img src="/img-urdimbre/stats/cursoempresafia1Est.webp" class="d-block w-100" alt="ternium"/>
           </div>
           <div class="item">
-            <img src="/img-urdimbre/stats/cursoempresafia2Est.png" class="d-block w-100" alt="construccion en seco"/>
+            <img src="/img-urdimbre/stats/cursoempresafia2Est.webp" class="d-block w-100" alt="construccion en seco"/>
           </div>
           <div class="item">
-            <img src="/img-urdimbre/stats/cursoempresafia3Est.png" class="d-block w-100" alt="sika"/>
+            <img src="/img-urdimbre/stats/cursoempresafia3Est.webp" class="d-block w-100" alt="sika"/>
           </div>
           <div class="item">
-            <img src="/img-urdimbre/stats/cursoempresafia4Est.png" class="d-block w-100" alt="corona"/>
+            <img src="/img-urdimbre/stats/cursoempresafia4Est.webp" class="d-block w-100" alt="corona"/>
           </div>
           <div class="item">
-            <img src="/img-urdimbre/stats/cursoempresafia5Est.png" class="d-block w-100" alt="grupo argos"/>
+            <img src="/img-urdimbre/stats/cursoempresafia5Est.webp" class="d-block w-100" alt="grupo argos"/>
           </div>
           <div class="item">
-            <img src="/img-urdimbre/stats/tallerinterdisciplinar1Est.png" class="d-block w-100" alt="taller 1"/>
+            <img src="/img-urdimbre/stats/tallerinterdisciplinar1Est.webp" class="d-block w-100" alt="taller 1"/>
           </div>
           <div class="item">
-            <img src="/img-urdimbre/stats/tallerinterdisciplinar2Est.png" class="d-block w-100" alt="taller 2"/>
+            <img src="/img-urdimbre/stats/tallerinterdisciplinar2Est.webp" class="d-block w-100" alt="taller 2"/>
           </div>
           <div class="item">
-            <img src="/img-urdimbre/stats/promedioporprograma.png" class="d-block w-100" alt="promedio por programa"/>
+            <img src="/img-urdimbre/stats/promedioporprograma.webp" class="d-block w-100" alt="promedio por programa"/>
           </div>
           <div class="item">
-            <img src="/img-urdimbre/stats/docencia.jpg" class="d-block w-100" alt="docencia"/>
+            <img src="/img-urdimbre/stats/docencia.webp" class="d-block w-100" alt="docencia"/>
           </div>
     </div>
 

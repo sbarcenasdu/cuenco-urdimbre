@@ -90,35 +90,73 @@ const { title } = Astro.props;
 
     <style is:global>
       /* ... (estilos globales) */
-
-      /* Estilos para el ícono flotante */
+    
+      /* Estilos base para el ícono flotante */
       #floating-icon {
         position: fixed;
-        bottom: 20px; /* Ajusta la distancia desde abajo */
-        right: 20px; /* Ajusta la distancia desde la derecha */
+        bottom: 10px;
+        right: 10px;
         z-index: 9999;
-        width: 120px; /* Ajusta el tamaño del icono */
-        height: 120px;
-        border-radius: 50%; /* Para hacer el ícono redondo */
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra alrededor del icono */
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: #ffffff71; /* Color de fondo del ícono */
-        background-image: url("/img-cuenco/circulo-contador-flotante.png"); /* Reemplaza con la ruta a tu imagen */
+        background-color: #ffffff71;
+        background-image: url("/img-cuenco/circulo-contador-flotante.png");
         background-size: cover;
         background-position: center;
       }
-
+    
       #contador-visitas {
         text-align: center;
-        color: #fff; /* Color del texto del contador */
+        color: #fff;
         font-weight: bold;
-        font-size: 18px; /* Tamaño de fuente del contador */
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Sombra del texto del contador */
+        font-size: 14px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        transform: scale(0.7);
+      }
+    
+      /* Media queries para ajustar el tamaño en diferentes pantallas */
+      @media screen and (min-width: 480px) {
+        #floating-icon {
+          width: 100px;
+          height: 100px;
+          bottom: 15px;
+          right: 15px;
+        }
+        #contador-visitas {
+          font-size: 16px;
+          transform: scale(0.75);
+        }
+      }
+    
+      @media screen and (min-width: 768px) {
+        #floating-icon {
+          width: 120px;
+          height: 120px;
+          bottom: 20px;
+          right: 20px;
+        }
+        #contador-visitas {
+          font-size: 18px;
+          transform: scale(0.8);
+        }
+      }
+    
+      @media screen and (min-width: 1024px) {
+        #floating-icon {
+          width: 140px;
+          height: 140px;
+        }
+        #contador-visitas {
+          transform: scale(0.85);
+        }
       }
     </style>
-
+    
     <!-- Código para el contador de visitas -->
     <div id="floating-icon">
       <div id="contador-visitas">
@@ -128,25 +166,17 @@ const { title } = Astro.props;
           src="https://counter4.optistats.ovh/private/counter.js?c=wcffswrbnyeegkwqqd32r5pugf89t8qg&down=async"
           async></script>
         <noscript>
-          <a
+          
             href="https://www.contadorvisitasgratis.com"
-            title="contador de visitas para web"
-          >
+            title="contador de visitas para web">
             <img
               src="https://counter4.optistats.ovh/private/contadorvisitasgratis.php?c=wcffswrbnyeegkwqqd32r5pugf89t8qg"
               title="contador de visitas para web"
-              alt="contador de visitas para web"
-            />
+              alt="contador de visitas para web" />
           </a>
         </noscript>
       </div>
     </div>
-
-    <style>
-      #contador-visitas {
-        transform: scale(0.8); /* Ajusta el valor según el tamaño deseado */
-      }
-    </style>
 
     <style is:global>
       :root {

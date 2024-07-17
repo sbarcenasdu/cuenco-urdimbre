@@ -2,14 +2,10 @@
 const { class: className } = Astro.props;
 ---
 
-<div class=`${className} w-10/12 m-auto my-8 md:my-16`>
-  <div class="flex flex-row items-center justify-between bg-zinc-100 p-2 rounded-t-xl px-32">
-    <h1 class="text-5xl text-black">Difusión</h1>
-    <img
-      class="max-h-32 object-cover overflow-hidden"
-      src="/img-urdimbre/logo-urdimbre.webp"
-      alt="logo"
-    />
+<div class="${className} w-10/12 m-auto my-8 md:my-16">
+  <div class="w-full flex flex-col md:flex-row items-center justify-between bg-zinc-100 p-2 rounded-t-xl md:px-32">
+    <h1 class="text-3xl md:text-5xl text-black mb-2 md:mb-0">Difusión</h1>
+    <img class="max-h-24 md:max-h-32 object-cover overflow-hidden" src="/img-urdimbre/logo-urdimbre.webp" alt="logo" />
   </div>
   <!-- Carousel container -->
   <div id="stats-diffusion" class="carousel slide" data-ride="carousel">
@@ -70,3 +66,4 @@ const { class: className } = Astro.props;
     </a>
   </div>
 </div>
+

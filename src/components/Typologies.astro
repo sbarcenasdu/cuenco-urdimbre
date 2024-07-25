@@ -718,9 +718,6 @@
   .contenedor-menu .menu li ul {
     display: block;
   }
-  .contenedor-menu .menu li ul {
-  display: none;
-  }
 }
 </style>
 
@@ -799,14 +796,4 @@
       menu.classList.toggle("active");
     });
   });
-  const menuItems = document.querySelectorAll('.contenedor-menu .menu li');
-
-menuItems.forEach((item) => {
-  item.addEventListener('click', (e) => {
-    const submenu = item.querySelector('ul');
-    if (submenu) {
-      submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
-    }
-  });
-});
 </script>

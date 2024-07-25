@@ -2,11 +2,11 @@
 const { class: className } = Astro.props;
 ---
 
-<div class="container p-8 rounded-lg w-11/12 mx-auto bg-transparent">
-  <div class="py-8 flex flex-col items-center justify-center ${className}">
-    <div class="grid md:grid-cols-2 gap-1 mx-2 md:mx-20 justify-evenly">
-      <div class="p-3 m-3 self-center text-5xl">
-        <p class="text-2xl text-justify">
+<div class="container p-4 sm:p-8 rounded-lg w-11/12 max-w-7xl mx-auto bg-transparent">
+  <div class="py-4 sm:py-8 flex flex-col items-center justify-center ${className}">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mx-2 md:mx-8 lg:mx-20 justify-evenly">
+      <div class="p-3 self-center order-1 md:order-1">
+        <p class="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-justify">
           La línea base titulada &quot;Investigación en educación, innovación académica y
           política educativa en la UNAL&quot; es un acervo documental sobre producción e
           investigación en educación dentro de la Universidad Nacional de Colombia, y en
@@ -21,13 +21,12 @@ const { class: className } = Astro.props;
           respecto.
         </p>
       </div>
-      <div class="p-3 m-3 self-center" style="overflow: visible;">
-        <div class="flex flex-col items-center justify-center bg-transparent ml-8" style="width: 120%; margin-top: -20px; padding-bottom: 20px;">
+      <div class="p-3 self-center order-2 md:order-2">
+        <div class="flex flex-col items-center justify-center bg-transparent md:ml-8" style="width: 100%; md:width: 120%; margin-top: -20px; padding-bottom: 20px;">
           <img
-            class="rounded-t-lg"
+            class="rounded-t-lg w-full md:w-auto max-w-full md:max-w-[500px] object-contain mt-0 mb-10"
             src="/img-cuenco/Imagen-linea-base.webp"
-            alt=""
-            style="width: auto; height: 500px; max-width: 200%; object-fit: contain; margin-top: 0px; margin-bottom: 40px;"
+            alt="Imagen línea base"
           />
 
           <div class="text-center">
@@ -35,12 +34,11 @@ const { class: className } = Astro.props;
               href="/Baseline/Linea_ Base_Proyecto_Instituto_CUENCO_V24.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              class="flex items-center justify-center px-5 py-2.5 text-xl text-center text-white bg-[#681b54] rounded-lg hover:bg-[#681b54] focus:ring-4 focus:outline-none focus:ring-[#681b54] hover:no-underline"
-              style="display: inline-block; margin: 20px auto; padding: 12px 24px; margin-left: 20px;"
+              class="inline-flex items-center justify-center px-3 py-1 sm:px-4 sm:py-2 text-sm sm:text-base md:text-lg lg:text-xl text-center text-white bg-[#681b54] rounded-lg hover:bg-opacity-90 focus:ring-4 focus:outline-none focus:ring-[#681b54] hover:no-underline transition-colors duration-300"
             >
               Ver más
               <svg
-                class="w-6 h-6 ml-2 rtl:rotate-180 inline-block"
+                class="w-4 h-4 sm:w-5 sm:h-5 ml-2 rtl:rotate-180"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

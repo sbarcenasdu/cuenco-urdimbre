@@ -2,22 +2,16 @@
   class="flex flex-col items-center justify-center w-10/12 mx-auto rounded-xl my-8 md:my-16 text-white
   bg-white"
 >
-  <div
-    class="w-full flex flex-row items-center justify-between bg-zinc-100 p-2 rounded-t-xl px-32"
-  >
-    <h1 class="text-5xl text-black">Tipologías</h1>
-    <img
-      class="max-h-32 object-cover overflow-hidden"
-      src="/img-urdimbre/logo-urdimbre.webp"
-      alt="logo"
-    />
+  <div class="w-full flex flex-col md:flex-row items-center justify-between bg-zinc-100 p-2 rounded-t-xl md:px-32">
+    <h1 class="text-3xl md:text-5xl text-black mb-2 md:mb-0">Tipologías</h1>
+    <img class="max-h-24 md:max-h-32 object-cover overflow-hidden" src="/img-urdimbre/logo-urdimbre.webp" alt="logo" />
   </div>
 
   <div class="contenedor-menu bg-white w-10/12">
-    <a href="#" class="btn-menu">Menu<i class="icono fa fa-bars"></i></a>
+    <!-- <a href="#" class="btn-menu">Menu<i class="icono fa fa-bars"></i></a> -->
     <!-- Presentación -->
     <div class="presentation text-justify">
-      <h2 class="text-4xl py-6 text-center">
+      <h2 class="text-3xl sm:text-4xl md:text-4xl lg:text-4xl py-6 text-center">
         Presentación Asignaturas Interdisciplinares
       </h2>
       <div class="grid md:grid-cols-2">
@@ -682,9 +676,6 @@
     float: right;
     margin-left: 10px;
   }
-  .contenedor-menu .menu ul {
-    display: none;
-  }
   .contenedor-menu .menu ul li a {
     background: #fcfbfbbb;
     color: #e9e9e9;
@@ -693,23 +684,6 @@
     background: #6f7375a6;
     color: #fff;
   }
-
-  /* @media screen and (max-width: 450px) {
-    .contenedor-menu {
-      margin: 0;
-      width: 100%;
-      position: fixed;
-      top: 0;
-      z-index: 1000;
-    }
-    .btn-menu {
-      display: block;
-    }
-    .contenedor-menu .menu {
-      display: none;
-    }
-  } */
-
   .carousel-item {
     margin: 1rem;
   }
@@ -725,12 +699,33 @@
     margin-bottom: 1rem;
     font-size: x-large;
   }
-  .carousel-video {
-    /* margin: 1rem auto; */
-  }
   .carousel-video h2 {
     font-size: large;
   }
+  @media (max-width: 450px) {
+  .contenedor-menu .menu {
+    display: block;
+    width: 100%;
+  }
+  .contenedor-menu .menu ul {
+    display: block;
+    width: 100%;
+  }
+  .contenedor-menu .menu li {
+    display: block;
+    width: 100%;
+  }
+  .contenedor-menu .menu li a {
+    padding: 15px 10px; /* Reduce el padding horizontal si es necesario */
+  }
+  .contenedor-menu .menu li ul {
+    display: none; /* Los submenús permanecen ocultos hasta que se haga clic */
+    width: 100%;
+  }
+  .contenedor-menu .menu li.activado > ul {
+    display: block; /* Muestra los submenús cuando el elemento padre está activado */
+  }
+}
 </style>
 
 <script>
@@ -773,13 +768,18 @@
     });
 
     window.addEventListener("resize", () => {
-      if (menuContainer)
-        if (document.documentElement.clientWidth > 450) {
+      if (menuContainer) {
+        // Elimina o comenta estas líneas
+        /*if (document.documentElement.clientWidth > 450) {
           menuContainer.style.display = "block";
         } else {
           menuContainer.style.display = "none";
           closeAllSubmenus();
-        }
+        }*/
+        
+        // En su lugar, asegúrate de que el menú siempre esté visible
+        menuContainer.style.display = "block";
+      }
     });
 
     const submenuLinks =
@@ -800,10 +800,12 @@
       });
     }
   });
-  document.addEventListener("DOMContentLoaded", () => {
-    const firstMenuItem = document.querySelector(".menu li.activado");
-    const firstSubmenu = firstMenuItem.querySelector("ul");
+  document.addEventListener("DOMContentLoaded", function() {
+    var btnMenu = document.querySelector(".btn-menu");
+    var menu = document.querySelector(".menu");
 
-    firstSubmenu.style.display = "block";
+    btnMenu.addEventListener("click", function() {
+      menu.classList.toggle("active");
+    });
   });
 </script>

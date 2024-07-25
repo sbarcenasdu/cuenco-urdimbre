@@ -705,6 +705,23 @@
   .carousel-video h2 {
     font-size: large;
   }
+  @media (max-width: 450px) {
+  .contenedor-menu .menu {
+    display: block;
+  }
+  .contenedor-menu .menu ul {
+    display: block;
+  }
+  .contenedor-menu .menu li {
+    display: block;
+  }
+  .contenedor-menu .menu li ul {
+    display: block;
+  }
+  .contenedor-menu .menu li ul {
+  display: none;
+  }
+}
 </style>
 
 <script>
@@ -782,4 +799,14 @@
       menu.classList.toggle("active");
     });
   });
+  const menuItems = document.querySelectorAll('.contenedor-menu .menu li');
+
+menuItems.forEach((item) => {
+  item.addEventListener('click', (e) => {
+    const submenu = item.querySelector('ul');
+    if (submenu) {
+      submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+    }
+  });
+});
 </script>

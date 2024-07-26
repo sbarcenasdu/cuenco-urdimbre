@@ -83,3 +83,18 @@ const { class: className } = Astro.props;
     </a>
   </div>
 </div>
+<style>
+  /* Ocultar los puntos en pantallas pequeñas */
+  @media (max-width: 768px) {
+    .carousel-indicators {
+      display: none;
+    }
+  }
+
+  /* Mostrar los puntos en pantallas grandes */
+  @media (min-width: 769px) {
+    .carousel-indicators {
+      display: block;
+    }
+  }
+</style>

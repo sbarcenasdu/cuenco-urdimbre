@@ -684,6 +684,9 @@
     background: #6f7375a6;
     color: #fff;
   }
+  .contenedor-menu .menu li ul {
+    display: none;
+  }
   .carousel-item {
     margin: 1rem;
   }
@@ -703,54 +706,42 @@
     font-size: large;
   }
   @media (max-width: 450px) {
-  .contenedor-menu .menu {
-    display: block;
-    width: 100%;
+    .contenedor-menu .menu {
+      display: block;
+      width: 100%;
+    }
+    .contenedor-menu .menu ul {
+      display: block;
+      width: 100%;
+    }
+    .contenedor-menu .menu li {
+      display: block;
+      width: 100%;
+    }
+    .contenedor-menu .menu li a {
+      padding: 15px 10px;
+    }
   }
-  .contenedor-menu .menu ul {
-    display: block;
-    width: 100%;
-  }
-  .contenedor-menu .menu li {
-    display: block;
-    width: 100%;
-  }
-  .contenedor-menu .menu li a {
-    padding: 15px 10px; /* Reduce el padding horizontal si es necesario */
-  }
-  .contenedor-menu .menu li ul {
-    display: none; /* Los submenús permanecen ocultos hasta que se haga clic */
-    width: 100%;
-  }
-  .contenedor-menu .menu li.activado > ul {
-    display: block; /* Muestra los submenús cuando el elemento padre está activado */
-  }
-}
 </style>
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    const menuItemsWithSubmenu =
-      document.querySelectorAll<HTMLElement>(".menu li:has(ul)");
-    const menuButton = document.querySelector<HTMLElement>(".btn-menu");
-    const menuContainer = document.querySelector<HTMLElement>(
-      ".contenedor-menu .menu"
-    );
+    const menuItemsWithSubmenu = document.querySelectorAll(".menu li:has(ul)");
 
     menuItemsWithSubmenu.forEach((item) => {
       item.addEventListener("click", (e) => {
         e.preventDefault();
-
+        
         if (item.classList.contains("activado")) {
           item.classList.remove("activado");
-          const submenu = item.children[1] as HTMLElement | undefined;
+          const submenu = item.querySelector("ul");
           if (submenu) {
             submenu.style.display = "none";
           }
         } else {
           closeAllSubmenus();
           item.classList.add("activado");
-          const submenu = item.children[1] as HTMLElement | undefined;
+          const submenu = item.querySelector("ul");
           if (submenu) {
             submenu.style.display = "block";
           }
@@ -758,34 +749,10 @@
       });
     });
 
-    menuButton?.addEventListener("click", () => {
-      if (menuContainer)
-        menuContainer.style.display =
-          menuContainer.style.display === "none" ||
-          menuContainer.style.display === ""
-            ? "block"
-            : "none";
-    });
-
-    window.addEventListener("resize", () => {
-      if (menuContainer) {
-        // Elimina o comenta estas líneas
-        /*if (document.documentElement.clientWidth > 450) {
-          menuContainer.style.display = "block";
-        } else {
-          menuContainer.style.display = "none";
-          closeAllSubmenus();
-        }*/
-        
-        // En su lugar, asegúrate de que el menú siempre esté visible
-        menuContainer.style.display = "block";
-      }
-    });
-
-    const submenuLinks =
-      document.querySelectorAll<HTMLElement>(".menu li ul li a");
+    const submenuLinks = document.querySelectorAll(".menu li ul li a");
     submenuLinks.forEach((link) => {
-      link.addEventListener("click", () => {
+      link.addEventListener("click", (e) => {
+        e.stopPropagation();
         window.location.href = link.getAttribute("href") || "";
       });
     });
@@ -793,19 +760,14 @@
     function closeAllSubmenus() {
       menuItemsWithSubmenu.forEach((item) => {
         item.classList.remove("activado");
-        const submenu = item.children[1] as HTMLElement | undefined;
+        const submenu = item.querySelector("ul");
         if (submenu) {
           submenu.style.display = "none";
         }
       });
     }
-  });
-  document.addEventListener("DOMContentLoaded", function() {
-    var btnMenu = document.querySelector(".btn-menu");
-    var menu = document.querySelector(".menu");
 
-    btnMenu.addEventListener("click", function() {
-      menu.classList.toggle("active");
-    });
+    // Submenus cerrados
+    closeAllSubmenus();
   });
 </script>

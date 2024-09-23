@@ -19,6 +19,7 @@ export default {
     "./src/components/Events.astro",
     "./src/components/Publications.astro",
     "./src/components/Typologies.astro",
+    "./src/components/CuencoEnRed.astro",
 
   ],
   theme: {

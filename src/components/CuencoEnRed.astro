@@ -1,72 +1,21 @@
 ---
-const { id, class: className } = Astro.props;
+const { class: className } = Astro.props;
 ---
 
-<div class="flex flex-col items-center text-xl mx-2 md:mx-auto ${className} mt-10 mb-10">
-  <div class="w-full md:w-[600px] rounded bg-gray-300 p-7 border border-gray-700 relative">
-    <!-- Mensaje de desarrollo -->
-    <div class="absolute top-0 left-0 right-0 bg-yellow-200 text-yellow-800 text-center py-1">
-      Esta función está en desarrollo
-    </div> 
-
-    <form action="#" class="">
-      <div class="grid md:grid-cols-2 gap-8">
-        <div class="grid gap-3">
-          <div>
-            <label for="email" class="block mb-2 font-medium">Correo</label>
-            <input
-              type="email"
-              id="email"
-              class="bg-gray-50 shadow-sm border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
-              placeholder="usuario@correo.com"
-              required
-              disabled
-            />
-          </div>
-          <div>
-            <label for="subject" class="block mb-2 font-medium">Asunto</label>
-            <input
-              type="text"
-              id="subject"
-              class="bg-gray-50 block p-3 w-full text-gray-900 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500"
-              placeholder="Asunto"
-              required
-              disabled
-            />
-          </div>
-        </div>
-        <div class="">
-          <label for="message" class="block mb-2 font-medium">Mensaje</label>
-          <textarea
-            id="message"
-            rows="5"
-            class="bg-gray-50 block p-2.5 w-full text-gray-900 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500"
-            placeholder="Mensaje..."
-            disabled
-          ></textarea>
-        </div>
-      </div>
-    </form>
-    <!-- Agregando enlace de contacto -->
-    <div class="flex items-center justify-center mt-5">
-      <span class="text-lg font-bold text-black mr-2 animate-bounce" style="font-size: 24px;"> &raquo; &raquo; &raquo; &raquo;</span>
-      <button id="emailLink" class="bg-[#681b54] py-3 px-5 font-medium text-center text-white rounded-lg bg-primary-300 sm:w-fit hover:bg-gray-500 focus:ring-4 focus:outline-none focus:ring-primary-300">
-        ¿Tienes alguna pregunta? Contáctanos aquí
-      </button>
-      <span class="text-lg font-bold text-black ml-2 animate-bounce" style="font-size: 24px;"> &laquo; &laquo; &laquo; &laquo;</span>
-    </div>
-    
-    <script>
-    document.getElementById("emailLink").addEventListener("click", function(event) {
-      event.preventDefault(); // Previene el comportamiento predeterminado del enlace
-      
-      var email = "cuenco_nal@unal.edu.co";
-      var subject = "Contacto desde tu sitio web";
-      
-      var gmailLink = "https://mail.google.com/mail/?view=cm&fs=1&to=" + encodeURIComponent(email) + "&su=" + encodeURIComponent(subject);
-      window.open(gmailLink, '_blank'); // Abre Gmail en una nueva pestaña
-    });
-    </script>
-    
+<div class="relative flex flex-col justify-center items-center min-h-[70vh] sm:min-h-screen">
+  <!-- Nueva capa de fondo con video -->
+  <div class="absolute inset-0 h-full w-full overflow-hidden">
+    <video autoplay muted loop class="h-full w-full object-cover opacity-50">
+      <source src="/img-cuenco/fondo_grafo.mp4" type="video/mp4">
+    </video>
+    <!-- Capa con fondo semi-transparente -->
+    <div class="absolute inset-0 bg-black bg-opacity-0"></div>
   </div>
+  <!-- Imagen del mapa -->
+  <div class="relative w-full max-w-3xl md:max-w-4xl lg:max-w-5xl h-auto z-10 mt-8 px-4">
+    <img src="/img-cuenco/mapaconsombra.png" alt="Mapa de Colombia" class="w-full h-auto object-contain" />
+  </div>  
 </div>
+
+
+

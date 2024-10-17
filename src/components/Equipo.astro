@@ -1,3 +1,155 @@
 ---
+// Equipo.astro
 const { id, class: className } = Astro.props;
+import Linea from "../../public/svg/linea.astro";
+
+const miembros = [
+  {
+    nombre: 'Gloria Hoyos Bustamante',
+    cargo: 'Directora del proyecto',
+    imagen: '/img-cuenco/Equipo/Gloria.jpeg', 
+  },
+  {
+    nombre: 'Claudia Margarita Osorio Salazar',
+    cargo: 'Neuropsicóloga asesora en cultura organizacional',
+    imagen: '/svg/Icono-individual-equipo.png', 
+  },
+  {
+    nombre: 'Katia Milena Montes',
+    cargo: 'Coordinadora Funcional',
+    imagen: '/img-cuenco/Equipo/katia.png', 
+  },
+  {
+    nombre: 'Luisa Fernanda Martínez Mosquera',
+    cargo: 'Diseñadora Visual',
+    imagen: '/img-cuenco/Equipo/Luisa.png', 
+  },
+
+  {
+    nombre: 'Sofía Valencia Osorio',
+    cargo: 'Politóloga',
+    imagen:'/img-cuenco/Equipo/Sofia.png', 
+  },
+  {
+    nombre: 'Carolina Sara Lucia Moya Ramírez',
+    cargo: 'Arquitecta',
+    imagen: '/img-cuenco/Equipo/Carolina.png', 
+  },
+  {
+    nombre: 'Luisa Sossa Henao',
+    cargo: 'Asesora Audiovisual',
+    imagen: '/img-cuenco/Equipo/Luisa-S.png', 
+  },
+  {
+    nombre: 'Laura Valentina Romero Ramírez',
+    cargo: 'Estudiante auxiliar Administración de Sistemas Informáticos',
+    imagen: '/img-cuenco/Equipo/Laura.png', 
+  },
+  {
+    nombre: 'Ana Sofía Medina',
+    cargo: 'Estudiante auxiliar Gestión Cultural y Comunicativa',
+    imagen: '/img-cuenco/Equipo/Ana-sofia.png', 
+  },
+  {
+    nombre: 'Susana Maestre Botero',
+    cargo: 'Psicóloga',
+    imagen: '/img-cuenco/Equipo/Susana.png', 
+  },
+  {
+    nombre: 'Melissa Rodríguez Tobón',
+    cargo: 'Abogada',
+    imagen: '/img-cuenco/Equipo/Melissa.png', 
+  },
+  {
+    nombre: 'Sebastian Henao Arroyave',
+    cargo: 'Profesional en Negocios Internacionales',
+    imagen: '/img-cuenco/Equipo/Sebastian-H.png', 
+  }
+];
+
+const miembros2 = [
+  {
+    nombre: 'Sebastián Bárcenas Duque',
+    cargo: 'Administrador de sistemas informáticos',
+    imagen: '/img-cuenco/Equipo/Sebastian-B.png', 
+  },
+  {
+    nombre: 'María Cristina Palacio',
+    cargo: 'Socióloga asesora del proyecto',
+    imagen: '/img-cuenco/Equipo/Maria-Cristina.png', 
+  },
+  {
+    nombre: 'Kelly Noreña Hoyos',
+    cargo: 'Socióloga',
+    imagen: '/img-cuenco/Equipo/Kelly.png', 
+  },
+];
 ---
+
+<div id={id} class={`w-full md:order-0 ${className}`}>
+  <div class="py-4 px-4 md:px-20 pb-10">
+    <div class="publicaciones grid grid-cols-1 md:grid-cols-4 gap-5">
+      {miembros.map((miembro) => (
+        <div class="equipo flex flex-col items-center">
+          <img 
+            src={miembro.imagen} 
+            alt={miembro.nombre} 
+            style={{ height: '80px', width: '80px', borderRadius: '50%', objectFit: 'cover'}}
+            class="shadow-md mb-4"
+          />
+          <h2 class="text-custom font-semibold">{miembro.nombre}</h2>
+          <p class="font-medium text-black">{miembro.cargo}</p>
+        </div>
+      ))} 
+    </div>
+  </div>
+</div>
+
+<div class="w-full flex flex-col items-center justify-center bg-zinc-100 p-4 sm:p-6 md:p-8 lg:p-10 rounded-t-xl px-4 sm:px-8 md:px-16 lg:px-32">
+  <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-black mb-1 text-center">
+    Cuenco en el pasado
+  </h1>
+  <Linea class="w-full max-w-[18rem] sm:max-w-[26rem] md:max-w-[32rem] lg:max-w-[38rem] mx-auto" />
+</div>
+
+<div id={id} class={`w-full md:order-0 ${className}`}>
+  <div class="py-4 px-4 md:px-20 pb-10">
+    <div class="publicaciones grid grid-cols-1 md:grid-cols-3 gap-6">
+      {miembros2.map((miembro) => (
+        <div class="equipo flex flex-col items-center">
+          <img 
+            src={miembro.imagen} 
+            alt={miembro.nombre} 
+            style={{ height: '80px', width: '80px', borderRadius: '50%', objectFit: 'cover', filter: 'grayscale(100%)'}}
+            class="shadow-md mb-4"
+          />
+          <h2 class="text-custom font-semibold">{miembro.nombre}</h2>
+          <p class="font-medium text-black">{miembro.cargo}</p>
+        </div>
+      ))} 
+    </div>
+  </div>
+</div>
+
+<style>
+  .equipo {
+    border: none;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .equipo h2 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+  }
+
+  .equipo p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .text-custom {
+    font-size: 1rem !important; /* Ajusta este valor según sea necesario */
+}
+
+</style>

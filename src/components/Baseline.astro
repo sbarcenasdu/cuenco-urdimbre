@@ -1,6 +1,345 @@
 ---
+import Linea from "../../public/svg/linea.astro";
 const { class: className } = Astro.props;
 ---
+
+<!-- Carrusel de videos -->
+<div class="mt-0">
+  <div id="meetings-videos" class="carousel slide" data-ride="carousel" data-interval="5000">
+    <div class="carousel-inner">
+      <div class="item active">
+        <div class="row">
+          <div class="col-md-12">
+            <a href="#" data-toggle="modal" data-target="#meetings-modal">
+              <div class="video-container">
+                <iframe
+                  src="https://www.youtube.com/embed/JGJF1W8K0F4?rel=0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="row">
+          <div class="col-md-12">
+            <a href="#" data-toggle="modal" data-target="#meetings-modal">
+              <div class="video-container">
+                <iframe
+                  src="https://www.youtube.com/embed/PECNV0hvuzA?rel=0"
+                  title="Asignaturas Interdisciplinares: Taller Interdisciplinar"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Indicadores -->
+    <div class="flex justify-center mt-6">
+      <div class="bg-white/50 rounded-full px-3 py-2 flex space-x-2">
+        <button type="button" class="w-3 h-3 rounded-full bg-gray-300" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+        <button type="button" class="w-3 h-3 rounded-full bg-gray-300" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+      </div>
+    </div>
+    <!-- Previous/Next controls -->
+    <a
+      class="carousel-control-prev absolute top-1/2 left-2 md:left-4 lg:left-8 transform -translate-y-1/2 text-gray-600 hover:text-gray-900 transition duration-300"
+      href="#meetings-videos"
+      role="button"
+      data-slide="prev"
+    >
+      <span class="glyphicon glyphicon-chevron-left text-lg md:text-xl lg:text-2xl"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a
+      class="carousel-control-next absolute top-1/2 right-2 md:right-4 lg:right-8 transform -translate-y-1/2 text-gray-600 hover:text-gray-900 transition duration-300"
+      href="#meetings-videos"
+      role="button"
+      data-slide="next"
+    >
+      <span class="glyphicon glyphicon-chevron-right text-lg md:text-xl lg:text-2xl"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+  <style>
+    .video-container {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border: 4px solid white;
+      border-radius: 4px;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</div>
+
+<!-- Podcast -->
+<div class="w-full flex flex-col items-center justify-center bg-zinc-100 p-4 sm:p-6 md:p-8 lg:p-10 rounded-t-xl px-4 sm:px-8 md:px-16 lg:px-32 mt-10">
+  <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-black mb-1 text-center">
+    Podcast
+  </h1>
+  <Linea class="w-full max-w-[18rem] sm:max-w-[26rem] md:max-w-[32rem] lg:max-w-[38rem] mx-auto" />
+</div>
+
+<div class="relative w-full max-w-5xl mx-auto"> 
+  <!-- Carrusel -->
+  <div class="relative w-full max-w-5xl mx-auto"> 
+    <!-- Carrusel -->
+    <div class="overflow-hidden relative">
+      <div class="flex transition-transform duration-500" id="carousel">
+        <!-- Card 1 -->
+        <div class="w-1/3 flex-shrink-0 p-4">
+          <a href="https://open.spotify.com/episode/2GONRfss95B7qMIHuVzne3?si=vJmgYueKT96uOybQCK1E3w" target="_blank">
+            <div class="p-6 bg-white shadow-lg rounded-lg"> 
+              <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/2GONRfss95B7qMIHuVzne3?utm_source=generator&theme=0" width="100%" height="352"  allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+          </a>
+        </div>
+        <!-- Puedes añadir más tarjetas aquí -->
+        <!-- Card 2 -->
+        <div class="w-1/3 flex-shrink-0 p-4">
+          <a href="https://open.spotify.com/episode/2GONRfss95B7qMIHuVzne3?si=vJmgYueKT96uOybQCK1E3w" target="_blank">
+            <div class="p-6 bg-white shadow-lg rounded-lg"> 
+              <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/2GONRfss95B7qMIHuVzne3?utm_source=generator&theme=0" width="100%" height="352"  allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+          </a>
+        </div>
+        <!-- Card 3 -->
+        <div class="w-1/3 flex-shrink-0 p-4">
+          <a href="https://open.spotify.com/episode/2GONRfss95B7qMIHuVzne3?si=vJmgYueKT96uOybQCK1E3w" target="_blank">
+            <div class="p-6 bg-white shadow-lg rounded-lg"> 
+              <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/2GONRfss95B7qMIHuVzne3?utm_source=generator&theme=0" width="100%" height="352"  allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+          </a>
+        </div>
+        <!-- Card 4 -->
+        <div class="w-1/3 flex-shrink-0 p-4">
+          <a href="https://open.spotify.com/episode/2GONRfss95B7qMIHuVzne3?si=vJmgYueKT96uOybQCK1E3w" target="_blank">
+            <div class="p-6 bg-white shadow-lg rounded-lg"> 
+              <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/2GONRfss95B7qMIHuVzne3?utm_source=generator&theme=0" width="100%" height="352"  allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+          </a>
+        </div>
+        <!-- Card 5 -->
+        <div class="w-1/3 flex-shrink-0 p-4">
+          <a href="https://open.spotify.com/episode/2GONRfss95B7qMIHuVzne3?si=vJmgYueKT96uOybQCK1E3w" target="_blank">
+            <div class="p-6 bg-white shadow-lg rounded-lg"> 
+              <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/2GONRfss95B7qMIHuVzne3?utm_source=generator&theme=0" width="100%" height="352"  allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+          </a>
+        </div>
+        <!-- Card 6 -->
+        <div class="w-1/3 flex-shrink-0 p-4">
+          <a href="https://open.spotify.com/episode/2GONRfss95B7qMIHuVzne3?si=vJmgYueKT96uOybQCK1E3w" target="_blank">
+            <div class="p-6 bg-white shadow-lg rounded-lg"> 
+              <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/2GONRfss95B7qMIHuVzne3?utm_source=generator&theme=0" width="100%" height="352"  allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- Controles -->
+  <div class="absolute inset-0 flex justify-between items-center">
+    <button id="prev" class="bg-gray-800 text-white p-2 rounded-full hover:bg-gray-700">
+      &lt;
+    </button>
+    <button id="next" class="bg-gray-800 text-white p-2 rounded-full hover:bg-gray-700">
+      &gt;
+    </button>
+  </div>
+</div>
+<script>
+  const carousel = document.getElementById('carousel');
+  const prevButton = document.getElementById('prev');
+  const nextButton = document.getElementById('next');
+
+  const itemsToShow = 3; // Mostrar 3 podcasts a la vez
+  const totalItems = document.querySelectorAll('#carousel > div').length; // Total de items (6)
+  const totalSlides = Math.ceil(totalItems / itemsToShow); // Número de slides (2)
+  let currentIndex = 0;
+
+  // Función para mostrar el slide
+  function showSlide(index) {
+    const offset = index * 100; // Mover el ancho completo (100%) para mostrar los 3 items
+    carousel.style.transform = `translateX(-${offset}%)`;
+  }
+
+  // Control del botón "previo"
+  prevButton.addEventListener('click', () => {
+    currentIndex = (currentIndex === 0) ? totalSlides - 1 : currentIndex - 1;
+    showSlide(currentIndex);
+  });
+
+  // Control del botón "siguiente"
+  nextButton.addEventListener('click', () => {
+    currentIndex = (currentIndex === totalSlides - 1) ? 0 : currentIndex + 1;
+    showSlide(currentIndex);
+  });
+</script>
+
+<!-- Textos Sofía -->
+<div class="w-full flex flex-col items-center justify-center bg-zinc-100 p-4 sm:p-6 md:p-8 lg:p-10 rounded-t-xl px-4 sm:px-8 md:px-16 lg:px-32 mt-20">
+  <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-black mb-1 text-center">
+    Textos
+  </h1>
+  <Linea class="w-full max-w-[18rem] sm:max-w-[26rem] md:max-w-[32rem] lg:max-w-[38rem] mx-auto" />
+</div>
+
+<div class="w-full md:order-0">
+  <div class="py-4 px-4 md:px-20 pb-10">
+    <div class="textos grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="textos flex flex-col items-center">
+        <h2>Texto 1</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-2 w-full">
+          <img src="/img-urdimbre/publications/p-01.png" alt="portada" class="w-full md:w-auto mx-auto" />
+          <p class="col-span-1 md:col-span-2 text-justify">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt..
+            <!-- <a
+              href="https://www.fodun.com.co/boletin/74/memorias-diplomado-ecosol"
+              target="_blank"
+              >https://www.fodun.com.co/boletin/74/memorias-diplomado-ecosol</a
+            > -->
+          </p>
+          <a
+          href="https://www.fodun.com.co/boletin/74/memorias-diplomado-ecosol"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="bg-blue-600 hover:bg-blue-700 font-bold py-2 px-4 rounded text-center"
+          style="color:white"
+          >
+            Descargar
+          </a>
+        </div>
+      </div>
+
+      <div class="textos flex flex-col items-center">
+        <h2>Texto 2</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-2 w-full">
+          <img src="/img-urdimbre/publications/p-02.webp" alt="portada"  class="w-full md:w-auto mx-auto" />
+          <p class="col-span-1 md:col-span-2 text-justify">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+            <!-- <a
+            href="https://doi.org/10.1007/978-3-031-23152-0_13"
+            target="_blank"
+            >https://link.springer.com/chapter/10.1007/978-3-031-23152-0_13</a
+          > -->
+          </p>
+          <a
+            href="https://link.springer.com/chapter/10.1007/978-3-031-23152-0_13"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-blue-600 hover:bg-blue-700 font-bold py-2 px-4 rounded text-center"
+            style="color:white"
+          >
+            Descargar
+          </a>
+        </div>
+      </div>
+
+      <div class="textos flex flex-col items-center">
+        <h2>Texto 3</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-2 w-full">
+          <img src="/img-urdimbre/publications/p-03.png" alt="portada" class="w-full md:w-auto mx-auto"/>
+          <p class="col-span-1 md:col-span-2 text-justify">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+            <!-- <a
+              href="/publicaciones/sostenibilidad y cambio climatico.pdf"
+              target="_blank">Descargar PDF</a
+            > -->
+          </p>
+          <a
+            href="/publicaciones/sostenibilidad y cambio climatico.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-[#8dc2b2] font-bold py-2 px-4 rounded text-center"
+          >
+            Descargar
+          </a>
+        </div>
+      </div>
+
+      <div class="textos flex flex-col items-center">
+        <h2>Texto 4</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-2 w-full">
+          <img src="/img-urdimbre/publications/p-03.png" alt="portada" class="w-full md:w-auto mx-auto"/>
+          <p class="col-span-1 md:col-span-2 text-justify">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+            <!-- <a
+              href="/publicaciones/sostenibilidad y cambio climatico.pdf"
+              target="_blank">Descargar PDF</a
+            > -->
+          </p>
+          <a
+            href="/publicaciones/sostenibilidad y cambio climatico.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-[#8dc2b2] font-bold py-2 px-4 rounded text-center"
+          >
+            Descargar
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<style>
+.textos {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 1rem;
+}
+
+.textos h2 {
+  font-size: 1.7rem;
+  margin-bottom: 10px;
+}
+
+.textos p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  padding: 0.7rem;
+}
+
+.textos a {
+  color: white;
+  text-decoration: none;
+  background-color: #681b54;
+}
+
+. a:hover {
+  text-decoration: underline;
+}
+</style>
+
+
+<!-- Línea base -->
+<div class="w-full flex flex-col items-center justify-center bg-zinc-100 p-4 sm:p-6 md:p-8 lg:p-10 rounded-t-xl px-4 sm:px-8 md:px-16 lg:px-32">
+  <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-black mb-1 text-center">
+    Línea base
+  </h1>
+  <Linea class="w-full max-w-[18rem] sm:max-w-[26rem] md:max-w-[32rem] lg:max-w-[38rem] mx-auto" />
+</div>
 
 <div class="container p-4 sm:p-8 rounded-lg w-11/12 max-w-7xl mx-auto bg-transparent">
   <div class="py-4 sm:py-8 flex flex-col items-center justify-center ${className}">

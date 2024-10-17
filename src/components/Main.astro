@@ -19,6 +19,7 @@ import HomeUrdimbre from "./HomeUrdimbre.astro";
 import NavBar from "./NavBar.astro";
 import ScrollToTop from "./ScrollToTop.astro";
 import CuencoEnRed from "./CuencoEnRed.astro";
+import Equipo from "./Equipo.astro";
 ---
 
 <div class="">
@@ -177,6 +178,13 @@ import CuencoEnRed from "./CuencoEnRed.astro";
               <span>Cuenco en red</span>
             </a>
           </li>
+
+          <li role="presentation">
+            <a href="#Equipo" aria-controls="Equipo" role="tab" data-toggle="tab" style="display: flex; align-items: center; gap: 8px;">
+              <img src="/svg/Icono-equipo.png" alt="Icono Cuenco en red" style="width: 16px; height: 16px;" />
+              <span>Equipo</span>
+            </a>
+          </li>
           
           <li role="presentation">
             <a href="#contact" aria-controls="contact" role="tab" data-toggle="tab" style="display: flex; align-items: center;">
@@ -242,10 +250,10 @@ import CuencoEnRed from "./CuencoEnRed.astro";
           </div>
           
           <div role="tabpanel" class="tab-pane fade" id="baseline">
-            <!-- Contenido de Línea Base -->
+            <!-- Contenido productos académicos -->
             <section class="flex flex-col items-center justify-center w-10/12 mx-auto rounded-xl my-8 md:my-16 text-black bg-white">
               <div class="w-full flex flex-col items-center justify-center bg-zinc-100 p-4 sm:p-6 md:p-8 lg:p-10 rounded-t-xl px-4 sm:px-8 md:px-16 lg:px-32">
-                <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-black mb-1 text-center">Productos Académicos</h1>
+                <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-black mb-1 text-center">Videos</h1>
                 <Linea class="w-full max-w-[18rem] sm:max-w-[26rem] md:max-w-[32rem] lg:max-w-[38rem] mx-auto" />
               </div>
               <div class="w-full mx-auto mt-10 mb-8">
@@ -267,6 +275,18 @@ import CuencoEnRed from "./CuencoEnRed.astro";
             </section>
           </div>
           
+          <div role="tabpanel" class="tab-pane fade" id="Equipo">
+            <!-- Contenido de Equipo-->
+            <section class="flex flex-col items-center justify-center w-10/12 mx-auto rounded-xl my-8 md:my-16 text-black bg-white">
+              <div class="w-full flex flex-col items-center justify-center bg-zinc-100 p-4 sm:p-6 md:p-8 lg:p-10 rounded-t-xl px-4 sm:px-8 md:px-16 lg:px-32">
+                <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-black mb-1 text-center">Cuenco Actualmente</h1>
+                <Linea class="w-full max-w-[18rem] sm:max-w-[26rem] md:max-w-[32rem] lg:max-w-[38rem] mx-auto" />
+              </div>
+              <div class="w-full mx-auto mt-10 mb-8">
+                <Equipo />
+              </div>
+            </section>
+          </div>
           
           <div role="tabpanel" class="tab-pane fade" id="contact">
             <!-- Contenido de Contacto -->

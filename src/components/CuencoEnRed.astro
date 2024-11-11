@@ -3,19 +3,156 @@ const { class: className } = Astro.props;
 ---
 
 <div class="relative flex flex-col justify-center items-center min-h-[70vh] sm:min-h-screen">
-  <!-- Nueva capa de fondo con video -->
+  <!-- Capa de fondo con video -->
   <div class="absolute inset-0 h-full w-full overflow-hidden">
     <video autoplay muted loop class="h-full w-full object-cover opacity-50">
       <source src="/img-cuenco/fondo_grafo.mp4" type="video/mp4">
     </video>
-    <!-- Capa con fondo semi-transparente -->
     <div class="absolute inset-0 bg-black bg-opacity-0"></div>
   </div>
+
+  
   <!-- Imagen del mapa -->
   <div class="relative w-full max-w-3xl md:max-w-4xl lg:max-w-5xl h-auto z-10 mt-8 px-4">
-    <img src="/img-cuenco/mapaconsombra.png" alt="Mapa de Colombia" class="w-full h-auto object-contain" />
-  </div>  
+    <img src="/img-cuenco/Mapa-colombia.png" alt="Mapa de Colombia" class="w-full h-auto object-contain" />
+    
+    <!-- SVG para las aristas -->
+    <svg class="absolute top-0 left-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Amazonía -->
+      <line x1="63.5%" y1="90%" x2="60%" y2="35%" stroke="black" stroke-width="1" /> <!-- Amazonía a Orinoquía -->
+      
+      <!-- Bogotá -->
+      <line x1="44.2%" y1="43.5%" x2="48.5%" y2="16%" stroke="black" stroke-width="1" /> <!-- Bogotá a La Paz -->
+      <line x1="44.2%" y1="43.5%" x2="37.6%" y2="36%" stroke="black" stroke-width="1" /> <!-- Bogotá a Medellín -->
+      <line x1="44.2%" y1="43.5%" x2="22.6%" y2="9.8%" stroke="black" stroke-width="1" /> <!-- Bogotá a Caribe -->
+      <line x1="44.2%" y1="43.5%" x2="33.5%" y2="51.5%" stroke="black" stroke-width="1" /> <!-- Bogotá a Palmira -->
+      <line x1="44.2%" y1="43.5%" x2="23.3%" y2="63.2%" stroke="black" stroke-width="1" /> <!-- Bogotá a Tumaco -->
+      
+      <!-- Caribe -->
+      <line x1="22.6%" y1="9.8%" x2="37.6%" y2="36%" stroke="black" stroke-width="1" /> <!-- Caribe a Medellín -->
+      <line x1="22.6%" y1="9.8%" x2="33.5%" y2="51.5%" stroke="black" stroke-width="1" /> <!-- Caribe a Palmira -->
+      <line x1="22.6%" y1="9.8%" x2="44.2%" y2="43.5%" stroke="black" stroke-width="1" /> <!-- Caribe a Bogotá -->
+      
+      <!-- La Paz -->
+      <line x1="48.5%" y1="16%" x2="63.5%" y2="90%" stroke="black" stroke-width="1" /> <!-- La Paz a Amazonía -->
+      <line x1="48.5%" y1="16%" x2="44.2%" y2="43.5%" stroke="black" stroke-width="1" /> <!-- La Paz a Bogotá -->
+      
+      <!-- Manizales -->
+      <line x1="38%" y1="42.6%" x2="44.2%" y2="43.5%" stroke="black" stroke-width="1" /> <!-- Manizales a Bogotá -->
+      <line x1="38%" y1="42.6%" x2="33.5%" y2="51.5%" stroke="black" stroke-width="1" /> <!-- Manizales a Palmira -->
+      <line x1="38%" y1="42.6%" x2="37.6%" y2="36%" stroke="black" stroke-width="1" /> <!-- Manizales a Medellín -->
+      
+      <!-- Medellín -->
+      <line x1="37.6%" y1="36%" x2="60%" y2="35%" stroke="black" stroke-width="1" /> <!-- Medellín a Orinoquía -->
+      <line x1="37.6%" y1="36%" x2="44.2%" y2="43.5%" stroke="black" stroke-width="1" /> <!-- Medellín a Bogotá -->
+      
+      <!-- Orinoquía -->
+      <line x1="60%" y1="35%" x2="63.5%" y2="90%" stroke="black" stroke-width="1" /> <!-- Orinoquía a Amazonía -->
+      <line x1="60%" y1="35%" x2="37.6%" y2="36%" stroke="black" stroke-width="1" /> <!-- Orinoquía a Medellín -->
+      <line x1="60%" y1="35%" x2="44.2%" y2="43.5%" stroke="black" stroke-width="1" /> <!-- Orinoquía a Bogotá -->
+      
+      <!-- Palmira -->
+      <line x1="33.5%" y1="51.5%" x2="63.5%" y2="90%" stroke="black" stroke-width="1" /> <!-- Palmira a Amazonía -->
+      <line x1="33.5%" y1="51.5%" x2="44.2%" y2="43.5%" stroke="black" stroke-width="1" /> <!-- Palmira a Bogotá -->
+      <line x1="33.5%" y1="51.5%" x2="37.6%" y2="36%" stroke="black" stroke-width="1" /> <!-- Palmira a Medellín -->
+      
+      <!-- Tumaco -->
+      <line x1="23.3%" y1="63.2%" x2="33.5%" y2="51.5%" stroke="black" stroke-width="1" /> <!-- Tumaco a Palmira -->
+      <line x1="23.3%" y1="63.2%" x2="38%" y2="42.6%" stroke="black" stroke-width="1" /> <!-- Tumaco a Manizales -->
+      <line x1="23.3%" y1="63.2%" x2="60%" y2="35%" stroke="black" stroke-width="1" /> <!-- Tumaco a Orinoquía -->
+
+      <!-- Conexiones del Nivel Central a las sedes -->
+      <line x1="50%" y1="50%" x2="44.2%" y2="43.5%" stroke="black" stroke-width="1" /> <!-- Nivel Central a Bogotá -->
+      <line x1="50%" y1="50%" x2="38%" y2="42.6%" stroke="black" stroke-width="1" /> <!-- Nivel Central a Manizales -->
+      <line x1="50%" y1="50%" x2="37.6%" y2="36%" stroke="black" stroke-width="1" /> <!-- Nivel Central a Medellín -->
+      <line x1="50%" y1="50%" x2="22.6%" y2="9.8%" stroke="black" stroke-width="1" /> <!-- Nivel Central a Caribe -->
+      <line x1="50%" y1="50%" x2="33.5%" y2="51.5%" stroke="black" stroke-width="1" /> <!-- Nivel Central a Palmira -->
+      <line x1="50%" y1="50%" x2="23.3%" y2="63.2%" stroke="black" stroke-width="1" /> <!-- Nivel Central a Tumaco -->
+      <line x1="50%" y1="50%" x2="60%" y2="35%" stroke="black" stroke-width="1" /> <!-- Nivel Central a Orinoquía -->
+      <line x1="50%" y1="50%" x2="48.5%" y2="16%" stroke="black" stroke-width="1" /> <!-- Nivel Central a La Paz -->
+      <line x1="50%" y1="50%" x2="63.5%" y2="90%" stroke="black" stroke-width="1" /> <!-- Nivel Central a Amazonía -->
+    </svg>
+    
+  
+    <!-- Nodos del grafo sobre el mapa -->
+    <div class="absolute top-[89%] left-[62.5%] bg-[#3C499E] w-6 h-6 rounded-full nodo" data-region="Sede Amazonía" data-relations="Sede 4 Encuentro Intersedes, Red para la enseñanza de las matemáticas"></div>
+    <div class="absolute top-[34%] left-[59.8%] bg-[#3C499E] w-4 h-4 rounded-full nodo" data-region="Sede Orinoquía" data-relations="Impacto de la experiencia del Semillero de investigación Germinando Curiosidades"></div>
+    <div class="absolute top-[15.5%] left-[47.8%] bg-[#3C499E] w-5 h-5 rounded-full nodo" data-region="Sede La Paz" data-relations="Red para la enseñanza de las matemáticas, Diálogos entre Dependencias y colectivos"></div>
+    <div class="absolute top-[9%] left-[21.8%] bg-[#3C499E] w-4 h-4 rounded-full nodo" data-region="Sede Caribe" data-relations="Sede 5 Encuentro Intersedes, Red para la enseñanza de las matemáticas Canal de olas"></div>
+    <div class="absolute top-[35.5%] left-[37%] bg-[#3C499E] w-5 h-5 rounded-full nodo" data-region="Sede Medellín" data-relations="Dirección Académica, Vicerrectora, Red de Matemáticas, Entrenadores Docentes, Profe Boliviano"></div>
+    <div class="absolute top-[42%] left-[37.5%] bg-[#3C499E] w-4 h-4 rounded-full nodo" data-region="Sede Manizales" data-relations="Celebración día de la Calidad, Sistema de Gestión de la Calidad, Facultad de Administración, Biblioteca, Secretaría de Facultad de Ingeniería y Arquitectura, Facultad de Ciencias Exactas y Naturales, MECENA"></div>
+    <div class="absolute top-[43%] left-[43.5%] bg-[#3C499E] w-6 h-6 rounded-full nodo" data-region="Sede Bogotá" data-relations="IIEDU, Centro de Pensamiento en Políticas Públicas de Educación Superior, Unidad de Transformación Pedagógica, Cuerpos Diversos en Rebeldía, Maestría en Discapacidad, Observatorio de Inclusión, MECENA, FACARTES"></div>
+    <div class="absolute top-[51%] left-[33%] bg-[#3C499E] w-4 h-4 rounded-full nodo" data-region="Sede Palmira" data-relations="FODUN, Dirección Académica, Maestría en Enseñanza de las Ciencias Exactas y Naturales - MECENA, Libro Docente, Vicerrectoría de Sede"></div>
+    <div class="absolute top-[62%] left-[23%] bg-[#3C499E] w-4 h-4 rounded-full nodo" data-region="Sede Tumaco" data-relations="Dirección de Sede, Bienestar Universitario, Nivel Central, Rectoría, Vicerrectoría General, Vicerrectoría Académica, Formación Permanente en Docencia y Docentes de Reciente Ingreso, Dirección Nacional de Programas de Pregrado, Dirección Nacional de Personal Académico y Administrativo, Planeación Nacional, Red de Matemáticas DNIA"></div>
+    <div class="absolute top-[48%] left-[48%] bg-[#fc5a5a] w-8 h-8 rounded-full nodo" data-region="Nivel Central" data-relations="Todas las sedes conectadas"></div>
+
+    <!-- Tooltip -->
+    <div id="tooltip" class="absolute hidden bg-gray-100 bg-opacity-50 border border-gray-100 p-2 rounded shadow"></div>
+  </div>
 </div>
 
+<!-- Modal -->
+<div id="modal" class="fixed inset-0 z-20 hidden justify-center items-center bg-black bg-opacity-50 transition-opacity duration-300 opacity-0 pointer-events-none">
+  <div class="bg-white rounded-lg p-4 max-w-sm w-full">
+    <h2 id="modal-title" class="text-lg font-semibold"></h2>
+    <p id="modal-relations" class="mt-2"></p>
+    <button id="close-modal" class="mt-4 bg-[#3C499E] text-white py-2 px-4 rounded">Cerrar</button>
+  </div>
+</div>
 
+<script>
+  // Script para hacer nodos interactivos
+  const nodos = document.querySelectorAll('.nodo');
+  const tooltip = document.getElementById('tooltip');
+  const modal = document.getElementById('modal');
+  const modalTitle = document.getElementById('modal-title');
+  const modalRelations = document.getElementById('modal-relations');
+  const closeModal = document.getElementById('close-modal');
 
+  nodos.forEach(nodo => {
+    nodo.addEventListener('mouseover', (event) => {
+      const region = nodo.getAttribute('data-region');
+      tooltip.innerText = region;
+
+      // Type casting para resolver el error de TypeScript
+      const htmlNodo = nodo as HTMLElement;
+
+      // Posicionamiento directo
+      tooltip.style.left = `${htmlNodo.offsetLeft + htmlNodo.offsetWidth + 5}px`;
+      tooltip.style.top = `${htmlNodo.offsetTop}px`;
+      
+      tooltip.classList.remove('hidden');
+    });
+
+    nodo.addEventListener('mouseout', () => {
+      tooltip.classList.add('hidden');
+    });
+
+    nodo.addEventListener('click', () => {
+      const region = nodo.getAttribute('data-region');
+      const relations = nodo.getAttribute('data-relations');
+      modalTitle.innerText = `Relaciones de ${region}`;
+      modalRelations.innerText = relations;
+
+      // Cambia el estilo para mostrar el modal
+      modal.style.display = 'flex';
+      setTimeout(() => {
+        modal.classList.remove('opacity-0', 'pointer-events-none');
+      }, 0);
+    });
+  });
+
+  closeModal.addEventListener('click', () => {
+    modal.classList.add('opacity-0', 'pointer-events-none');
+    setTimeout(() => {
+      modal.style.display = 'none';
+    }, 300);
+  });
+
+  // Añadir la función de cierre al hacer clic fuera del modal
+  modal.addEventListener('click', (event) => {
+    if (event.target === modal) {
+      closeModal.click();
+    }
+  });
+</script>

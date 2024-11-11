@@ -3,71 +3,6 @@ import Linea from "../../public/svg/linea.astro";
 const { class: className } = Astro.props;
 ---
 
-<!-- Línea base -->
-<div class="container p-4 sm:p-8 rounded-lg w-11/12 max-w-7xl mx-auto bg-transparent">
-  <div class="py-4 sm:py-8 flex flex-col items-center justify-center ${className}">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mx-2 md:mx-8 lg:mx-20 justify-evenly">
-      <div class="p-3 self-center order-1 md:order-1">
-        <p class="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-justify">
-          La línea base titulada &quot;Investigación en educación, innovación académica y
-          política educativa en la UNAL&quot; es un acervo documental sobre producción e
-          investigación en educación dentro de la Universidad Nacional de Colombia, y en
-          red con otras instituciones, durante el presente milenio. En este contexto, el
-          presente mapeo de procesos, actividades, discusiones, proyectos, colectivos y
-          producción académica tiene por objeto ser un insumo para investigaciones
-          provenientes de todas las disciplinas y orientadas al campo de la educación.
-          El documento consta de dos componentes principales: colectivos y ámbitos de
-          investigación, y producción académica, organizados por indicadores temáticos. Se
-          considera que esta recopilación es útil para visibilizar avances realizados desde la
-          universidad, reconocer retos educativos para el país y proyectar rutas de acción al
-          respecto.
-        </p>
-      </div>
-      <div class="p-3 self-center order-2 md:order-2">
-        <div class="flex flex-col items-center justify-center bg-transparent md:ml-8" style="width: 100%; md:width: 120%; margin-top: -20px; padding-bottom: 20px;">
-          <img
-            class="rounded-t-lg w-full md:w-auto max-w-full md:max-w-[500px] object-contain mt-0 mb-10"
-            src="/img-cuenco/Imagen-linea-base.webp"
-            alt="Imagen línea base"
-          />
-
-          <div class="text-center">
-            <a 
-               
-              target="_blank"
-              rel="noopener noreferrer"
-              class="inline-flex items-center justify-center px-3 py-1 sm:px-4 sm:py-2 text-sm sm:text-base md:text-lg lg:text-xl text-center text-white bg-[#681b54] rounded-lg hover:bg-opacity-90 focus:ring-4 focus:outline-none focus:ring-[#681b54] hover:no-underline transition-colors duration-300"
-            >
-              Ver más
-              <svg
-                class="w-4 h-4 sm:w-5 sm:h-5 ml-2 rtl:rotate-180"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 14 10"
-              >
-                <path
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M1 5h12m0 0L9 1m4 4L9 9"
-                ></path>
-              </svg>
-            </a>
-          </div>                           
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="w-full flex flex-col items-center justify-center bg-zinc-100 p-4 sm:p-6 md:p-8 lg:p-10 rounded-t-xl px-4 sm:px-8 md:px-16 lg:px-32">
-  <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-black mb-1 text-center">
-    Videos
-  </h1>
-  <Linea class="w-full max-w-[18rem] sm:max-w-[26rem] md:max-w-[32rem] lg:max-w-[38rem] mx-auto" />
-</div>
 <!-- Carrusel de videos -->
 <div class="mt-0">
   <div id="meetings-videos" class="carousel slide" data-ride="carousel" data-interval="5000">
@@ -78,7 +13,8 @@ const { class: className } = Astro.props;
             <a href="#" data-toggle="modal" data-target="#meetings-modal">
               <div class="video-container">
                 <iframe
-                  src="https://www.youtube.com/embed/JGJF1W8K0F4?rel=0"
+                  src="https://www.youtube.com/embed/GCRmKnp2jl0?rel=0&si=wBdNwTMLaapVPvAn"
+                  title="Primer encuentro"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen
                 ></iframe>
@@ -94,8 +30,59 @@ const { class: className } = Astro.props;
             <a href="#" data-toggle="modal" data-target="#meetings-modal">
               <div class="video-container">
                 <iframe
-                  src="https://www.youtube.com/embed/PECNV0hvuzA?rel=0"
-                  title="Asignaturas Interdisciplinares: Taller Interdisciplinar"
+                  src="https://www.youtube.com/embed/z8K7GDzGk90?rel=0&si=wXGvFOVMIPrAy_RX"
+                  title="segundo encuentro"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="row">
+          <div class="col-md-12">
+            <a href="#" data-toggle="modal" data-target="#meetings-modal">
+              <div class="video-container">
+                <iframe
+                  src="https://www.youtube.com/embed/WSoWGwdJQoI?rel=0&si=ItUv8iguRR0H6nZV"
+                  title="Tercer encuentro"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="row">
+          <div class="col-md-12">
+            <a href="#" data-toggle="modal" data-target="#meetings-modal">
+              <div class="video-container">
+                <iframe
+                  src="https://www.youtube.com/embed/1lmOORiIdHk?rel=0&si=mn-o4GrEo-OJZiaF"
+                  title="Cuarto encuentro"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="row">
+          <div class="col-md-12">
+            <a href="#" data-toggle="modal" data-target="#meetings-modal">
+              <div class="video-container">
+                <iframe
+                  src="https://www.youtube.com/embed/JGJF1W8K0F4?rel=0&si=jO8rvQ_hWn1DshvW"
+                  title="Presentación"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen
                 ></iframe>
@@ -154,3 +141,169 @@ const { class: className } = Astro.props;
   </style>
 </div>
 
+
+<!-- Podcast -->
+<div class="w-full flex flex-col items-center justify-center bg-zinc-100 p-4 sm:p-6 md:p-8 lg:p-10 rounded-t-xl px-4 sm:px-8 md:px-16 lg:px-32">
+  <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-black mb-1 text-center">
+    Podcast
+  </h1>
+  <Linea class="w-full max-w-[18rem] sm:max-w-[26rem] md:max-w-[32rem] lg:max-w-[38rem] mx-auto" />
+</div>
+
+<div class="max-w-6xl mx-auto p-6">
+  <div class="flex items-center justify-between mb-2"></div>
+  
+  <!-- Contenedor principal con ancho fijo -->
+  <div class="w-full relative overflow-hidden">
+    <!-- Botón anterior en el lado izquierdo del carrusel -->
+    <button id="prevSlide" class="absolute left-0 top-1/2 transform -translate-y-1/2 px-4 py-2 bg-gray-200 rounded-full hover:bg-gray-300 z-10 opacity-0 hover:opacity-100 transition-opacity duration-300">
+      ←
+    </button>
+    <!-- Contenedor del slider con ancho del 200% para contener ambos grupos -->
+    <div id="podcastSlider" class="w-[200%] flex transition-transform duration-500">
+      <!-- Primer grupo - ancho 50% del contenedor slider -->
+      <div class="w-1/2 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Podcast 1 -->
+        <div class="bg-white rounded-lg shadow-md p-4">
+          <h3 class="text-lg font-semibold mb-2 text-center">Episodio 1</h3>
+          <iframe 
+            src="https://open.spotify.com/embed/episode/2GONRfss95B7qMIHuVzne3?utm_source=generator&theme=0" 
+            width="100%" 
+            height="152" 
+            frameborder="0" 
+            allow="encrypted-media"
+            class="rounded-md"
+          ></iframe>
+        </div>
+
+        <!-- Podcast 2 -->
+        <div class="bg-white rounded-lg shadow-md p-4">
+          <h3 class="text-lg font-semibold mb-2 text-center">Episodio 2</h3>
+          <iframe 
+            src="https://open.spotify.com/embed/episode/17bbKCZQiuRWtdtgOOHYNA?utm_source=generator&theme=0" 
+            width="100%" 
+            height="152" 
+            frameborder="0" 
+            allow="encrypted-media"
+            class="rounded-md"
+          ></iframe>
+        </div>
+
+        <!-- Podcast 3 -->
+        <div class="bg-white rounded-lg shadow-md p-4">
+          <h3 class="text-lg font-semibold mb-2 text-center">Episodio 3</h3>
+          <iframe 
+            src="https://open.spotify.com/embed/episode/2upitTcDEePgtzgKbtAmth?utm_source=generator&theme=0" 
+            width="100%" 
+            height="152" 
+            frameborder="0" 
+            allow="encrypted-media"
+            class="rounded-md"
+          ></iframe>
+        </div>
+      </div>
+
+      <!-- Segundo grupo - ancho 50% del contenedor slider -->
+      <div class="w-1/2 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Podcast 4 -->
+        <div class="bg-white rounded-lg shadow-md p-4">
+          <h3 class="text-lg font-semibold mb-2 text-center">Episodio 4</h3>
+          <iframe 
+            src="https://open.spotify.com/embed/episode/17rbN3MOqY6x1S21WHTjk0?utm_source=generator&theme=0" 
+            width="100%" 
+            height="152" 
+            frameborder="0" 
+            allow="encrypted-media"
+            class="rounded-md"
+          ></iframe>
+        </div>
+
+        <!-- Podcast 5 -->
+        <div class="bg-white rounded-lg shadow-md p-4">
+          <h3 class="text-lg font-semibold mb-2 text-center">Episodio 5</h3>
+          <iframe 
+            src="https://open.spotify.com/embed/episode/4W2k9UWS32FX4wwGXsHEsy?utm_source=generator&theme=0" 
+            width="100%" 
+            height="152" 
+            frameborder="0" 
+            allow="encrypted-media"
+            class="rounded-md"
+          ></iframe>
+        </div>
+
+        <!-- Podcast 6 -->
+        <div class="bg-white rounded-lg shadow-md p-4">
+          <h3 class="text-lg font-semibold mb-2 text-center">Episodio 6</h3>
+          <iframe 
+            src="https://open.spotify.com/embed/episode/1ok6kMhtzBSGDp1G6QWegr?utm_source=generator&theme=0" 
+            width="100%" 
+            height="152" 
+            frameborder="0" 
+            allow="encrypted-media"
+            class="rounded-md"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+    <!-- Botón siguiente en el lado derecho del carrusel -->
+    <button id="nextSlide" class="absolute right-0 top-1/2 transform -translate-y-1/2 px-4 py-2 bg-gray-200 rounded-full hover:bg-gray-300 z-10 opacity-0 hover:opacity-100 transition-opacity duration-300">
+      →
+    </button>    
+  </div>
+
+  
+
+  <!-- Indicadores -->
+  <div class="flex justify-center mt-4 gap-2">
+    <span id="dot1" class="h-2 w-2 rounded-full bg-gray-300 cursor-pointer"></span>
+    <span id="dot2" class="h-2 w-2 rounded-full bg-gray-300 cursor-pointer"></span>
+  </div>
+</div>
+
+<script>
+  // Lógica para manejar los slides
+  let currentSlide = 0;
+  const slider = document.getElementById('podcastSlider');
+  const dots = [document.getElementById('dot1'), document.getElementById('dot2')];
+
+  // Esta función actualiza la posición del slider y los puntos de navegación.
+  function updateSlider() {
+    // Movemos el slider a la posición correspondiente según currentSlide
+    slider.style.transform = `translateX(-${currentSlide * 50}%)`;
+
+    // Actualizamos el color de los puntos de navegación
+    dots.forEach((dot, index) => {
+      dot.style.backgroundColor = index === currentSlide ? '#4B5563' : '#D1D5DB';
+    });
+  }
+
+  // Función para ir al siguiente slide
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % 2; // Hay solo 2 slides, alterna entre 0 y 1
+    updateSlider();
+  }
+
+  // Función para ir al slide anterior
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + 2) % 2; // Asegura que al restar no se vuelva negativo
+    updateSlider();
+  }
+
+  // Función para ir a un slide específico usando el índice
+  function goToSlide(index) {
+    currentSlide = index;
+    updateSlider();
+  }
+
+  // Inicializa la visualización del slider
+  updateSlider();
+
+  // Agregamos los eventos de clic a los botones
+  document.getElementById('nextSlide').addEventListener('click', nextSlide);
+  document.getElementById('prevSlide').addEventListener('click', prevSlide);
+
+  // Agregar los eventos a los puntos de navegación
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => goToSlide(index));
+  });
+</script>

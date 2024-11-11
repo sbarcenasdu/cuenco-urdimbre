@@ -2,6 +2,7 @@
 const { class: className } = Astro.props;
 ---
 
+
 <div class="relative flex flex-col justify-center items-center min-h-[70vh] sm:min-h-screen">
   <!-- Capa de fondo con video -->
   <div class="absolute inset-0 h-full w-full overflow-hidden">
@@ -11,9 +12,55 @@ const { class: className } = Astro.props;
     <div class="absolute inset-0 bg-black bg-opacity-0"></div>
   </div>
 
-  
+  <!-- Filtros -->
+  <div class="absolute top-4 right-4 z-20 bg-white p-4 rounded shadow">
+    <h3 class="font-semibold text-center">Filtrar Nodos</h3>
+    <label>
+      <input type="checkbox" class="filter" value="Sede Bogotá" checked />
+      Sede Bogotá
+    </label><br />
+    <label>
+      <input type="checkbox" class="filter" value="Sede Medellín" checked />
+      Sede Medellín
+    </label><br />
+    <label>
+      <input type="checkbox" class="filter" value="Sede Manizales" checked />
+      Sede Manizales
+    </label><br />
+    <label>
+      <input type="checkbox" class="filter" value="Sede Palmira" checked />
+      Sede Palmira
+    </label><br />
+    <label>
+      <input type="checkbox" class="filter" value="Sede Tumaco" checked />
+      Sede Tumaco
+    </label><br />
+    <label>
+      <input type="checkbox" class="filter" value="Sede La Paz" checked />
+      Sede La Paz
+    </label><br />
+    <label>
+      <input type="checkbox" class="filter" value="Sede Amazonía" checked />
+      Sede Amazonía
+    </label><br />
+    <label>
+      <input type="checkbox" class="filter" value="Sede Orinoquía" checked />
+      Sede Orinoquía
+    </label><br />
+    <label>
+      <input type="checkbox" class="filter" value="Sede Caribe" checked />
+      Sede Caribe
+    </label><br />
+    <label>
+      <input type="checkbox" class="filter" value="Nivel Central" checked />
+      Nivel Central
+    </label><br />
+    <button id="reset-filters" class="mt-2 bg-[#3C499E] text-white py-1 px-2 rounded">Restablecer Filtros</button>
+  </div>
+
+
   <!-- Imagen del mapa -->
-  <div class="relative w-full max-w-3xl md:max-w-4xl lg:max-w-5xl h-auto z-10 mt-8 px-4">
+  <div class="relative w-full max-w-full h-auto z-10 mt-8 px-4">
     <img src="/img-cuenco/Mapa-colombia.png" alt="Mapa de Colombia" class="w-full h-auto object-contain" />
     
     <!-- SVG para las aristas -->
@@ -75,16 +122,16 @@ const { class: className } = Astro.props;
     
   
     <!-- Nodos del grafo sobre el mapa -->
-    <div class="absolute top-[89%] left-[62.5%] bg-[#3C499E] w-6 h-6 rounded-full nodo" data-region="Sede Amazonía" data-relations="Sede 4 Encuentro Intersedes, Red para la enseñanza de las matemáticas"></div>
-    <div class="absolute top-[34%] left-[59.8%] bg-[#3C499E] w-4 h-4 rounded-full nodo" data-region="Sede Orinoquía" data-relations="Impacto de la experiencia del Semillero de investigación Germinando Curiosidades"></div>
-    <div class="absolute top-[15.5%] left-[47.8%] bg-[#3C499E] w-5 h-5 rounded-full nodo" data-region="Sede La Paz" data-relations="Red para la enseñanza de las matemáticas, Diálogos entre Dependencias y colectivos"></div>
-    <div class="absolute top-[9%] left-[21.8%] bg-[#3C499E] w-4 h-4 rounded-full nodo" data-region="Sede Caribe" data-relations="Sede 5 Encuentro Intersedes, Red para la enseñanza de las matemáticas Canal de olas"></div>
-    <div class="absolute top-[35.5%] left-[37%] bg-[#3C499E] w-5 h-5 rounded-full nodo" data-region="Sede Medellín" data-relations="Dirección Académica, Vicerrectora, Red de Matemáticas, Entrenadores Docentes, Profe Boliviano"></div>
-    <div class="absolute top-[42%] left-[37.5%] bg-[#3C499E] w-4 h-4 rounded-full nodo" data-region="Sede Manizales" data-relations="Celebración día de la Calidad, Sistema de Gestión de la Calidad, Facultad de Administración, Biblioteca, Secretaría de Facultad de Ingeniería y Arquitectura, Facultad de Ciencias Exactas y Naturales, MECENA"></div>
-    <div class="absolute top-[43%] left-[43.5%] bg-[#3C499E] w-6 h-6 rounded-full nodo" data-region="Sede Bogotá" data-relations="IIEDU, Centro de Pensamiento en Políticas Públicas de Educación Superior, Unidad de Transformación Pedagógica, Cuerpos Diversos en Rebeldía, Maestría en Discapacidad, Observatorio de Inclusión, MECENA, FACARTES"></div>
-    <div class="absolute top-[51%] left-[33%] bg-[#3C499E] w-4 h-4 rounded-full nodo" data-region="Sede Palmira" data-relations="FODUN, Dirección Académica, Maestría en Enseñanza de las Ciencias Exactas y Naturales - MECENA, Libro Docente, Vicerrectoría de Sede"></div>
-    <div class="absolute top-[62%] left-[23%] bg-[#3C499E] w-4 h-4 rounded-full nodo" data-region="Sede Tumaco" data-relations="Dirección de Sede, Bienestar Universitario, Nivel Central, Rectoría, Vicerrectoría General, Vicerrectoría Académica, Formación Permanente en Docencia y Docentes de Reciente Ingreso, Dirección Nacional de Programas de Pregrado, Dirección Nacional de Personal Académico y Administrativo, Planeación Nacional, Red de Matemáticas DNIA"></div>
-    <div class="absolute top-[48%] left-[48%] bg-[#fc5a5a] w-8 h-8 rounded-full nodo" data-region="Nivel Central" data-relations="Todas las sedes conectadas"></div>
+    <div class="absolute top-[89%] left-[62.5%] bg-[#3C499E] w-6 h-6 rounded-full nodo" data-region="Sede Amazonía" data-relations="Sede 4 Encuentro Intersedes., Red para la enseñanza de las matemáticas."></div>
+    <div class="absolute top-[34%] left-[59.8%] bg-[#3C499E] w-5 h-5 rounded-full nodo" data-region="Sede Orinoquía" data-relations="Impacto de la experiencia del Semillero de investigación Germinando Curiosidades."></div>
+    <div class="absolute top-[15.5%] left-[47.8%] bg-[#3C499E] w-5 h-5 rounded-full nodo" data-region="Sede La Paz" data-relations="Red para la enseñanza de las matemáticas., Diálogos entre Dependencias y colectivos."></div>
+    <div class="absolute top-[9%] left-[21.8%] bg-[#3C499E] w-5 h-5 rounded-full nodo" data-region="Sede Caribe" data-relations="Sede 5 Encuentro Intersedes., Red para la enseñanza de las matemáticas Canal de olas."></div>
+    <div class="absolute top-[35.5%] left-[37%] bg-[#3C499E] w-5 h-5 rounded-full nodo" data-region="Sede Medellín" data-relations="Diálogos entre Dependencias y colectivos., Red para la enseñanza de las matemáticas Entrenadores Evaluación"></div>
+    <div class="absolute top-[42%] left-[37.5%] bg-[#3C499E] w-6 h-6 rounded-full nodo" data-region="Sede Manizales" data-relations="Sede 3 y 9 Encuentro Intersedes., Proyecto Componente 614-C7 BPUN., Red para la enseñanza de las matemáticas., Diálogos entre Dependencias y colectivos sobre inclusión equidad y diversidad., Diálogos entre Dependencias y colectivos., Piloto Repositorio de datos., Diálogos entre Dependencias y colectivos Celebración Día de la Calidad Articulación 9 Encuentro."></div>
+    <div class="absolute top-[43%] left-[43.5%] bg-[#3C499E] w-8 h-8 rounded-full nodo" data-region="Sede Bogotá" data-relations="Conceptualización sobre investigación en educación y definición de Líneas de investigación en Educación para la implementación de Cuenco., Producción audiovisual., Conceptualización sobre políticas públicas en educación y definición de Líneas de investigación en Políticas Públicas de Educación Superior para la implementación de Cuenco., Diálogos entre Dependencias y colectivos sobre inclusión equidad y diversidad., Diálogos entre Dependencias y colectivos., Red para la enseñanza de las matemáticas., Enseñanza de las artes para la formación docente en Sedes de Presencia Nacional."></div>
+    <div class="absolute top-[51%] left-[33%] bg-[#3C499E] w-5 h-5 rounded-full nodo" data-region="Sede Palmira" data-relations="Productos académicos Una mirada a los territorios de las Sedes de Presencia Nacional., Diálogos entre Dependencias y colectivos., Red para la enseñanza de las matemáticas."></div>
+    <div class="absolute top-[62%] left-[23%] bg-[#3C499E] w-5 h-5 rounded-full nodo" data-region="Sede Tumaco" data-relations="Sede del 8 y participación en 7; 8 y 9 Encuentro Intersedes"></div>
+    <div class="absolute top-[48%] left-[48%] bg-[#a52984] w-10 h-10 rounded-full nodo" data-region="Nivel Central" data-relations="Conformación y consolidación de un Instituto Nacional de Investigación Innovación y Política Educativa., Reflexiones sobre el Marco Nacional de Cualificaciones: oportunidades; desafíos y perspectivas Articulación 9 Encuentro., Diálogos entre Dependencias y colectivos Futura formación permanente de docentes y formación de docentes de reciente ingreso., Diálogos entre Dependencias y colectivos., Piloto Repositorio de Datos., Red para la enseñanza de las matemáticas Entrenadores Evaluación., Conceptualización sobre innovación en la UNAL para la implementación de Cuenco."></div>
 
     <!-- Tooltip -->
     <div id="tooltip" class="absolute hidden bg-gray-100 bg-opacity-50 border border-gray-100 p-2 rounded shadow"></div>
@@ -95,13 +142,12 @@ const { class: className } = Astro.props;
 <div id="modal" class="fixed inset-0 z-20 hidden justify-center items-center bg-black bg-opacity-50 transition-opacity duration-300 opacity-0 pointer-events-none">
   <div class="bg-white rounded-lg p-4 max-w-sm w-full">
     <h2 id="modal-title" class="text-lg font-semibold"></h2>
-    <p id="modal-relations" class="mt-2"></p>
+    <ul id="modal-relations" class="mt-2 list-disc pl-5"></ul>
     <button id="close-modal" class="mt-4 bg-[#3C499E] text-white py-2 px-4 rounded">Cerrar</button>
   </div>
 </div>
 
 <script>
-  // Script para hacer nodos interactivos
   const nodos = document.querySelectorAll('.nodo');
   const tooltip = document.getElementById('tooltip');
   const modal = document.getElementById('modal');
@@ -114,10 +160,7 @@ const { class: className } = Astro.props;
       const region = nodo.getAttribute('data-region');
       tooltip.innerText = region;
 
-      // Type casting para resolver el error de TypeScript
       const htmlNodo = nodo as HTMLElement;
-
-      // Posicionamiento directo
       tooltip.style.left = `${htmlNodo.offsetLeft + htmlNodo.offsetWidth + 5}px`;
       tooltip.style.top = `${htmlNodo.offsetTop}px`;
       
@@ -132,9 +175,31 @@ const { class: className } = Astro.props;
       const region = nodo.getAttribute('data-region');
       const relations = nodo.getAttribute('data-relations');
       modalTitle.innerText = `Relaciones de ${region}`;
-      modalRelations.innerText = relations;
+      
+      // Limpiar el contenido anterior
+      modalRelations.innerHTML = '';
 
-      // Cambia el estilo para mostrar el modal
+      // Verificar si relations es un array JSON o una cadena simple
+      try {
+        const relationsList = JSON.parse(relations);
+        // Si es un array, crear un elemento li para cada item
+        if (Array.isArray(relationsList)) {
+          relationsList.forEach(relation => {
+            const li = document.createElement('li');
+            li.textContent = relation;
+            modalRelations.appendChild(li);
+          });
+        }
+      } catch (e) {
+        // Si no es JSON, dividir por comas y crear elementos li
+        const relationItems = relations.split(',');
+        relationItems.forEach(relation => {
+          const li = document.createElement('li');
+          li.textContent = relation.trim();
+          modalRelations.appendChild(li);
+        });
+      }
+
       modal.style.display = 'flex';
       setTimeout(() => {
         modal.classList.remove('opacity-0', 'pointer-events-none');
@@ -149,10 +214,136 @@ const { class: className } = Astro.props;
     }, 300);
   });
 
-  // Añadir la función de cierre al hacer clic fuera del modal
   modal.addEventListener('click', (event) => {
     if (event.target === modal) {
       closeModal.click();
     }
   });
+</script>
+
+<style>
+  #modal-relations li {
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+  }
+
+  #modal-relations li:last-child {
+    margin-bottom: 0;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    interface GraphNode extends HTMLElement {
+        dataset: {
+            region: string;
+            relations: string;
+        };
+    }
+
+    const filters = document.querySelectorAll<HTMLInputElement>('.filter');
+    const nodes = document.querySelectorAll<GraphNode>('.nodo');
+    const edges = document.querySelectorAll<SVGLineElement>('line');
+
+    // Grafo dinámico representado como un objeto
+    interface Graph {
+        nodes: Map<string, GraphNode>;
+        edges: Set<SVGLineElement>;
+        relations: Map<string, Set<string>>;  // Relaciona nodos entre sí
+    }
+
+    const graph: Graph = {
+        nodes: new Map(),
+        edges: new Set(),
+        relations: new Map(),
+    };
+
+    // Función para construir el grafo con las conexiones iniciales
+    const buildGraph = () => {
+        nodes.forEach(node => {
+            graph.nodes.set(node.dataset.region, node);
+            graph.relations.set(node.dataset.region, new Set(node.dataset.relations.split(',').map(r => r.trim())));
+        });
+
+        edges.forEach(edge => {
+            graph.edges.add(edge);
+        });
+    };
+
+    // Función para encontrar los nodos conectados según los filtros
+    const findConnectedNodes = (selectedRegions: string[]): Set<GraphNode> => {
+        const visibleNodes = new Set<GraphNode>();
+
+        if (selectedRegions.length === 0 || selectedRegions.length === filters.length) {
+            graph.nodes.forEach(node => visibleNodes.add(node));
+            return visibleNodes;
+        }
+
+        selectedRegions.forEach(region => {
+            if (graph.nodes.has(region)) {
+                visibleNodes.add(graph.nodes.get(region)!);
+            }
+        });
+
+        return visibleNodes;
+    };
+
+    // Función para actualizar la visibilidad del grafo dinámico
+    const updateGraphVisualization = () => {
+        const checkedFilters = Array.from(filters)
+            .filter(filter => filter.checked)
+            .map(filter => filter.value);
+
+        const visibleNodes = findConnectedNodes(checkedFilters);
+
+        // Actualizar visibilidad de nodos
+        graph.nodes.forEach((node) => {
+            if (visibleNodes.has(node)) {
+                node.style.display = 'block';
+                node.style.opacity = '1';
+            } else {
+                node.style.display = 'none';
+                node.style.opacity = '0';
+            }
+        });
+
+        // Actualizar visibilidad de aristas
+        graph.edges.forEach(edge => {
+            // Obtener los nodos conectados por la arista usando atributos 'data-node1' y 'data-node2'
+            const node1Region = edge.getAttribute('data-node1');
+            const node2Region = edge.getAttribute('data-node2');
+
+            if (node1Region && node2Region) {
+                const node1 = graph.nodes.get(node1Region);
+                const node2 = graph.nodes.get(node2Region);
+
+                if (node1 && node2) {
+                    // Las aristas se muestran solo si ambos nodos están visibles
+                    const isVisible = visibleNodes.has(node1) && visibleNodes.has(node2);
+                    edge.style.display = isVisible ? 'block' : 'none';
+                    edge.style.opacity = isVisible ? '1' : '0';
+                }
+            }
+        });
+    };
+
+    // Event listeners para los filtros
+    filters.forEach(filter => {
+        filter.addEventListener('change', updateGraphVisualization);
+    });
+
+    // Event listener para el botón de reset
+    const resetButton = document.getElementById('reset-filters');
+    if (resetButton) {
+        resetButton.addEventListener('click', () => {
+            filters.forEach(filter => filter.checked = true);
+            updateGraphVisualization();
+        });
+    }
+
+    // Construir el grafo al cargar la página
+    buildGraph();
+    updateGraphVisualization();
+});
+
 </script>

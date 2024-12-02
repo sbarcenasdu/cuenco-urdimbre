@@ -12,51 +12,94 @@ const { class: className } = Astro.props;
     <div class="absolute inset-0 bg-black bg-opacity-0"></div>
   </div>
 
-  <!-- Filtros -->
-  <div class="absolute top-4 right-4 z-20 bg-white p-4 rounded shadow">
-    <h3 class="font-semibold text-center">Filtrar Nodos</h3>
-    <label>
-      <input type="checkbox" class="filter" value="Sede Bogotá" checked />
-      Sede Bogotá
-    </label><br />
-    <label>
-      <input type="checkbox" class="filter" value="Sede Medellín" checked />
-      Sede Medellín
-    </label><br />
-    <label>
-      <input type="checkbox" class="filter" value="Sede Manizales" checked />
-      Sede Manizales
-    </label><br />
-    <label>
-      <input type="checkbox" class="filter" value="Sede Palmira" checked />
-      Sede Palmira
-    </label><br />
-    <label>
-      <input type="checkbox" class="filter" value="Sede Tumaco" checked />
-      Sede Tumaco
-    </label><br />
-    <label>
-      <input type="checkbox" class="filter" value="Sede La Paz" checked />
-      Sede La Paz
-    </label><br />
-    <label>
-      <input type="checkbox" class="filter" value="Sede Amazonía" checked />
-      Sede Amazonía
-    </label><br />
-    <label>
-      <input type="checkbox" class="filter" value="Sede Orinoquía" checked />
-      Sede Orinoquía
-    </label><br />
-    <label>
-      <input type="checkbox" class="filter" value="Sede Caribe" checked />
-      Sede Caribe
-    </label><br />
-    <label>
-      <input type="checkbox" class="filter" value="Nivel Central" checked />
-      Nivel Central
-    </label><br />
-    <button id="reset-filters" class="mt-2 bg-[#3C499E] text-white py-1 px-2 rounded">Restablecer Filtros</button>
+  <!-- Botón para desplegar filtros -->
+  <div class="absolute top-4 right-4 z-30">
+    <button id="toggle-filters" class="bg-[#3C499E] text-white p-2 rounded shadow">
+      Filtrar Nodos
+    </button>
   </div>
+  
+  <!-- Filtros -->
+  <div id="filter-menu" class="absolute top-4 right-4 z-20 bg-white p-4 rounded shadow w-11/12 sm:w-72 lg:w-80 max-w-sm hidden">
+    <h3 class="font-semibold text-center text-sm sm:text-base">Filtrar Nodos</h3>
+    <div class="space-y-1">
+      <label class="block text-xs sm:text-sm">
+        <input type="checkbox" class="filter" value="Sede Bogotá" checked />
+        Sede Bogotá
+      </label>
+      <label class="block text-xs sm:text-sm">
+        <input type="checkbox" class="filter" value="Sede Medellín" checked />
+        Sede Medellín
+      </label>
+      <label class="block text-xs sm:text-sm">
+        <input type="checkbox" class="filter" value="Sede Manizales" checked />
+        Sede Manizales
+      </label>
+      <label class="block text-xs sm:text-sm">
+        <input type="checkbox" class="filter" value="Sede Palmira" checked />
+        Sede Palmira
+      </label>
+      <label class="block text-xs sm:text-sm">
+        <input type="checkbox" class="filter" value="Sede Tumaco" checked />
+        Sede Tumaco
+      </label>
+      <label class="block text-xs sm:text-sm">
+        <input type="checkbox" class="filter" value="Sede La Paz" checked />
+        Sede La Paz
+      </label>
+      <label class="block text-xs sm:text-sm">
+        <input type="checkbox" class="filter" value="Sede Amazonía" checked />
+        Sede Amazonía
+      </label>
+      <label class="block text-xs sm:text-sm">
+        <input type="checkbox" class="filter" value="Sede Orinoquía" checked />
+        Sede Orinoquía
+      </label>
+      <label class="block text-xs sm:text-sm">
+        <input type="checkbox" class="filter" value="Sede Caribe" checked />
+        Sede Caribe
+      </label>
+      <label class="block text-xs sm:text-sm">
+        <input type="checkbox" class="filter" value="Nivel Central" checked />
+        Nivel Central
+      </label>
+    </div>
+    <button id="reset-filters" class="mt-2 bg-[#3C499E] text-white py-1 px-2 rounded w-full text-xs sm:text-sm">Restablecer Filtros</button>
+  </div>
+  
+  <!-- JavaScript para control del desplegable -->
+  <script>
+    // Mostrar/Ocultar el menú de filtros y el botón de filtro
+    document.getElementById('toggle-filters').addEventListener('click', function(event) {
+      const filterMenu = document.getElementById('filter-menu');
+      const toggleButton = document.getElementById('toggle-filters');
+      
+      // Alternar la visibilidad del menú de filtros
+      filterMenu.classList.toggle('hidden');
+      
+      // Alternar la visibilidad del botón "Filtrar Nodos"
+      toggleButton.classList.toggle('hidden');
+      
+      // Prevenir la propagación del clic en el botón de "Filtrar Nodos"
+      event.stopPropagation();
+    });
+  
+    // Cerrar el menú si se hace clic fuera de él
+    document.addEventListener('click', function(event) {
+      const filterMenu = document.getElementById('filter-menu');
+      const toggleButton = document.getElementById('toggle-filters');
+
+      // Aseguramos que `event.target` sea tratado como un `Node` usando un cast
+      const target = event.target as Node;
+
+      // Si el clic no es dentro del menú de filtros ni en el botón de filtro, ocultar el menú
+      if (filterMenu && toggleButton && !filterMenu.contains(target) && !toggleButton.contains(target)) {
+        filterMenu.classList.add('hidden');
+        toggleButton.classList.remove('hidden');
+      }
+    });
+  </script>
+  
 
 
   <!-- Imagen del mapa -->
@@ -320,8 +363,13 @@ const { class: className } = Astro.props;
                 if (node1 && node2) {
                     // Las aristas se muestran solo si ambos nodos están visibles
                     const isVisible = visibleNodes.has(node1) && visibleNodes.has(node2);
-                    edge.style.display = isVisible ? 'block' : 'none';
-                    edge.style.opacity = isVisible ? '1' : '0';
+                    if (isVisible) {
+                        edge.style.display = 'block';   // Mostrar la arista
+                        edge.style.opacity = '1';       // Mostrar con opacidad completa
+                    } else {
+                        edge.style.display = 'none';    // Ocultar la arista
+                        edge.style.opacity = '0';       // Establecer opacidad cero
+                    }
                 }
             }
         });
@@ -344,6 +392,6 @@ const { class: className } = Astro.props;
     // Construir el grafo al cargar la página
     buildGraph();
     updateGraphVisualization();
-});
-
+  });
 </script>
+

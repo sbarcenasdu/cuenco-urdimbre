@@ -3,7 +3,169 @@ import Linea from "../../public/svg/linea.astro";
 const { class: className } = Astro.props;
 ---
 
+<!-- Podcast -->
+<div class="max-w-6xl mx-auto p-6">
+  <div class="flex items-center justify-between mb-2"></div>
+  
+  <!-- Contenedor principal con ancho fijo -->
+  <div class="w-full relative overflow-hidden">
+    <!-- Botón anterior en el lado izquierdo del carrusel -->
+    <button id="prevSlide" class="absolute left-0 top-1/2 transform -translate-y-1/2 px-4 py-2 bg-gray-200 rounded-full hover:bg-gray-300 z-10 opacity-0 hover:opacity-100 transition-opacity duration-300">
+      ←
+    </button>
+    <!-- Contenedor del slider con ancho del 200% para contener ambos grupos -->
+    <div id="podcastSlider" class="w-[200%] flex transition-transform duration-500">
+      <!-- Primer grupo - ancho 50% del contenedor slider -->
+      <div class="w-1/2 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Podcast 1 -->
+        <div class="bg-white rounded-lg shadow-md p-4">
+          <iframe 
+            src="https://open.spotify.com/embed/episode/2GONRfss95B7qMIHuVzne3?utm_source=generator&theme=0" 
+            width="100%" 
+            height="152" 
+            frameborder="0" 
+            allow="encrypted-media"
+            class="rounded-md"
+          ></iframe>
+        </div>
+
+        <!-- Podcast 2 -->
+        <div class="bg-white rounded-lg shadow-md p-4">
+          <iframe 
+            src="https://open.spotify.com/embed/episode/17bbKCZQiuRWtdtgOOHYNA?utm_source=generator&theme=0" 
+            width="100%" 
+            height="152" 
+            frameborder="0" 
+            allow="encrypted-media"
+            class="rounded-md"
+          ></iframe>
+        </div>
+
+        <!-- Podcast 3 -->
+        <div class="bg-white rounded-lg shadow-md p-4">
+          <iframe 
+            src="https://open.spotify.com/embed/episode/2upitTcDEePgtzgKbtAmth?utm_source=generator&theme=0" 
+            width="100%" 
+            height="152" 
+            frameborder="0" 
+            allow="encrypted-media"
+            class="rounded-md"
+          ></iframe>
+        </div>
+      </div>
+
+      <!-- Segundo grupo - ancho 50% del contenedor slider -->
+      <div class="w-1/2 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Podcast 4 -->
+        <div class="bg-white rounded-lg shadow-md p-4">
+          <iframe 
+            src="https://open.spotify.com/embed/episode/17rbN3MOqY6x1S21WHTjk0?utm_source=generator&theme=0" 
+            width="100%" 
+            height="152" 
+            frameborder="0" 
+            allow="encrypted-media"
+            class="rounded-md"
+          ></iframe>
+        </div>
+
+        <!-- Podcast 5 -->
+        <div class="bg-white rounded-lg shadow-md p-4">
+          <iframe 
+            src="https://open.spotify.com/embed/episode/4W2k9UWS32FX4wwGXsHEsy?utm_source=generator&theme=0" 
+            width="100%" 
+            height="152" 
+            frameborder="0" 
+            allow="encrypted-media"
+            class="rounded-md"
+          ></iframe>
+        </div>
+
+        <!-- Podcast 6 -->
+        <div class="bg-white rounded-lg shadow-md p-4">
+          <iframe 
+            src="https://open.spotify.com/embed/episode/1ok6kMhtzBSGDp1G6QWegr?utm_source=generator&theme=0" 
+            width="100%" 
+            height="152" 
+            frameborder="0" 
+            allow="encrypted-media"
+            class="rounded-md"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+    <!-- Botón siguiente en el lado derecho del carrusel -->
+    <button id="nextSlide" class="absolute right-0 top-1/2 transform -translate-y-1/2 px-4 py-2 bg-gray-200 rounded-full hover:bg-gray-300 z-10 opacity-0 hover:opacity-100 transition-opacity duration-300">
+      →
+    </button>    
+  </div>
+
+  
+
+  <!-- Indicadores -->
+  <div class="flex justify-center mt-4 gap-2">
+    <span id="dot1" class="h-3 w-3 rounded-full bg-gray-300 cursor-pointer"></span>
+    <span id="dot2" class="h-3 w-3 rounded-full bg-gray-300 cursor-pointer"></span>
+  </div>
+</div>
+
+<script>
+  // Lógica para manejar los slides
+  let currentSlide = 0;
+  const slider = document.getElementById('podcastSlider');
+  const dots = [document.getElementById('dot1'), document.getElementById('dot2')];
+
+  // Esta función actualiza la posición del slider y los puntos de navegación.
+  function updateSlider() {
+    // Movemos el slider a la posición correspondiente según currentSlide
+    slider.style.transform = `translateX(-${currentSlide * 50}%)`;
+
+    // Actualizamos el color de los puntos de navegación
+    dots.forEach((dot, index) => {
+      dot.style.backgroundColor = index === currentSlide ? '#4B5563' : '#D1D5DB';
+    });
+  }
+
+  // Función para ir al siguiente slide
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % 2; // Hay solo 2 slides, alterna entre 0 y 1
+    updateSlider();
+  }
+
+  // Función para ir al slide anterior
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + 2) % 2; // Asegura que al restar no se vuelva negativo
+    updateSlider();
+  }
+
+  // Función para ir a un slide específico usando el índice
+  function goToSlide(index) {
+    currentSlide = index;
+    updateSlider();
+  }
+
+  // Inicializa la visualización del slider
+  updateSlider();
+
+  // Agregamos los eventos de clic a los botones
+  document.getElementById('nextSlide').addEventListener('click', nextSlide);
+  document.getElementById('prevSlide').addEventListener('click', prevSlide);
+
+  // Agregar los eventos a los puntos de navegación
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => goToSlide(index));
+  });
+</script>
+
+
 <!-- Carrusel de videos -->
+<div class="w-full flex flex-col items-center justify-center bg-zinc-100 p-4 sm:p-6 md:p-8 lg:p-10 rounded-t-xl px-4 sm:px-8 md:px-16 lg:px-32">
+  <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-black mb-1 text-center">
+    Videos
+  </h1>
+  <Linea class="w-full max-w-[18rem] sm:max-w-[26rem] md:max-w-[32rem] lg:max-w-[38rem] mx-auto" />
+</div>
+
+
 <div class="mt-0">
   <div id="meetings-videos" class="carousel slide" data-ride="carousel" data-interval="5000">
     <div class="carousel-inner">
@@ -281,162 +443,3 @@ const { class: className } = Astro.props;
 </div>
 
 
-<!-- Podcast -->
-<div class="w-full flex flex-col items-center justify-center bg-zinc-100 p-4 sm:p-6 md:p-8 lg:p-10 rounded-t-xl px-4 sm:px-8 md:px-16 lg:px-32">
-  <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-black mb-1 text-center">
-    Podcast
-  </h1>
-  <Linea class="w-full max-w-[18rem] sm:max-w-[26rem] md:max-w-[32rem] lg:max-w-[38rem] mx-auto" />
-</div>
-
-<div class="max-w-6xl mx-auto p-6">
-  <div class="flex items-center justify-between mb-2"></div>
-  
-  <!-- Contenedor principal con ancho fijo -->
-  <div class="w-full relative overflow-hidden">
-    <!-- Botón anterior en el lado izquierdo del carrusel -->
-    <button id="prevSlide" class="absolute left-0 top-1/2 transform -translate-y-1/2 px-4 py-2 bg-gray-200 rounded-full hover:bg-gray-300 z-10 opacity-0 hover:opacity-100 transition-opacity duration-300">
-      ←
-    </button>
-    <!-- Contenedor del slider con ancho del 200% para contener ambos grupos -->
-    <div id="podcastSlider" class="w-[200%] flex transition-transform duration-500">
-      <!-- Primer grupo - ancho 50% del contenedor slider -->
-      <div class="w-1/2 grid grid-cols-1 md:grid-cols-3 gap-6">
-        <!-- Podcast 1 -->
-        <div class="bg-white rounded-lg shadow-md p-4">
-          <iframe 
-            src="https://open.spotify.com/embed/episode/2GONRfss95B7qMIHuVzne3?utm_source=generator&theme=0" 
-            width="100%" 
-            height="152" 
-            frameborder="0" 
-            allow="encrypted-media"
-            class="rounded-md"
-          ></iframe>
-        </div>
-
-        <!-- Podcast 2 -->
-        <div class="bg-white rounded-lg shadow-md p-4">
-          <iframe 
-            src="https://open.spotify.com/embed/episode/17bbKCZQiuRWtdtgOOHYNA?utm_source=generator&theme=0" 
-            width="100%" 
-            height="152" 
-            frameborder="0" 
-            allow="encrypted-media"
-            class="rounded-md"
-          ></iframe>
-        </div>
-
-        <!-- Podcast 3 -->
-        <div class="bg-white rounded-lg shadow-md p-4">
-          <iframe 
-            src="https://open.spotify.com/embed/episode/2upitTcDEePgtzgKbtAmth?utm_source=generator&theme=0" 
-            width="100%" 
-            height="152" 
-            frameborder="0" 
-            allow="encrypted-media"
-            class="rounded-md"
-          ></iframe>
-        </div>
-      </div>
-
-      <!-- Segundo grupo - ancho 50% del contenedor slider -->
-      <div class="w-1/2 grid grid-cols-1 md:grid-cols-3 gap-6">
-        <!-- Podcast 4 -->
-        <div class="bg-white rounded-lg shadow-md p-4">
-          <iframe 
-            src="https://open.spotify.com/embed/episode/17rbN3MOqY6x1S21WHTjk0?utm_source=generator&theme=0" 
-            width="100%" 
-            height="152" 
-            frameborder="0" 
-            allow="encrypted-media"
-            class="rounded-md"
-          ></iframe>
-        </div>
-
-        <!-- Podcast 5 -->
-        <div class="bg-white rounded-lg shadow-md p-4">
-          <iframe 
-            src="https://open.spotify.com/embed/episode/4W2k9UWS32FX4wwGXsHEsy?utm_source=generator&theme=0" 
-            width="100%" 
-            height="152" 
-            frameborder="0" 
-            allow="encrypted-media"
-            class="rounded-md"
-          ></iframe>
-        </div>
-
-        <!-- Podcast 6 -->
-        <div class="bg-white rounded-lg shadow-md p-4">
-          <iframe 
-            src="https://open.spotify.com/embed/episode/1ok6kMhtzBSGDp1G6QWegr?utm_source=generator&theme=0" 
-            width="100%" 
-            height="152" 
-            frameborder="0" 
-            allow="encrypted-media"
-            class="rounded-md"
-          ></iframe>
-        </div>
-      </div>
-    </div>
-    <!-- Botón siguiente en el lado derecho del carrusel -->
-    <button id="nextSlide" class="absolute right-0 top-1/2 transform -translate-y-1/2 px-4 py-2 bg-gray-200 rounded-full hover:bg-gray-300 z-10 opacity-0 hover:opacity-100 transition-opacity duration-300">
-      →
-    </button>    
-  </div>
-
-  
-
-  <!-- Indicadores -->
-  <div class="flex justify-center mt-4 gap-2">
-    <span id="dot1" class="h-3 w-3 rounded-full bg-gray-300 cursor-pointer"></span>
-    <span id="dot2" class="h-3 w-3 rounded-full bg-gray-300 cursor-pointer"></span>
-  </div>
-</div>
-
-<script>
-  // Lógica para manejar los slides
-  let currentSlide = 0;
-  const slider = document.getElementById('podcastSlider');
-  const dots = [document.getElementById('dot1'), document.getElementById('dot2')];
-
-  // Esta función actualiza la posición del slider y los puntos de navegación.
-  function updateSlider() {
-    // Movemos el slider a la posición correspondiente según currentSlide
-    slider.style.transform = `translateX(-${currentSlide * 50}%)`;
-
-    // Actualizamos el color de los puntos de navegación
-    dots.forEach((dot, index) => {
-      dot.style.backgroundColor = index === currentSlide ? '#4B5563' : '#D1D5DB';
-    });
-  }
-
-  // Función para ir al siguiente slide
-  function nextSlide() {
-    currentSlide = (currentSlide + 1) % 2; // Hay solo 2 slides, alterna entre 0 y 1
-    updateSlider();
-  }
-
-  // Función para ir al slide anterior
-  function prevSlide() {
-    currentSlide = (currentSlide - 1 + 2) % 2; // Asegura que al restar no se vuelva negativo
-    updateSlider();
-  }
-
-  // Función para ir a un slide específico usando el índice
-  function goToSlide(index) {
-    currentSlide = index;
-    updateSlider();
-  }
-
-  // Inicializa la visualización del slider
-  updateSlider();
-
-  // Agregamos los eventos de clic a los botones
-  document.getElementById('nextSlide').addEventListener('click', nextSlide);
-  document.getElementById('prevSlide').addEventListener('click', prevSlide);
-
-  // Agregar los eventos a los puntos de navegación
-  dots.forEach((dot, index) => {
-    dot.addEventListener('click', () => goToSlide(index));
-  });
-</script>

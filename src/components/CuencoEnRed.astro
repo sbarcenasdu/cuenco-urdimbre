@@ -1,4 +1,5 @@
 ---
+import Linea from "../../public/svg/linea.astro";
 const { class: className } = Astro.props;
 ---
 
@@ -165,16 +166,55 @@ const { class: className } = Astro.props;
     
   
     <!-- Nodos del grafo sobre el mapa -->
-    <div class="absolute top-[89%] left-[62.5%] bg-[#3C499E] w-6 h-6 rounded-full nodo" data-region="Sede Amazonía" data-relations="Sede 4 Encuentro Intersedes., Red para la enseñanza de las matemáticas."></div>
-    <div class="absolute top-[34%] left-[59.8%] bg-[#3C499E] w-5 h-5 rounded-full nodo" data-region="Sede Orinoquía" data-relations="Impacto de la experiencia del Semillero de investigación Germinando Curiosidades."></div>
-    <div class="absolute top-[15.5%] left-[47.8%] bg-[#3C499E] w-5 h-5 rounded-full nodo" data-region="Sede La Paz" data-relations="Red para la enseñanza de las matemáticas., Diálogos entre Dependencias y colectivos."></div>
-    <div class="absolute top-[9%] left-[21.8%] bg-[#3C499E] w-5 h-5 rounded-full nodo" data-region="Sede Caribe" data-relations="Sede 5 Encuentro Intersedes., Red para la enseñanza de las matemáticas Canal de olas."></div>
-    <div class="absolute top-[35.5%] left-[37%] bg-[#3C499E] w-5 h-5 rounded-full nodo" data-region="Sede Medellín" data-relations="Diálogos entre Dependencias y colectivos., Red para la enseñanza de las matemáticas Entrenadores Evaluación"></div>
-    <div class="absolute top-[42%] left-[37.5%] bg-[#3C499E] w-6 h-6 rounded-full nodo" data-region="Sede Manizales" data-relations="Sede 3 y 9 Encuentro Intersedes., Proyecto Componente 614-C7 BPUN., Red para la enseñanza de las matemáticas., Diálogos entre Dependencias y colectivos sobre inclusión equidad y diversidad., Diálogos entre Dependencias y colectivos., Piloto Repositorio de datos., Diálogos entre Dependencias y colectivos Celebración Día de la Calidad Articulación 9 Encuentro."></div>
-    <div class="absolute top-[43%] left-[43.5%] bg-[#3C499E] w-8 h-8 rounded-full nodo" data-region="Sede Bogotá" data-relations="Conceptualización sobre investigación en educación y definición de Líneas de investigación en Educación para la implementación de Cuenco., Producción audiovisual., Conceptualización sobre políticas públicas en educación y definición de Líneas de investigación en Políticas Públicas de Educación Superior para la implementación de Cuenco., Diálogos entre Dependencias y colectivos sobre inclusión equidad y diversidad., Diálogos entre Dependencias y colectivos., Red para la enseñanza de las matemáticas., Enseñanza de las artes para la formación docente en Sedes de Presencia Nacional."></div>
-    <div class="absolute top-[51%] left-[33%] bg-[#3C499E] w-5 h-5 rounded-full nodo" data-region="Sede Palmira" data-relations="Productos académicos Una mirada a los territorios de las Sedes de Presencia Nacional., Diálogos entre Dependencias y colectivos., Red para la enseñanza de las matemáticas."></div>
-    <div class="absolute top-[62%] left-[23%] bg-[#3C499E] w-5 h-5 rounded-full nodo" data-region="Sede Tumaco" data-relations="Sede del 8 y participación en 7; 8 y 9 Encuentro Intersedes"></div>
-    <div class="absolute top-[48%] left-[48%] bg-[#a52984] w-10 h-10 rounded-full nodo" data-region="Nivel Central" data-relations="Conformación y consolidación de un Instituto Nacional de Investigación Innovación y Política Educativa., Reflexiones sobre el Marco Nacional de Cualificaciones: oportunidades; desafíos y perspectivas Articulación 9 Encuentro., Diálogos entre Dependencias y colectivos Futura formación permanente de docentes y formación de docentes de reciente ingreso., Diálogos entre Dependencias y colectivos., Piloto Repositorio de Datos., Red para la enseñanza de las matemáticas Entrenadores Evaluación., Conceptualización sobre innovación en la UNAL para la implementación de Cuenco."></div>
+    <div class="absolute top-[89%] left-[62.5%] bg-[#3C499E] w-6 h-6 rounded-full nodo"
+      data-region="Sede Amazonía"
+      data-relations="Sede 4 Encuentro Intersedes, Proyecto Red para la enseñanza de las matemáticas" 
+      data-dependencies="Dirección Nacional de Innovación Académica (DNIA), Ecosistema de Innovación Académica (EIA)">
+    </div>
+    <div class="absolute top-[34%] left-[59.8%] bg-[#3C499E] w-5 h-5 rounded-full nodo" 
+      data-region="Sede Orinoquía" 
+      data-relations="Impacto de la experiencia del Semillero de investigación Germinando Curiosidades"
+      data-dependencies="Semillero de investigación Germinando curiosidades, Dirección Sede de Presencia Nacional">
+    </div>
+    <div class="absolute top-[15.5%] left-[47.8%] bg-[#3C499E] w-5 h-5 rounded-full nodo" 
+      data-region="Sede La Paz" 
+      data-relations="Proyecto Red para la enseñanza de las matemáticas., Diálogos entre Dependencias y colectivos."
+      data-dependencies="Dirección Nacional de Innovación Académica (DNIA), Ecosistema de Innovación Académica (EIA), Vicerrectoría Académica, Escuela de Posgrado MECENA">
+    </div>
+    <div class="absolute top-[9%] left-[21.8%] bg-[#3C499E] w-5 h-5 rounded-full nodo" 
+      data-region="Sede Caribe" 
+      data-relations="Sede 5 Encuentro Intersedes., Proyecto Red para la enseñanza de las matemáticas Canal de olas."
+      data-dependencies="Dirección Sede de Presencia Nacional, Unidad de Docencia y Formación U.D.F., Actores extrainstitucionales Corporación Centro de Excelencia en Ciencias Marinas CEMarin, Gobernación de la Isla de San Andrés Corporación para el Desarrollo Sostenible (Coralina)">
+    </div>
+    <div class="absolute top-[35.5%] left-[37%] bg-[#3C499E] w-5 h-5 rounded-full nodo" 
+      data-region="Sede Medellín" 
+      data-relations="Diálogos entre Dependencias y colectivos., Proyecto Red para la enseñanza de las matemáticas Entrenadores Evaluación"
+      data-dependencies="Dirección Académica, Vicerrectoría de Sede, Facultad de Minas, Vicedecanatura Académica, Instituto de Educación en Ingeniería, Facultad de Ciencias Humanas y Económicas, Laboratorio de pedagogía social"></div>
+    <div class="absolute top-[42%] left-[37.5%] bg-[#3C499E] w-6 h-6 rounded-full nodo" 
+      data-region="Sede Manizales" 
+      data-relations="Sede 3 y 9 Encuentro Intersedes., Proyecto Componente 614-C7 BPUN., Red para la enseñanza de las matemáticas., Diálogos entre Dependencias y colectivos sobre inclusión equidad y diversidad., Diálogos entre Dependencias y colectivos., Piloto Repositorio de datos., Diálogos entre Dependencias y colectivos Celebración Día de la Calidad Articulación 9 Encuentro."
+      data-dependencies="Vicerrectoría de Sede, Dirección Académica, Planeación y Estadística Sede, Dirección Financiera y Administrativa, Sección de Contratación, Facultad de Administración, Secretaría de Facultad de Ingeniería y Arquitectura, Facultad de Ciencias Exactas y Naturales (FCEN), Bienestar Universitario Proyecto Política de Educación Inclusiva UNAL, Vicedecanatura FCEN MECENA, Sistema de Bibliotecas Sede Manizales, Sistema de Gestión de la Calidad, Actor del territorio Huerta Comunitaria Naksí, Actor del territorio Universo ARKE">
+    </div>
+    <div class="absolute top-[43%] left-[43.5%] bg-[#3C499E] w-8 h-8 rounded-full nodo" 
+      data-region="Sede Bogotá" 
+      data-relations="Conceptualización sobre investigación en educación y definición de Líneas de investigación en Educación para la implementación de Cuenco., Producción audiovisual., Conceptualización sobre políticas públicas en educación y definición de Líneas de investigación en Políticas Públicas de Educación Superior para la implementación de Cuenco., Diálogos entre Dependencias y colectivos sobre inclusión equidad y diversidad., Diálogos entre Dependencias y colectivos., Red para la enseñanza de las matemáticas., Enseñanza de las artes para la formación docente en Sedes de Presencia Nacional."
+      data-dependencies="IIEDU, Facultad de Ciencias Humanas, Facultad de Derecho, Ciencias Políticas y Sociales, Centro de Pensamiento en Políticas Públicas de Educación Superior, Unidad de Transformación Pedagógica, Dirección Académica, Cuerpos Diversos en Rebeldía Cocuer, Maestría en Discapacidad e Inclusión Social, Facultad de Medicina, Bienestar Universitario, MECENA, Decanatura Facultad de Ingenierías, Escuela de Arquitectura y Urbanismo, Decanatura Facultad de Artes FACARTES">
+    </div>
+    <div class="absolute top-[51%] left-[33%] bg-[#3C499E] w-5 h-5 rounded-full nodo" 
+      data-region="Sede Palmira" 
+      data-relations="Productos académicos Una mirada a los territorios de las Sedes de Presencia Nacional., Diálogos entre Dependencias y colectivos., Red para la enseñanza de las matemáticas."
+      data-dependencies="FODUN, Dirección Académica, MECENA, Sistema de Acompañamiento Estudiantil, Bienestar Universitario, Actor extrainstitucional Instituto Departamental de Bellas Artes de Cali, Actor del territorio Colectivo ForMa Mediación Cultural de Cali">
+    </div>
+    <div class="absolute top-[62%] left-[23%] bg-[#3C499E] w-5 h-5 rounded-full nodo" 
+      data-region="Sede Tumaco" 
+      data-relations="Sede del 8 y participación en 7; 8 y 9 Encuentro Intersedes"
+      data-dependencies="Dirección Sede de Presencia Nacional, Bienestar Universitario, Instituto de Estudios del Pacífico (IEP)">
+    </div>
+    <div class="absolute top-[48%] left-[48%] bg-[#a52984] w-10 h-10 rounded-full nodo" 
+      data-region="Nivel Central" 
+      data-relations="Conformación y consolidación de un Instituto Nacional de Investigación Innovación y Política Educativa., Reflexiones sobre el Marco Nacional de Cualificaciones: oportunidades; desafíos y perspectivas Articulación 9 Encuentro., Diálogos entre Dependencias y colectivos Futura formación permanente de docentes y formación de docentes de reciente ingreso., Diálogos entre Dependencias y colectivos., Piloto Repositorio de Datos., Red para la enseñanza de las matemáticas Entrenadores Evaluación., Conceptualización sobre innovación en la UNAL para la implementación de Cuenco."
+      data-dependencies="Rectoría, Vicerrectoría Académica, Vicerrectoría General, Dirección Nacional de Programas Curriculares de Pregrado, Diplomado en docencia universitaria, Sistema Nacional de Bibliotecas, DNIA, EIA, Dirección Nacional de Planeación y Estadística, Secretaría General, Dirección Nacional de Personal Académico y Administrativo, Dirección Jurídica Nacional, Gerencia Administrativa y Financiera">
+    </div>
 
     <!-- Tooltip -->
     <div id="tooltip" class="absolute hidden bg-gray-100 bg-opacity-50 border border-gray-100 p-2 rounded shadow"></div>
@@ -184,8 +224,11 @@ const { class: className } = Astro.props;
 <!-- Modal -->
 <div id="modal" class="fixed inset-0 z-20 hidden justify-center items-center bg-black bg-opacity-50 transition-opacity duration-300 opacity-0 pointer-events-none">
   <div class="bg-white rounded-lg p-4 max-w-sm w-full">
-    <h2 id="modal-title" class="text-lg font-semibold"></h2>
+    <h2 id="modal-title" class="text-lg font-semibold text-center"></h2>
+    <h3 id="modal-subtitle" class="text-base text-black font-bold mt-2">Sinergias</h3>
     <ul id="modal-relations" class="mt-2 list-disc pl-5"></ul>
+    <h3 id="modal-subtitle2" class="text-base text-black font-bold mt-2">Dependencias</h3>
+    <ul id="modal-dependencies" class="mt-2 list-disc pl-5"></ul>
     <button id="close-modal" class="mt-4 bg-[#3C499E] text-white py-2 px-4 rounded">Cerrar</button>
   </div>
 </div>
@@ -196,6 +239,7 @@ const { class: className } = Astro.props;
   const modal = document.getElementById('modal');
   const modalTitle = document.getElementById('modal-title');
   const modalRelations = document.getElementById('modal-relations');
+  const modalDependencies = document.getElementById('modal-dependencies');
   const closeModal = document.getElementById('close-modal');
 
   nodos.forEach(nodo => {
@@ -217,10 +261,15 @@ const { class: className } = Astro.props;
     nodo.addEventListener('click', () => {
       const region = nodo.getAttribute('data-region');
       const relations = nodo.getAttribute('data-relations');
-      modalTitle.innerText = `Relaciones de ${region}`;
+      const dependencies = nodo.getAttribute('data-dependencies'); 
+
+      modalTitle.innerText = `Enlaces con ${region}`;
+      
+      
       
       // Limpiar el contenido anterior
       modalRelations.innerHTML = '';
+      modalDependencies.innerHTML = '';
 
       // Verificar si relations es un array JSON o una cadena simple
       try {
@@ -233,6 +282,7 @@ const { class: className } = Astro.props;
             modalRelations.appendChild(li);
           });
         }
+        
       } catch (e) {
         // Si no es JSON, dividir por comas y crear elementos li
         const relationItems = relations.split(',');
@@ -242,6 +292,26 @@ const { class: className } = Astro.props;
           modalRelations.appendChild(li);
         });
       }
+
+      //Nuevo: Procesar dependencias
+      try {
+        const dependenciesList = JSON.parse(dependencies);
+        if (Array.isArray(dependenciesList)) {
+          dependenciesList.forEach(dep => {
+            const li = document.createElement('li');
+            li.textContent = dep;
+            modalDependencies.appendChild(li);
+          });
+        }
+      } catch (e) {
+        const dependencyItems = dependencies.split(',');
+        dependencyItems.forEach(dep => {
+          const li = document.createElement('li');
+          li.textContent = dep.trim();
+          modalDependencies.appendChild(li);
+        });
+      }
+
 
       modal.style.display = 'flex';
       setTimeout(() => {
@@ -395,3 +465,121 @@ const { class: className } = Astro.props;
   });
 </script>
 
+<!-- Productos academicos de participantes en red -->
+<div class="w-full flex flex-col items-center justify-center bg-zinc-100 p-4 sm:p-6 md:p-8 lg:p-10 rounded-t-xl px-4 sm:px-8 md:px-16 lg:px-32">
+  <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-black mb-1 text-center">
+    Productos académicos de participantes en red
+  </h1>
+  <Linea  class="w-full max-w-[34rem] sm:max-w-[42rem] md:max-w-[50rem] lg:max-w-[58rem] mx-auto" />
+</div>
+
+<div class="w-full md:order-0">
+  <div class="bg-white shadow-md py-4 px-4 md:px-20 pb-10">
+    
+    <div class="publicaciones grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="producto flex flex-col items-center">
+        <h2>Bases para la industrialización de la construcción en países en vía de desarrollo: caso particular de Colombia</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-2 w-full">
+          <img src="/img-cuenco/productosParticipantes/pub1.png" alt="portada" class="w-full md:w-auto mx-auto" />
+          <p class="col-span-1 md:col-span-2 text-justify">
+            El estudio analiza la industrialización de la construcción en tres partes: primero, sus limitaciones y factores clave; luego, el impacto social y económico de las técnicas aplicadas y posibles soluciones; y finalmente, una propuesta teórica para planificar recursos en el sector. 
+          </p>
+          <a
+          href="https://repositorio.unal.edu.co/handle/unal/70258"
+          target="_blank"
+            rel="noopener noreferrer"
+            class="font-bold py-2 px-4 rounded text-center"
+            style="color:white"
+          >
+            Ver más
+          </a>
+        </div>
+      </div>
+
+      <div class="producto">
+        <h2>Manual para la investigación: guía para la formulación, desarrollo y divulgación de Proyectos</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-2 w-full">
+          <img src="/img-cuenco/productosParticipantes/pub2.png" alt="portada"  class="w-full md:w-auto mx-auto" />
+          <p class="col-span-1 md:col-span-2 text-justify">
+            Este libro es el producto de la experiencia de la enseñanza de la investigación en los programas de Arquitectura y profesiones afines. Nace sin ambages metodológicos, con el propósito de ofrecer, de manera sencilla, aspectos prácticos del quehacer investigativo.
+          </p>
+          <a
+            href="https://repositorio.unal.edu.co/handle/unal/87390"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="font-bold py-2 px-4 rounded text-center"
+            style="color:white"
+          >
+            Ver más
+          </a>
+        </div>
+      </div>
+
+      <div class="producto">
+        <h2>Anatomía y fisiología de la edificación: tecnología de la arquitectura</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-2 w-full">
+          <img src="/img-cuenco/productosParticipantes/pub3.png" alt="portada" class="w-full md:w-auto mx-auto"/>
+          <p class="col-span-1 md:col-span-2 text-justify">
+            Esta obra es una propuesta pedagógica a quienes se inician en la arquitectura o “arte de proyectar y construir edificios” con especial enfoque tecnológico. Se presenta como una guía destinada a facilitar la formulación de proyectos y el desarrollo, sustentación y divulgación de los resultados de una investigación.
+          </p>
+          <a
+          href="https://repositorio.unal.edu.co/handle/unal/87383"
+          target="_blank"
+            rel="noopener noreferrer"
+            class="font-bold py-2 px-4 rounded text-center"
+          >
+            Ver más
+          </a>
+        </div>
+      </div>
+
+      <div class="producto">
+        <h2>Centro Interamericano de Vivienda (Cinva), 1951-1972 : aportes a la investigación, al desarrollo de técnicas constructivas y otras contribuciones en Vivienda de Interés Social (VIS)</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-2 w-full">
+          <img src="/img-cuenco/productosParticipantes/pub4.png" alt="portada" class="w-full md:w-auto mx-auto"/>
+          <p class="col-span-1 md:col-span-2 text-justify">
+            A comienzos de los años 50, la OEA creó el Centro Interamericano de Vivienda (Cinva) para desarrollar programas de enseñanza, investigación y asesoría en construcción de vivienda y planeación urbana. Su enfoque era interdisciplinario, promoviendo el intercambio y divulgación de conocimientos.
+          </p>
+          <a
+          href="https://repositorio.unal.edu.co/handle/unal/87386"
+          target="_blank"
+            rel="noopener noreferrer"
+            class="font-bold py-2 px-4 rounded text-center"
+          >
+            Ver más
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<style>
+.producto {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 1rem;
+}
+
+.producto h2 {
+  font-size: 1.7rem;
+  margin-bottom: 10px;
+}
+
+.producto p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  padding: 0.7rem;
+}
+
+.producto a {
+  color: white;
+  text-decoration: none;
+  background-color: #681b54;
+}
+
+.producto a:hover {
+  text-decoration: underline;
+}
+</style>

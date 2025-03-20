@@ -3,6 +3,24 @@ const { class: className } = Astro.props;
 ---
 
 <div class={`${className}mx-auto w-10/12 mt-10`}>
+
+  <div class="flex flex-wrap gap-4 mb-4">
+    <div class="flex items-center">
+        <div style="width: 12px; height: 12px; background-color: #666; border-radius: 2px;"></div>
+        <span class="text-gray-800 font-medium">&nbsp;&nbsp;IIEDU: Instituto de Investigación en Educación</span>
+    </div>
+    <div class="flex items-center">
+        <div style="width: 12px; height: 12px; background-color: #666; border-radius: 2px;"></div>
+        <span class="text-gray-800 font-medium">&nbsp;&nbsp;EIA: Ecosistema de Innovación Académica</span>
+    </div>
+    <div class="flex items-center">
+        <div style="width: 12px; height: 12px; background-color: #666; border-radius: 2px;"></div>
+        <span class="text-gray-800 font-medium">&nbsp;&nbsp;DNIA: Dirección Nacional de Innovación Académica</span>
+    </div>
+  </div>
+
+
+
   <div class="row">
     <div class="col-12 col-md-8">
       <img

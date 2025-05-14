@@ -7,22 +7,9 @@ const { id, class: className } = Astro.props;
     <!-- Sección de Contacto Mejorada -->
     <div class="flex flex-col items-center justify-center mt-10 px-6">
         <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-300 max-w-2xl text-center relative">
-            <!-- Icono animado y título -->
-            <div class="flex justify-center items-center mb-4">
-                <span class="text-5xl text-[#681b54] animate-bounce">📞📩</span>
-            </div>
-
-            <!-- Espacio adicional -->
-            <div class="h-6"></div>
-
-            <!-- Pregunta de contacto con icono animado -->
-            <p class="text-lg font-semibold text-gray-800 mb-4 flex items-center justify-center gap-2">
-                ¿Tienes dudas o sugerencias? ¡Contáctanos!
-            </p>
 
             <!-- Botón de contacto mejorado -->
             <div class="flex items-center gap-3 justify-center">
-                <span class="text-2xl font-bold text-gray-600 animate-bounce">💬</span>
 
                 <a href="mailto:cuenco_nal@unal.edu.co?subject=Contacto%20desde%20tu%20sitio%20web"
                 class="bg-[#681b54] py-3 px-6 font-semibold text-white rounded-lg sm:w-fit hover:scale-105 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-primary-300 transition-transform duration-300 flex items-center gap-2 shadow-lg"
@@ -30,7 +17,6 @@ const { id, class: className } = Astro.props;
                     ✉️ Enviar correo
                 </a>
 
-                <span class="text-2xl font-bold text-gray-600 animate-bounce">💬</span>
             </div>
         </div>
     </div>

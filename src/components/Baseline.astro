@@ -3,7 +3,67 @@ import Linea from "../../public/svg/linea.astro";
 const { class: className } = Astro.props;
 ---
 
+<!-- Documentos -->
+<section class="w-full flex justify-center bg-white pt-2 pb-10 px-2">
+  <div class="max-w-3xl w-full bg-gray-100 shadow-lg rounded-2xl p-8 text-center">
+    
+    <!-- Logo de Excel centrado -->
+    <div class="flex justify-center mb-4">
+      <img src="https://img.icons8.com/color/96/microsoft-excel-2019--v1.png" alt="Excel icon" class="w-24 h-24" />
+    </div>
+
+    <!-- Título -->
+    <h2 class="text-xl font-semibold text-gray-800 mb-6">
+      Ámbitos, colectivos y producción académica UNAL en investigación en educación, innovación académica y política educativa en la UNAL
+    </h2>
+
+    <!-- Texto descriptivo -->
+    <div class="text-gray-700 text-sm md:text-base text-justify leading-relaxed space-y-6">
+      <p>
+        La presente base de datos reúne información acerca de ámbitos, colectivos y
+        producción académica en investigación en educación, innovación académica y
+        política educativa en la UNAL.
+      </p>
+      <p>
+        Este documento forma parte del proyecto de creación de un Instituto Nacional de
+        Investigación, Innovación y Política Educativa, como espacio de colaboración inter
+        y transdisciplinar, desde el modelo intersedes. Su propósito es mapear desde la
+        exploración documental institucional, procesos, actividades académicas,
+        discusiones, proyectos e investigadores relacionados con investigación y
+        desarrollo educativo desde la UNAL durante el presente milenio. Se busca
+        comprender el contexto en el que se enmarca un instituto nacional, a partir de la
+        identificación de estudios realizados, tendencias y patrones en la reflexión sobre
+        educación, sus alcances y liderazgo, así como posibles vacíos en su abordaje. Es
+        un punto de referencia para enunciar líneas de investigación, propuestas de
+        trabajo colaborativo, innovaciones y alianzas estratégicas con otras instituciones.
+        Su alcance transversal permite identificar oportunidades de sinergia y colaboración
+        entre diferentes actores y disciplinas involucradas en los procesos educativos de
+        la universidad y del país.
+      </p>
+    </div>
+
+    <!-- Botón centrado -->
+    <div class="mt-6">
+      <a 
+        href="/Documentos/BaseDeDatos_colectivos_y_ambitos_Anonimizada.xlsx" 
+        download
+        class="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-6 rounded-lg transition duration-300"
+      >
+        Descargar Excel
+      </a>
+    </div>
+    
+  </div>
+</section>
+
 <!-- Podcast -->
+<div class="w-full flex flex-col items-center justify-center bg-zinc-100 p-4 sm:p-6 md:p-8 lg:p-10 rounded-t-xl px-4 sm:px-8 md:px-16 lg:px-32">
+  <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-black mb-1 text-center">
+    Podcast
+  </h1>
+  <Linea class="w-full max-w-[18rem] sm:max-w-[26rem] md:max-w-[32rem] lg:max-w-[38rem] mx-auto" />
+</div>
+
 <div class="max-w-6xl mx-auto p-6">
   <div class="flex items-center justify-between mb-2"></div>
   
@@ -182,7 +242,7 @@ const { class: className } = Astro.props;
                 ></iframe>
               </div>
             </a>
-          </div>
+          </div> 
         </div>
       </div>
 

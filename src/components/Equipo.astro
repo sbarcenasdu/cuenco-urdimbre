@@ -61,12 +61,10 @@ const miembros = [
   },
   {
     nombre: 'Jorge Andrés Osorio Rueda',
+    cargo: 'Estudiante Auxiliar Maestría en Hábitat',
     imagen: '/img-cuenco/Equipo/icono-persona.png', 
-  }
-];
-
-const miembros2 = [
-  
+  },
+   
   {
     nombre: 'Camilo Alberto Cuartas Torres',
     cargo: 'Administrador de Empresas',
@@ -134,32 +132,6 @@ const miembros2 = [
             src={miembro.imagen} 
             alt={miembro.nombre} 
             style={{ height: '80px', width: '80px', borderRadius: '50%', objectFit: 'cover'}}
-            class="shadow-md mb-4"
-          />
-          <h2 class="text-custom font-semibold">{miembro.nombre}</h2>
-          <p class="font-medium text-black">{miembro.cargo}</p>
-        </div>
-      ))} 
-    </div>
-  </div>
-</div>
-
-<div class="w-full flex flex-col items-center justify-center bg-zinc-100 p-4 sm:p-6 md:p-8 lg:p-10 rounded-t-xl px-4 sm:px-8 md:px-16 lg:px-32">
-  <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-black mb-1 text-center">
-    Otros momentos de Cuenco
-  </h1>
-  <Linea class="w-full max-w-[18rem] sm:max-w-[26rem] md:max-w-[32rem] lg:max-w-[38rem] mx-auto" />
-</div>
-
-<div id={id} class={`w-full md:order-0 ${className}`}>
-  <div class="py-4 px-4 md:px-20 pb-10">
-    <div class="publicaciones grid grid-cols-1 md:grid-cols-3 gap-6">
-      {miembros2.map((miembro) => (
-        <div class="equipo flex flex-col items-center">
-          <img 
-            src={miembro.imagen} 
-            alt={miembro.nombre} 
-            style={{ height: '80px', width: '80px', borderRadius: '50%', objectFit: 'cover', filter: 'grayscale(100%)'}}
             class="shadow-md mb-4"
           />
           <h2 class="text-custom font-semibold">{miembro.nombre}</h2>
